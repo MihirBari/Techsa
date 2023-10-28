@@ -1,33 +1,25 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+export const Skills = ({ targets }) => {
+  const [counts, setCounts] = useState(targets.map(() => 0));
+
+  useEffect(() => {
+    const intervals = targets.map((target, index) => {
+      return setInterval(() => {
+        if (counts[index] < target) {
+          const updatedCounts = [...counts];
+          updatedCounts[index] = counts[index] + 1;
+          setCounts(updatedCounts);
+        }
+      }, 0); // Adjust the interval as needed
+    });
+
+    return () => intervals.forEach((interval) => clearInterval(interval));
+  }, [counts, targets]);
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -35,44 +27,42 @@ export const Skills = () => {
 
   return (
     <section
-    data-aos="fade-zoom-in"
-    data-aos-offset="200"
-    data-aos-easing="ease-in-sine"
-    data-aos-duration="600"
+      data-aos="fade-zoom-in"
+      data-aos-offset="200"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="600"
       className="skill"
       id="skills"
+      style={{
+        display: "flex",
+        flexDirection: "row", // Display items side by side in a row
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
       <Container>
         <Row>
           <Col>
-            <div className="skill-bx">
-              <h2>Skills</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium ipsa ab officia? Explicabo, recusandae consequatur.
-              </p>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                className="skill-slider"
-              >
-                <div className="item">
-                  <img src={meter1} alt="skills" />
-                  <h5>Web Development</h5>
-                </div>
-                <div className="item">
-                  <img src={meter2} alt="skills" />
-                  <h5>Brand Identity</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} alt="skills" />
-                  <h5>Logo designing</h5>
-                </div>
-                <div className="item">
-                  <img src={meter1} alt="skills" />
-                  <h5>Java</h5>
-                </div>
-              </Carousel>
+          <div>
+          <h2 style={{ textAlign: 'center' }}>Skills</h2>
+          </div>
+            <div style={{marginTop:"150px", display: "flex", justifyContent: "space-around" }}>
+              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
+                <p>{counts[0]}+</p>
+                <h5>Clients Addressed</h5>
+              </div>
+              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
+                <p>{counts[1]}+</p>
+                <h5>EndPoints Secured</h5>
+              </div>
+              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
+                <p>{counts[2]}+</p>
+                <h5>Devices Monitored</h5>
+              </div>
+              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
+                <p>{counts[3]}+</p>
+                <h5>Java</h5>
+              </div>
             </div>
           </Col>
         </Row>

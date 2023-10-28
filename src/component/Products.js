@@ -29,7 +29,7 @@ export const Products = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>Products</h2>
+                        <h2>Technology Partners</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Onulla aspernatur voluptas minima fugiat suscipit,
                             corrupti obcaecati facere reiciendis cupiditate repudiandae. Nemo magnam repellat aliquam.</p>
                          <Tab.Container id="projects-tabs" defaultActiveKey="first" >

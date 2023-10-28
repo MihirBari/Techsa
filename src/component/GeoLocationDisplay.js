@@ -3,7 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 export const GeoLocationDisplay = () => {
-  const gifUrl = require("../assets/img/World.gif");
+  const gifUrl = require("../assets/img/worldd.gif");
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
