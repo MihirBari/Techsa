@@ -9,12 +9,12 @@
     font-size: 3.5rem;
     text-align: center;
   }
-  .swiper_container {
-    height: 52rem;
-    padding: 2rem 0;
-    position: relative;
+  .swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjust the height as needed */
   }
-  
   .swiper-slide {
     width: 37rem;
     height: 42rem;
@@ -36,10 +36,15 @@
   }
   
   .swiper-slide img {
-    width: 37rem;
-    height: 42rem;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     border-radius: 2rem;
     object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    margin-top: 1rem; /* Add some top margin for spacing */
   }
   
   .swiper-slide-shadow-left,

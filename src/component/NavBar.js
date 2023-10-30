@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, Modal, Button, Form, InputGroup, FormControl } from "react-bootstrap";
+import { FaSearch } from 'react-icons/fa'; // Import a search icon
 import logo from "../assets/img/techsa.png";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const onScroll = () => {
@@ -18,20 +21,48 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    // Set the active link based on the current URL
+    const currentPathname = window.location.pathname;
+
+    if (currentPathname === "/") {
+      setActiveLink("home");
+    } else if (currentPathname === "/AboutUs") {
+      setActiveLink("About Us");
+    } else if (currentPathname === "/Products") {
+      setActiveLink("Products");
+    }  else if (currentPathname === "/Contact") {
+      setActiveLink("Contact");
+    }
+  }, []);
+
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
 
+  const toggleSearch = () => {
+    setShowSearch(!showSearch);
+  };
+
+  const handleSearch = () => {
+    // Implement your search functionality here using the searchQuery state.
+    console.log("Searching for: " + searchQuery);
+    // You can perform your search and update the UI accordingly.
+    // Close the search modal if needed
+    toggleSearch();
+  };
+
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-      <Container>
-        <Navbar.Brand href="/">
-          <img src={logo} alt="Logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
+    <div>
+      <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Container>
+          <Navbar.Brand href="/">
+            <img src={logo} alt="Logo" />
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span className="navbar-toggler-icon"></span>
+          </Navbar.Toggle>
           <Nav className="ms-auto">
             <Nav.Link
               href="/"
@@ -51,29 +82,15 @@ export const NavBar = () => {
             >
               About Us
             </Nav.Link>
-            <NavDropdown title="Products" id="products-dropdown">
-              <NavDropdown.Item
-                href="/SolarWinds"
-                className="navbar-link"
-                onClick={() => onUpdateActiveLink("solarwinds")}
-              >
-                SolarWinds
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="/bigfix"
-                className="navbar-link"
-                onClick={() => onUpdateActiveLink("bigfix")}
-              >
-                BigFix
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="/powerbi"
-                className="navbar-link"
-                onClick={() => onUpdateActiveLink("powerbi")}
-              >
-                PowerBI
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link
+              href="/Products"
+              className={
+                activeLink === "Products" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("Products")}
+            >
+              Products
+            </Nav.Link>
             <Nav.Link
               href="/Contact"
               className={
@@ -83,9 +100,33 @@ export const NavBar = () => {
             >
               Contact
             </Nav.Link>
+            <div className="search-icon" onClick={toggleSearch}>
+              <FaSearch />
+            </div>
           </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </Container>
+      </Navbar>
+
+      <Modal show={showSearch} onHide={toggleSearch} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Search</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form onSubmit={handleSearch}>
+            <InputGroup className="mb-3">
+              <FormControl
+                type="text"
+                placeholder="Search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <Button variant="primary" type="submit">
+                Search
+              </Button>
+            </InputGroup>
+          </Form>
+        </Modal.Body>
+      </Modal>
+    </div>
   );
 };

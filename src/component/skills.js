@@ -14,6 +14,8 @@ export const Skills = ({ targets }) => {
           const updatedCounts = [...counts];
           updatedCounts[index] = counts[index] + 1;
           setCounts(updatedCounts);
+        } else {
+          clearInterval(intervals[index]);
         }
       }, 0); // Adjust the interval as needed
     });
@@ -43,10 +45,10 @@ export const Skills = ({ targets }) => {
       <Container>
         <Row>
           <Col>
-          <div>
-          <h2 style={{ textAlign: 'center' }}>Skills</h2>
-          </div>
-            <div style={{marginTop:"150px", display: "flex", justifyContent: "space-around" }}>
+            <div>
+              <h2 style={{ textAlign: 'center' }}>Skills</h2>
+            </div>
+            <div style={{ marginTop: "150px", display: "flex", justifyContent: "space-around" }}>
               <div className="item" style={{ flex: 1, textAlign: 'center' }}>
                 <p>{counts[0]}+</p>
                 <h5>Clients Addressed</h5>

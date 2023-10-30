@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-
+import { Tab, Nav } from "react-bootstrap";
 import './Image.css'
 import { BFSIcard } from './BFSIcard';
 
@@ -8,9 +7,6 @@ export const Image = () => {
     return (
         <div className="con">
           <h1 className="heading">Our Customers</h1>
-          <Container>
-                <Row>
-                    <Col>
                          <Tab.Container id="projects-tabs" defaultActiveKey="first" >
                         <Nav variant="pills" className="nav-pills  justify-content-center align-items-center" id="pills-tab" >
                             <Nav.Item>
@@ -32,6 +28,8 @@ export const Image = () => {
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
+                                <br />
+                                <br/>
                                 <BFSIcard />         
                             </Tab.Pane>
                             <Tab.Pane eventKey="second" >
@@ -45,9 +43,6 @@ export const Image = () => {
                             </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
-                    </Col>
-                </Row>
-            </Container>
         </div>
       );
 }

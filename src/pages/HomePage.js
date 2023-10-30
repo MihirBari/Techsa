@@ -20,6 +20,9 @@ const HomePage = () => {
         <Skills  targets={[2000, 3000, 3500, 4000]}/>
         <Products />
         <Image />
+        <br>
+        </br>
+        <br />
         <GeoLocationDisplay />
         <br/>
         <br/>
