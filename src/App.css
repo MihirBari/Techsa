@@ -94,17 +94,17 @@ nav.navbar  {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #dedddd;
+  background-color: #ffffff;
 }
 nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 450;
+  font-weight: 400;
   color: #364625 !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 25px;
+  font-size: 18px;
   opacity: 0.75;
   position: relative; /* Add this for pseudo-elements */
 }
@@ -118,14 +118,14 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active::before {
   left: 0;
   width: 50%; /* Half of the element width */
   height: 100%;
-  background: #fff; /* White color for the left half */
+  background: #dedddd; /* White color for the left half */
   z-index: -1; /* Place it behind the text */
   border-radius: 5px;
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  background: linear-gradient(90deg, #fff 50%, #4CCD4C 75%);
+  background: linear-gradient(90deg, #ffffff 50%, #4CCD4C 75%);
   padding: 2px 5px;
   border-radius: 5px;
   color: transparent; /* Hide the text color */
