@@ -1,4 +1,4 @@
-import { Container, Row, Col, Tab } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/SolarWindsLogo-featured-image.jpg";
 import projImg2 from "../assets/img/136048.png";
@@ -37,9 +37,7 @@ export const Products = () => {
                         <h2>Technology Partners</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Onulla aspernatur voluptas minima fugiat suscipit,
                             corrupti obcaecati facere reiciendis cupiditate repudiandae. Nemo magnam repellat aliquam.</p>
-                         <Tab.Container id="projects-tabs" defaultActiveKey="first" >
-                        <Tab.Content>
-                            <Tab.Pane eventKey="first">
+
                              <Row>
                                 {
                                     projects.map((project, index) =>{
@@ -50,9 +48,6 @@ export const Products = () => {
                                     } )
                                 }
                              </Row>
-                            </Tab.Pane>
-                        </Tab.Content>
-                        </Tab.Container>
                     </Col>
                 </Row>
             </Container>

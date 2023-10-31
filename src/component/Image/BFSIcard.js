@@ -16,14 +16,13 @@ import projImg2 from "../../assets/img/BSGlogoNew.png";
 import projImg3 from "../../assets/img/Tata_Technologies_logo.png";
 import projImg4 from "../../assets/img/lt.png";
 
-const imageArray = [projImg1, projImg2, projImg3, projImg4 , projImg1,projImg2];
+const imageArray = [projImg1, projImg2, projImg3, projImg4, projImg1, projImg2];
 
 export const BFSIcard = () => {
   return (
     <div className="swiper-container">
       <Swiper
         effect={'coverflow'}
-        grabCursor={true}
         centeredSlides={true}
         loop={true}
         slidesPerView={3} // Show 3 images at a time (center, left, right)
@@ -35,10 +34,12 @@ export const BFSIcard = () => {
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         autoplay={{ delay: 1500 }}
+        noSwiping={true} // Disable swiping
+        noSwipingClass="swiper-no-swiping" // Add a CSS class to apply styles
       >
         {imageArray.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="slide-content">
+            <div className="slide-content swiper-no-swiping">
               <img src={image} alt={`slide_image_${index}`} />
             </div>
           </SwiperSlide>

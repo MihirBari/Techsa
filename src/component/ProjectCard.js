@@ -16,7 +16,7 @@ const defaultOptions = {
 
 export const ProjectCard = ({ title, imgUrl, link }) => {
   return (
-    <Col sm={6} md={3}>
+    <Col sm={4} md={3}>
       <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
         <div className="proj-imgbx">
           <Link to={link} className="proj-link">
