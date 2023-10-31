@@ -16,7 +16,7 @@ export const GeoLocationDisplay = () => {
     data-aos-duration="600"
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h2 style={{ textAlign: "center" }}>Our Clients</h2>
+      <h2 style={{ textAlign: "center" }}>Our Presence</h2>
       <img
         style={{ width: "50%", height: "50%", margin: "auto" }}
         src={gifUrl}

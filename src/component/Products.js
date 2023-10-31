@@ -3,7 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/SolarWindsLogo-featured-image.jpg";
 import projImg2 from "../assets/img/136048.png";
 import projImg3 from "../assets/img/Torq.jpeg";
-
+import projImg4 from "../assets/img/headerLogoLight.webp"
 
 export const Products = () => {
     const projects = [
@@ -20,6 +20,11 @@ export const Products = () => {
         {
             title: "Torq",
             imgUrl: projImg3,
+            link:"/SolarWinds"
+        },
+        {
+            title: "Freshworks",
+            imgUrl: projImg4,
             link:"/SolarWinds"
         },
     ]

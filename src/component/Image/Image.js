@@ -8,7 +8,8 @@ export const Image = () => {
         <div className="con">
           <h1 className="heading">Our Customers</h1>
                          <Tab.Container id="projects-tabs" defaultActiveKey="first" >
-                        <Nav variant="pills" className="nav-pills  justify-content-center align-items-center" id="pills-tab" >
+                        <Nav variant="pills" className="nav-pills  justify-content-center align-items-center" 
+                        id="pills-tab" style={{tabSize:"11px"}} >
                             <Nav.Item>
                                 <Nav.Link eventKey="first" >BFSI</Nav.Link>
                             </Nav.Item>
@@ -27,9 +28,7 @@ export const Image = () => {
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
-                            <Tab.Pane eventKey="first">
-                                <br />
-                                <br/>
+                            <Tab.Pane eventKey="first" >
                                 <BFSIcard />         
                             </Tab.Pane>
                             <Tab.Pane eventKey="second" >

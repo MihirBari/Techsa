@@ -1,7 +1,7 @@
 import React from "react";
 import { NavBar } from "../component/NavBar";
 import { Banner } from "../component/Banner";
-import { Skills } from "../component/skills";
+import { Skills } from "../component/Points/skills";
 import { Products } from "../component/Products";
 import "../App.css";
 import { Image } from "../component/Image/Image";
@@ -17,7 +17,7 @@ const HomePage = () => {
         <Banner />
         <br/>
         <br/>
-        <Skills  targets={[2000, 3000, 3500, 4000]}/>
+        <Skills />
         <Products />
         <Image />
         <br>

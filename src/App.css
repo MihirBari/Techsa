@@ -125,8 +125,8 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active::before {
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  background: linear-gradient(90deg, #ffffff 50%, #4CCD4C 75%);
-  padding: 2px 5px;
+  background: linear-gradient(90deg, #ffffff 25%, #4CCD4C 75%);
+  /* padding: 2px 5px; */
   border-radius: 5px;
   color: transparent; /* Hide the text color */
   opacity: 1;
@@ -309,20 +309,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 .project .nav.nav-pills {
-  width: 100%;
+  width: 100%; /* Adjust the width as needed */
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
+
 .project .nav.nav-pills .nav-item {
-  width: 100%;
+  width: 100%; /* Adjust the width as needed */
 }
+
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
-  padding: 17px 0;
-  color: #23d088 ;
+  padding: 25px 0; /* Increase the height by changing the padding */
+  color: #23d088;
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -332,22 +334,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   z-index: 0;
 }
+
 .project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #ece2e8 -5.91%, #17dc5f 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #ece2e8 -5.91%, #17dc5f 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
+
 .project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
+  width: 100% !important;
 }
+
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
