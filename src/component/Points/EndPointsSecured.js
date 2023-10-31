@@ -24,11 +24,6 @@ export const EndPointsSecured = () => {
     <div className="circle">
       <p className="count">{count}+</p>
     </div>
-    <br />
-    <br/>
-    <div style={{float:"left"}}>
-        <h5>EndPoints Secured</h5>
-    </div>
     </>
   );
 };

@@ -8,8 +8,6 @@ import { EndPointsSecured } from "./EndPointsSecured";
 import { DevicesMonitored } from "./DevicesMonitored";
 
 export const Skills = () => {
-
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -33,20 +31,38 @@ export const Skills = () => {
         <Row>
           <Col>
             <div>
-              <h2 style={{ textAlign: 'center' }}>Skills</h2>
+              <h2 style={{ textAlign: "center" }}>Skills</h2>
             </div>
-            <div style={{ marginTop: "150px", display: "flex", justifyContent: "space-around" }}>
-              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
-               <ClientsAddressed />
+            <div
+              style={{
+                marginTop: "150px",
+                display: "flex",
+                justifyContent: "space-around",
+              }}
+            >
+              <div className="item" style={{ flex: 1, textAlign: "center" }}>
+                <ClientsAddressed />
+                <br />
+                <br />
+                <p>Clients Addressed</p>
               </div>
-              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
-               <EndPointsSecured />
+              <div className="item" style={{ flex: 1, alignItems:"center",textAlign: "center" }}>
+                <EndPointsSecured />
+                <br />
+                <br />
+                <p>EndPoints Secured</p>
               </div>
-              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
+              <div className="item" style={{ flex: 1, textAlign: "center" }}>
                 <DevicesMonitored />
+                <br />
+                <br />
+                <p>Devices Monitored</p>
               </div>
-              <div className="item" style={{ flex: 1, textAlign: 'center' }}>
+              <div className="item" style={{ flex: 1, textAlign: "center" }}>
                 <DevicesMonitored />
+                <br />
+                <br />
+                <p>EndPoints Secured</p>
               </div>
             </div>
           </Col>

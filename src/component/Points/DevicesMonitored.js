@@ -19,14 +19,9 @@ export const DevicesMonitored = () => {
     }, [count, target]);
   
     return (
-      <div className="centered-container">
+      <div >
         <div className="circle">
-          <p className="count" style={{float:'left'}} >{count}+</p>
-        </div>
-        <br />
-        <br/>
-        <div style={{float:"left"}}>
-            <h5>Devices Monitored</h5>
+          <p className="count"  >{count}+</p>
         </div>
       </div>
     );

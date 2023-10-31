@@ -24,11 +24,6 @@ export const ClientsAddressed = () => {
         <div className="circle">
           <p className="count">{count}+</p>
         </div>
-        <br />
-        <br/>
-        <div style={{float:"left"}}>
-            <h5>Clients Addressed</h5>
-        </div>
       </div>
     );
 };
