@@ -10,32 +10,30 @@ import {
   Navigation,
   Autoplay,
 } from "swiper/modules";
-
-import projImg1 from "../../assets/img/HDFC_Bank_Logo.svg.png";
+import projImg1 from "../../assets/img/SBM.png";
 import projImg2 from "../../assets/img/BSGlogoNew.png";
 import projImg3 from "../../assets/img/Tata_Technologies_logo.png";
 import projImg4 from "../../assets/img/lt.png";
-
-const imageArray = [projImg1, projImg2, projImg3, projImg4, projImg1, projImg2];
+import projImg5 from "../../assets/img/HDFC_Bank_Logo.svg.png";
+import projImg6 from "../../assets/img/BSE.png";
+const imageArray = [projImg1, projImg2, projImg3, projImg4, projImg5, projImg6];
 
 export const BFSIcard = () => {
   return (
     <div className="swiper-container">
       <Swiper
         effect={'coverflow'}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={3} // Show 3 images at a time (center, left, right)
+        slidesPerView={3}
         coverflowEffect={{
           rotate: 0,
-          stretch: 50, // Adjust the stretch for the 3D effect
-          depth: 200,  // Adjust the depth for the 3D effect
+          stretch: 50,
+          depth: 200,
           modifier: 1,
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         autoplay={{ delay: 1500 }}
-        noSwiping={true} // Disable swiping
-        noSwipingClass="swiper-no-swiping" // Add a CSS class to apply styles
+        noSwiping={true} 
+        noSwipingClass="swiper-no-swiping"
       >
         {imageArray.map((image, index) => (
           <SwiperSlide key={index}>

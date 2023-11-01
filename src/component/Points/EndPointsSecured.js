@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Points.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faKey } from '@fortawesome/free-solid-svg-icons';
 
 export const EndPointsSecured = () => {
   const [count, setCount] = useState(0);
@@ -21,8 +23,16 @@ export const EndPointsSecured = () => {
 
   return (
     <>
-    <div className="circle">
-      <p className="count">{count}+</p>
+    <div className="row-container">
+    <div >
+    <FontAwesomeIcon icon={faKey} fade style={{color: "#1ec867" , height:"50px"}} />
+    </div>
+    <div>
+      <p >{count}+
+      <br />
+      EndPoints Secured
+      </p>
+    </div>
     </div>
     </>
   );

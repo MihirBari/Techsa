@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Points.css';
+import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const ClientsAddressed = () => {
     const [count, setCount] = useState(0);
@@ -20,10 +22,18 @@ export const ClientsAddressed = () => {
     }, [count, target]);
   
     return (
-      <div className="centered-container">
-        <div className="circle">
-          <p className="count">{count}+</p>
-        </div>
+      <>
+      <div className="row-container">
+      <div >
+      <FontAwesomeIcon icon={faPeopleGroup} bounce style={{color: "#1ec867" , height:"50px"}} />
       </div>
+      <div>
+        <p >{count}+
+        <br />
+        Clients Addressed
+        </p>
+      </div>
+      </div>
+      </>
     );
 };

@@ -42,27 +42,16 @@ export const Skills = () => {
             >
               <div className="item" style={{ flex: 1, textAlign: "center" }}>
                 <ClientsAddressed />
-                <br />
-                <br />
-                <p>Clients Addressed</p>
+                
               </div>
-              <div className="item" style={{ flex: 1, alignItems:"center",textAlign: "center" }}>
+              <div className="item" style={{ flex: 1,textAlign: "center" }}>
                 <EndPointsSecured />
-                <br />
-                <br />
-                <p>EndPoints Secured</p>
               </div>
               <div className="item" style={{ flex: 1, textAlign: "center" }}>
                 <DevicesMonitored />
-                <br />
-                <br />
-                <p>Devices Monitored</p>
               </div>
               <div className="item" style={{ flex: 1, textAlign: "center" }}>
                 <DevicesMonitored />
-                <br />
-                <br />
-                <p>EndPoints Secured</p>
               </div>
             </div>
           </Col>

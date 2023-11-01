@@ -10,22 +10,42 @@ export const Products = () => {
         {
             title: "SolarWinds",
             imgUrl: projImg1,
-            link:"/SolarWinds"
+            link:"/SolarWinds",
+            description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
+            Enabling it to offer additional security and compliance services. 
+            The software provides endpoint and security management in a single 
+            solution and enables organizations to see and manage physical and 
+            virtual endpoints.`
         },
         {
             title: "BigFix",
             imgUrl: projImg2,
-            link:"/SolarWinds"
+            link:"/SolarWinds",
+            description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
+            Enabling it to offer additional security and compliance services. 
+            The software provides endpoint and security management in a single 
+            solution and enables organizations to see and manage physical and 
+            virtual endpoints.`
         },
         {
             title: "Torq",
             imgUrl: projImg3,
-            link:"/SolarWinds"
+            link:"/SolarWinds",
+            description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
+            Enabling it to offer additional security and compliance services. 
+            The software provides endpoint and security management in a single 
+            solution and enables organizations to see and manage physical and 
+            virtual endpoints.`
         },
         {
             title: "Freshworks",
             imgUrl: projImg4,
-            link:"/SolarWinds"
+            link:"/SolarWinds",
+            description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
+            Enabling it to offer additional security and compliance services. 
+            The software provides endpoint and security management in a single 
+            solution and enables organizations to see and manage physical and 
+            virtual endpoints.`
         },
     ]
 
