@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Points.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
+import useCountUpAnimation from './useCountUpAnimation ';
 
 export const DevicesMonitored = () => {
-    const [count, setCount] = useState(0);
-    const target = 2500; 
-    
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (count < target) {
-                setCount((prevCount) => prevCount + 1);
-            } else {
-                clearInterval(interval);
-            }
-        }, ); 
-        return () => {
-            clearInterval(interval);
-        };
-    }, [count, target]);
+    const target = 175000;
+    const duration = 5000;
+    const count = useCountUpAnimation(target, duration);
 
     return (
         <div className="row-container">

@@ -1,26 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Points.css';
 import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useCountUpAnimation from './useCountUpAnimation ';
 
 export const ClientsAddressed = () => {
-    const [count, setCount] = useState(0);
-    const target = 1000; 
-    
-    useEffect(() => {
-      const interval = setInterval(() => {
-        if (count < target) {
-          setCount((prevCount) => prevCount + 1);
-        } else {
-          clearInterval(interval);
-        }
-      }, ); // Specify the interval duration (e.g., 1000ms for 1 second).
-  
-      return () => {
-        clearInterval(interval);
-      };
-    }, [count, target]);
-  
+  const target = 200;
+  const duration = 5000;
+  const count = useCountUpAnimation(target, duration);
+
     return (
       <>
       <div className="row-container">

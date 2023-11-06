@@ -99,37 +99,36 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
     width: 9%;
 }
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #364625 !important;
+  color: #000000 !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
-  opacity: 0.75;
-  position: relative; /* Add this for pseudo-elements */
+  transition: 0.3s ease-in-out;
+  position: relative;
 }
 
-/* Create a pseudo-element for the hover and active effect */
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover::before,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active::before {
+nav.navbar .navbar-nav a.nav-link.navbar-link::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 5%; /* Half of the element width */
+  width: 0;
   height: 100%;
-  background: #dedddd; /* White color for the left half */
-  z-index: -1; /* Place it behind the text */
-  border-radius: 5px;
+  transition: width 0.3s ease-in-out; 
+  background: linear-gradient(90.21deg, #ece2e8 -5.91%, #17dc5f 111.58%);
+  z-index: -1; 
+  border-radius: 25px;
 }
 
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  background: linear-gradient(90deg, #ffffff 25%, #4CCD4C 75%);
-  /* padding: 2px 5px; */
-  border-radius: 5px;
-  color: transparent; /* Hide the text color */
-  opacity: 1;
+nav.navbar .navbar-nav a.nav-link.navbar-link.nav-link:hover {
+  color: white;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover::before {
+  width: 100%; 
 }
 
 nav.navbar .navbar-toggler:active,
@@ -230,9 +229,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
+/* .banner img {
   animation: updown 3s linear infinite;
-}
+} */
 @keyframes updown {
     0% {
         transform: translateY(-20px);
@@ -378,56 +377,53 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   margin-bottom: 24px;
   box-shadow: -3px 4px 11px 0px #888888;
+  transition: 0.3s ease-in-out;
 }
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #81cb8e -5.91%, #14862e 111.58%);
-  opacity: 0.85;
+  opacity: 1;
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
   bottom: 0;
 }
+
+.proj-imgbx:hover {
+  transform: translateY(-10px); /* Move the image up when hovering */
+}
+
 .proj-imgbx:hover::before {
   height: 65%;
   bottom: 0;
 }
+
 .proj-txtx {
   position: absolute;
   text-align: center;
-  bottom: 65%;
+  bottom: -30%; /* Initially, move the description below the container */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
 }
+
 .proj-imgbx:hover .proj-txtx {
-  top: 50%;
+  bottom: 20%; /* Move the description up when hovering */
   opacity: 1;
 }
+
 .proj-txtx h4 {
   font-style: italic;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 200;
   letter-spacing: 0.8px;
   color: #000;
 }
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
+
 
 /************ contact Css ************/
 .contact {

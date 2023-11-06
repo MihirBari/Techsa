@@ -42,7 +42,6 @@ export const Skills = () => {
             >
               <div className="item" style={{ flex: 1, textAlign: "center" }}>
                 <ClientsAddressed />
-                
               </div>
               <div className="item" style={{ flex: 1,textAlign: "center" }}>
                 <EndPointsSecured />

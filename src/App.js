@@ -3,7 +3,7 @@ import {Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Solarwinds from "./pages/Solarwinds";
 import HomePage from "./pages/HomePage";
-import { Contact } from "./component/Contact";
+import { Contact } from "./pages/Contact";
 import Bigfix from "./pages/Bigfix";
 import { AboutUs } from "./pages/AboutUs";
 import { Products } from "./pages/Products.js";
