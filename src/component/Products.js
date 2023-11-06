@@ -55,8 +55,8 @@ export const Products = () => {
                 <Row>
                     <Col>
                         <h2>Technology Partners</h2>
-                        <p>We team up with industry-leading technology partners to deliver innovative solutions. Our strategic alliances with these industry leaders empower 
-                            us to stay ahead of the curve and provide our customers with top-quality products and services.</p>
+                        <p>We team up with industry-leading technology partners to deliver innovative solutions. 
+                            Our strategic alliances with these industry leaders empower us to stay ahead of the curve and provide our customers with top-quality products and services.</p>
 
                              <Row>
                                 {

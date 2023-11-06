@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useCountUpAnimation from './useCountUpAnimation ';
 
 export const ClientsAddressed = () => {
-  const target = 1500;
+  const target = 200;
   const duration = 5000;
   const count = useCountUpAnimation(target, duration);
 

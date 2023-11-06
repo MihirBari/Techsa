@@ -5,7 +5,7 @@ import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import useCountUpAnimation from './useCountUpAnimation ';
 
 export const DevicesMonitored = () => {
-    const target = 2500;
+    const target = 175000;
     const duration = 5000;
     const count = useCountUpAnimation(target, duration);
 

@@ -99,36 +99,36 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
     width: 9%;
 }
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #c1e699 !important;
+  color: #000000 !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
-  /* opacity: 0.75; */
   transition: 0.3s ease-in-out;
-  position: relative; 
+  position: relative;
 }
 
-/* Create a pseudo-element for the hover and active effect */
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover::before{
+nav.navbar .navbar-nav a.nav-link.navbar-link::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 0; 
+  width: 0;
   height: 100%;
-  transition: 0.3s ease-in-out;
-  background: #008000;
-  z-index: 0; /* Place it behind the text */
-  border-radius: 20px;
+  transition: width 0.3s ease-in-out; 
+  background: linear-gradient(90.21deg, #ece2e8 -5.91%, #17dc5f 111.58%);
+  z-index: -1; 
+  border-radius: 25px;
 }
 
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover{
-  background: #008000;
-  /* padding: 0px 2px; */
-  border-radius: 25px;
-  
+nav.navbar .navbar-nav a.nav-link.navbar-link.nav-link:hover {
+  color: white;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover::before {
+  width: 100%; 
 }
 
 nav.navbar .navbar-toggler:active,

@@ -10,7 +10,7 @@ export const Loader = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        animation: 'flip 2s infinite',
+        animation: 'spin 2s infinite',
       }}
     >
       <img

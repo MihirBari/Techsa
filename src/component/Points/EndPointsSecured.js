@@ -5,8 +5,8 @@ import { faKey } from '@fortawesome/free-solid-svg-icons';
 import useCountUpAnimation from './useCountUpAnimation '; // Import the custom hook
 
 export const EndPointsSecured = () => {
-  const target = 4500;
-  const duration = 5000; // Set the duration for the counting animation in milliseconds
+  const target = 350000;
+  const duration = 5000; 
 
   const count = useCountUpAnimation(target, duration);
 
@@ -17,7 +17,7 @@ export const EndPointsSecured = () => {
       </div>
       <div>
         <p>
-          {count}+
+          {count}+ 
           <br />
           EndPoints Secured
         </p>
