@@ -8,15 +8,15 @@ export const Loader = () => {
       style={{
         position: 'fixed',
         top: '50%',
-        left: '50%',
+        left: '45%',
         transform: 'translate(-50%, -50%)',
         animation: 'spin 2s infinite',
       }}
     >
       <img
         style={{
-          height: '50px',
-          width: '50px',
+          height: '100px',
+          width: '75x',
           display: 'flex',
           alignItems: 'center',
         }}
