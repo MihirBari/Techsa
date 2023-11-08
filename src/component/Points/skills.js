@@ -31,11 +31,11 @@ export const Skills = () => {
         <Row>
           <Col>
             <div>
-              <h2 style={{ textAlign: "center" }}>Skills</h2>
+              <h2 style={{ textAlign: "center" }}>Achievements</h2>
             </div>
             <div
               style={{
-                marginTop: "150px",
+                marginTop: "31px",
                 display: "flex",
                 justifyContent: "space-around",
               }}
