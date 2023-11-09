@@ -33,10 +33,14 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
+  /* background: url("./assets/img/bg") center/cover no-repeat; */
   background-color: #ffffff !important;
   color: #111010 !important;
   font-family: 'Centra', sans-serif !important;
+  height: 100%; /* Ensure body covers the entire height of the viewport */
+  margin: 0; /* Remove default body margin */
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -125,6 +129,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link::before {
 
 nav.navbar .navbar-nav a.nav-link.navbar-link.nav-link:hover {
   color: white;
+  background-color: transparent; 
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover::before {
@@ -522,21 +527,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 111px;
 }
 
-.gradient-container {
+.rectangle-container {
   position: relative;
-  width: 100%;
-  height: 60px; /* Adjust the height as needed */
-  overflow: hidden;
 }
 
-.gradient-line {
+.rectangle {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 2px; /* Adjust the height of the line */
-  background: linear-gradient(to left, transparent, #000); /* Adjust the colors as needed */
-  transform-origin: bottom right;
-  transform: skewX(-45deg);
-  clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 25%, 100% 0);
+  height: 100%;
+  border: 2px solid #000; /* Set the border style */
+  box-sizing: border-box;
+  border-radius: 35px;
+}
+
+.content {
+  padding: 15px; /* Adjust padding as needed */
+  z-index: 1;
+  position: relative;
 }

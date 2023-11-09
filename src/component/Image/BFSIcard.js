@@ -47,7 +47,6 @@ const row1 = [projImg1, projImg2, projImg3, projImg4, projImg5, projImg6, projIm
 const Wrapper = styled.div`
   width: 100%;
   height: fit-content;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +56,7 @@ const Wrapper = styled.div`
 const Marquee = styled.div`
   display: flex;
   width: 1200px;
+  height: 100px
   overflow: hidden;
   user-select: none;
 
@@ -84,8 +84,8 @@ const common = css`
   align-items: center;
   justify-content: space-around;
   white-space: nowrap;
-  width: 100%;
-  animation: ${scrollX} 30s linear infinite;
+  width: 270%;
+  animation: ${scrollX} 70s linear infinite;
 `;
 
 const MarqueeGroup = styled.div`
@@ -94,21 +94,21 @@ const MarqueeGroup = styled.div`
 
 const ImageGroup = styled.div`
   display: grid;
+  grid-template-columns: repeat(5, 1fr); // Adjusted to display 5 images at a time
+  gap: 10px; // Added gap for spacing between images
   place-items: center;
-  width: clamp(10rem, 1rem + 40vmin, 30rem);
-  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+  width: 100%; // Adjusted width to take the full width
 `;
 
 const Image = styled.img`
   object-fit: contain;
-  width: 100%;
-  height: 100%;
+  width: 600%;
+  height: 75%;
   border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px 20px;
+  aspect-ratio: 4/5;
+  padding: 5px 0px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
-
 
 export const BFSIcard = () => {
   return (
@@ -124,13 +124,12 @@ export const BFSIcard = () => {
           </MarqueeGroup>
           <MarqueeGroup>
             {row1.map((el, index) => (
-              <ImageGroup key={index}>
+              <ImageGroup key={index + row1.length}>
                 <Image src={el} />
               </ImageGroup>
             ))}
           </MarqueeGroup>
         </Marquee>
-
       </Wrapper>
     </AppContainer>
   );

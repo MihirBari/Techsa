@@ -37,19 +37,21 @@ export const Skills = () => {
               style={{
                 marginTop: "31px",
                 display: "flex",
+                flexWrap: "wrap",
                 justifyContent: "space-around",
+                alignItems:"center"
               }}
             >
-              <div className="item" style={{ flex: 1, textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <ClientsAddressed />
               </div>
-              <div className="item" style={{ flex: 1,textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <EndPointsSecured />
               </div>
-              <div className="item" style={{ flex: 1, textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <DevicesMonitored />
               </div>
-              <div className="item" style={{ flex: 1, textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <DevicesMonitored />
               </div>
             </div>

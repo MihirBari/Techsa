@@ -6,11 +6,19 @@ export const About = () => {
     <div className="about">
       <section>
         <Container>
-          <div>
-            <h2 style={{ textAlign: "center" }}>Welcome to Our Family</h2>
-          </div>
-          <div className="gradient-container">
-            <div className="gradient-line"></div>
+          <div className="rectangle-container">
+            <div className="rectangle"></div>
+            <div className="content">
+              <h2 style={{ textAlign: "center", marginTop: '15px' }}>Brief About Us</h2>
+               <p>lorem hasb
+                djsba
+                <br />
+                uwggud
+                vdasv
+                <br/>
+                bGdas
+               </p>
+            </div>
           </div>
         </Container>
       </section>

@@ -57,56 +57,57 @@ export const NavBar = () => {
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img style={{height:'81px',width:'100px'}} src={logo} alt="Logo" />
+            <img style={{ height: '81px', width: '100px' }} src={logo} alt="Logo" />
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toggler-icon"></span>
-          </Navbar.Toggle>
-          <Nav className="ms-auto">
-            <Nav.Link
-              href="/"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="/AboutUs"
-              className={
-                activeLink === "About Us" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("About Us")}
-            >
-              About Us
-            </Nav.Link>
-            <Nav.Link
-              href="/Products"
-              className={
-                activeLink === "Products" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("Products")}
-            >
-              Products
-            </Nav.Link>
-            <Nav.Link
-              href="/Contact"
-              className={
-                activeLink === "Contact" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("Contact")}
-            >
-              Contact
-            </Nav.Link>
-            <div className="search-icon" onClick={toggleSearch}>
-              <FaSearch />
-            </div>
-          </Nav>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link
+                href="/"
+                className={
+                  activeLink === "home" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("home")}
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                href="/AboutUs"
+                className={
+                  activeLink === "About Us" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("About Us")}
+              >
+                About Us
+              </Nav.Link>
+              <Nav.Link
+                href="/Products"
+                className={
+                  activeLink === "Products" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("Products")}
+              >
+                Products
+              </Nav.Link>
+              <Nav.Link
+                href="/Contact"
+                className={
+                  activeLink === "Contact" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("Contact")}
+              >
+                Contact
+              </Nav.Link>
+              <div className="search-icon" onClick={toggleSearch}>
+                <FaSearch />
+              </div>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-
+      
       <Modal show={showSearch} onHide={toggleSearch} centered>
         <Modal.Header closeButton>
           <Modal.Title>Search</Modal.Title>

@@ -14,7 +14,7 @@ const row1  = [projImg1, projImg2, projImg3, projImg4, projImg5, projImg6
 
     const AppContainer = styled.div`
     width: 100vw;
-    height: 50vh;
+    height: 35vh;
     color: #000000;
   
     position: relative;
@@ -63,7 +63,7 @@ const row1  = [projImg1, projImg2, projImg3, projImg4, projImg5, projImg6
     align-items: center;
     justify-content: space-around;
     white-space: nowrap;
-    width: 100%;
+    width: 130%;
     animation: ${scrollX} 30s linear infinite;
   `;
   
@@ -84,7 +84,7 @@ const row1  = [projImg1, projImg2, projImg3, projImg4, projImg5, projImg6
     height: 100%;
     border-radius: 0.5rem;
     aspect-ratio: 4/3;
-    padding: 5px 20px;
+    padding: 5px 0px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   `;
 

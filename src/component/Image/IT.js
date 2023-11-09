@@ -13,7 +13,7 @@ const row1 = [projImg1, projImg2, projImg3, projImg4, projImg5, projImg6];
 
 const AppContainer = styled.div`
   width: 100vw;
-  height: 50vh;
+  height: 35vh;
   color: #000000;
 
   position: relative;
@@ -82,8 +82,8 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px 20px;
+  aspect-ratio: 4/3;
+  padding: 10px 2px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
 
