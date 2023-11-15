@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/SolarWindsLogo-featured-image.jpg";
-import projImg2 from "../assets/img/136048.png";
-import projImg3 from "../assets/img/Torq.jpeg";
-import projImg4 from "../assets/img/headerLogoLight.webp"
+import projImg1 from "../../assets/img/SolarWindsLogo-featured-image.jpg";
+import projImg2 from "../../assets/img/136048.png";
+import projImg3 from "../../assets/img/Torq.jpeg";
+import projImg4 from "../../assets/img/headerLogoLight.webp"
 
 export const Products = () => {
     const projects = [
@@ -54,8 +54,8 @@ export const Products = () => {
                     <Col>
                         <h2>Technology Partners</h2>
                         <p>We team up with industry-leading technology partners to deliver innovative solutions. 
-                            Our strategic alliances with these industry leaders empower us to stay ahead of the curve and provide our customers with top-quality products and services.</p>
-
+                        Our strategic alliances with these industry leaders empower us to stay ahead of the
+                        curve and provide our customers with top-quality products and services.</p>
                              <Row>
                                 {
                                     projects.map((project, index) =>{

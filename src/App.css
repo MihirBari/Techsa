@@ -432,7 +432,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-imgbx:hover .proj-txtx {
-  bottom: 20%; /* Move the description up when hovering */
+  bottom: 20%; 
   opacity: 1;
 }
 
@@ -531,6 +531,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 
+.arc-container {
+  width: 200px;
+  height: 100px;
+  background-color: #120f0f;
+  border-radius: 50% / 100%;
+  position: relative;
+}
+
+.arc-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+
 .rectangle {
   position: absolute;
   top: 0;
@@ -549,33 +566,61 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 
-.abt-imgbx {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px; /* You can adjust the border-radius as needed */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* You can adjust the box-shadow as needed */
-  transition: transform 0.3s ease-in-out; /* Transition for zoom effect */
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    display: block;
-  }
-
-  .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
-    color: #fff; /* Adjust the text color */
-    padding: 8px;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  &:hover {
-    transform: scale(1.1); /* You can adjust the scale value for the zoom effect */
-  }
+.Cardd {
+  display: flex;
+  justify-content: space-around;
 }
+
+
+
+.productList{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.productCard{
+  position: relative;
+  background-color: var(--color-grey-primary);
+  margin: 1rem;
+  flex: 1 0 25rem;
+  max-width: 30rem;
+  max-height: 50rem;
+  transition: 0.2s;
+  box-shadow: -3px 4px 11px 0px #888888;
+}
+
+.productCard:hover{
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+}
+
+.productImage{
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+.productCard__content {
+  margin: 1rem;
+}
+
+.productName{
+  font-size: 1.5rem;
+}
+
+.displayStack__1{
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productPrice{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
