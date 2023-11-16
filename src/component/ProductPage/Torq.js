@@ -3,10 +3,10 @@ import projImg1 from "../../assets/img/136048.png";
 import { Link } from 'react-router-dom';
 
 
-export const BigFix = () => {
+export const Torq = () => {
   return (
     <>
-    <h2 style={{ textAlign: "center", marginTop:'50px' }}>BigFix</h2>
+    <h2 style={{ textAlign: "center", marginTop:'50px' }}>Torq</h2>
     <div className='product-Big'>
         <div>
         <p>BigFix is the result of IBM's purchase of BigFix, Inc. 
@@ -14,7 +14,7 @@ export const BigFix = () => {
             The software provides endpoint and security management in a single 
             solution and enables organizations to see and manage physical and 
             virtual endpoints.</p>
-             <Link to='/bigfix'>
+             <Link to='/Torq'>
              <button >Read More</button>
              </Link>
         </div>

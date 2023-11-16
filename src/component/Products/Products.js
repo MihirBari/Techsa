@@ -19,7 +19,7 @@ export const Products = () => {
         {
             title: "BigFix",
             imgUrl: projImg2,
-            link:"/SolarWinds",
+            link:"/bigfix",
             description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
             Enabling it to offer additional security and compliance services. 
             The software provides endpoint and security management in a single 
@@ -29,22 +29,23 @@ export const Products = () => {
         {
             title: "Freshworks",
             imgUrl: projImg4,
-            link:"/SolarWinds",
-            description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
-            Enabling it to offer additional security and compliance services. 
-            The software provides endpoint and security management in a single 
-            solution and enables organizations to see and manage physical and 
-            virtual endpoints.`
-        }, {
-            title: "Torq",
-            imgUrl: projImg3,
-            link:"/SolarWinds",
+            link:"/FreshWorks",
             description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
             Enabling it to offer additional security and compliance services. 
             The software provides endpoint and security management in a single 
             solution and enables organizations to see and manage physical and 
             virtual endpoints.`
         },
+        //  {
+        //     title: "Torq",
+        //     imgUrl: projImg3,
+        //     link:"/SolarWinds",
+        //     description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
+        //     Enabling it to offer additional security and compliance services. 
+        //     The software provides endpoint and security management in a single 
+        //     solution and enables organizations to see and manage physical and 
+        //     virtual endpoints.`
+        // },
     ]
 
     return (

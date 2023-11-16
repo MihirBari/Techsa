@@ -12,7 +12,7 @@ export const About = () => {
     {
       title: "SolarWinds",
       imgUrl: projImg1,
-      caption: "Ravi khanchandani",
+      caption: "Ravi Khanchandani",
       link: "https://www.linkedin.com/in/ravikhanchandani"
     },
     {
