@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { NavBar } from '../component/NavBar'
 import { Loader } from '../component/loader';
-
+import { Footer } from '../component/Footer'
+import { Solarwinds } from '../component/ProductPage/Solarwinds';
+import { BigFix } from '../component/ProductPage/BigFix';
 export const Products = () => {
   const [loading, setLoading] = useState(true);
 
@@ -16,10 +18,16 @@ export const Products = () => {
      {loading ? (
         <Loader />
       ) : (
+        <>
         <div className='App'>
           <NavBar/>
-          <p>bqusgsgyg</p>
+          <div className='ProductsPage'>
+          <Solarwinds />
+          <BigFix />
+          </div>
+         <Footer/>
         </div>
+        </>
       )}
     </>
   )

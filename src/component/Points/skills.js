@@ -22,7 +22,7 @@ export const Skills = () => {
       id="skills"
       style={{
         display: "flex",
-        flexDirection: "row", // Display items side by side in a row
+        flexDirection: "row", 
         alignItems: "center",
         justifyContent: "center",
       }}

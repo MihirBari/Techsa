@@ -37,8 +37,8 @@ body {
   background-color: #ffffff !important;
   color: #111010 !important;
   font-family: 'Centra', sans-serif !important;
-  height: 100%; /* Ensure body covers the entire height of the viewport */
-  margin: 0; /* Remove default body margin */
+  height: 100%; 
+  margin: 0; 
 }
 
 
@@ -304,7 +304,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
 }
 .project p {
-  color: #000000;
+  color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -571,8 +571,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: space-around;
 }
 
-
-
 .productList{
   display: flex;
   justify-content: space-evenly;
@@ -601,9 +599,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: auto;
 }
 
-
-
-
 .productCard__content {
   margin: 1rem;
 }
@@ -624,3 +619,93 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: bold;
 }
 
+/*********Products Page**********/
+.ProductsPage {
+  padding: 30px 0 200px 0;
+  margin-top: 111px;
+}
+
+.product-Solar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.product-Solar img {
+  height: 250px;
+  width: 250px;
+  border-radius: 25px;
+  margin-left: 140px;
+  box-shadow: -3px 4px 11px 0px #888888;
+}
+
+.product-Solar div {
+  width: 50%; /* Set the width to 50% for each child div */
+}
+
+.product-Solar p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+}
+
+.product-Solar button{
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+.product-Big{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.product-Big img {
+  height: 250px;
+  width: 250px;
+  border-radius: 25px;
+  margin-left: 220px;
+  box-shadow: -3px 4px 11px 0px #888888;
+}
+
+.product-Big div {
+  width: 50%; /* Set the width to 50% for each child div */
+  margin-left: 50px;
+}
+
+.product-Big p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+}
+
+.product-Big button{
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .product-Solar {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .product-Solar img {
+    margin-bottom: 20px; 
+  }
+
+  .product-Solar p {
+    width: 100%; 
+  }
+}

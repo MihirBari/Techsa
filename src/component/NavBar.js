@@ -22,7 +22,6 @@ export const NavBar = () => {
   }, []);
 
   useEffect(() => {
-    // Set the active link based on the current URL
     const currentPathname = window.location.pathname;
 
     if (currentPathname === "/") {
