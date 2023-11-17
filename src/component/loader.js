@@ -16,7 +16,7 @@ export const Loader = () => {
       <img
         style={{
           height: '100px',
-          width: '75px',  // Corrected typo here
+          width: '95px',
           display: 'flex',
           alignItems: 'center',
         }}
@@ -26,4 +26,3 @@ export const Loader = () => {
     </div>
   );
 };
-

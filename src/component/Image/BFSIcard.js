@@ -56,7 +56,6 @@ const Wrapper = styled.div`
 const Marquee = styled.div`
   display: flex;
   width: 1200px;
-  height: 100px
   overflow: hidden;
   user-select: none;
 

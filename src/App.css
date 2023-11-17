@@ -101,7 +101,7 @@ nav.navbar.scrolled {
   background-color: #ffffff;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+  width: 9%;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -708,4 +708,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .product-Solar p {
     width: 100%; 
   }
+}
+
+/*************Solarwind*************/
+.solarwinds{
+  padding: 30px 0 200px 0;
+  margin-top: 111px;
 }

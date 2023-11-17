@@ -3,7 +3,7 @@ import React from 'react';
 export const  Footer = () =>{
   return (
     <footer style={footerStyle}>
-      <p>&copy; 2023 Techsa Service Private Limited</p>
+      <p>&copy; 2023 Techsa Services Pvt. Ltd.</p>
     </footer>
   );
 }
