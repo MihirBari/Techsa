@@ -1,26 +1,36 @@
-import React, { useEffect, useState } from 'react'
-import { NavBar } from '../component/NavBar'
-import { Loader } from '../component/loader';
-
+import React, { useEffect, useState } from "react";
+import { NavBar } from "../component/NavBar";
+import { Loader } from "../component/loader";
+import { Footer } from "../component/Footer";
+import { Solarwinds } from "../component/ProductPage/Solarwinds";
+import { BigFix } from "../component/ProductPage/BigFix";
+import { FreshWorks } from "../component/ProductPage/FreshWorks";
 export const Products = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000); 
+    }, 1000);
   }, []);
 
   return (
     <>
-     {loading ? (
+      {loading ? (
         <Loader />
       ) : (
-        <div className='App'>
-          <NavBar/>
-          <p>bqusgsgyg</p>
-        </div>
+        <>
+          <div className="App">
+            <NavBar />
+            <div className="ProductsPage">
+              <Solarwinds />
+              <BigFix />
+              <FreshWorks />
+            </div>
+            <Footer />
+          </div>
+        </>
       )}
     </>
-  )
-}
+  );
+};

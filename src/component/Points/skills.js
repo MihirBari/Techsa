@@ -22,7 +22,7 @@ export const Skills = () => {
       id="skills"
       style={{
         display: "flex",
-        flexDirection: "row", // Display items side by side in a row
+        flexDirection: "row", 
         alignItems: "center",
         justifyContent: "center",
       }}
@@ -31,25 +31,27 @@ export const Skills = () => {
         <Row>
           <Col>
             <div>
-              <h2 style={{ textAlign: "center" }}>Skills</h2>
+              <h2 style={{ textAlign: "center" }}>Achievements</h2>
             </div>
             <div
               style={{
-                marginTop: "150px",
+                marginTop: "31px",
                 display: "flex",
+                flexWrap: "wrap",
                 justifyContent: "space-around",
+                alignItems:"center"
               }}
             >
-              <div className="item" style={{ flex: 1, textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <ClientsAddressed />
               </div>
-              <div className="item" style={{ flex: 1,textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <EndPointsSecured />
               </div>
-              <div className="item" style={{ flex: 1, textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <DevicesMonitored />
               </div>
-              <div className="item" style={{ flex: 1, textAlign: "center" }}>
+              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <DevicesMonitored />
               </div>
             </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavBar } from "../component/NavBar";
 import { Loader } from "../component/loader";
 import { Footer } from "../component/Footer";
+import { About } from "../component/About/About";
 
 export const AboutUs = () => {
   const [loading, setLoading] = useState(true);
@@ -20,9 +21,9 @@ export const AboutUs = () => {
         <div>
           <NavBar />
           <section>
-            <div className="App">AboutUs vhudhus
-            <br />
-            jqwo</div>
+            <div className="App">
+              <About />
+            </div>
           </section>
           <Footer />
         </div>
