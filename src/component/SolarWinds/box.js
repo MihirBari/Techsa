@@ -29,6 +29,7 @@ const Box = () => {
             border: "1px solid #B8B8B8",
             padding: "5px",
             borderTopLeftRadius: "20px",
+            position: "relative"
           }}
           onMouseEnter={() => handleHover(1)}
           onMouseLeave={handleLeave}
@@ -42,7 +43,11 @@ const Box = () => {
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
-            
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
@@ -59,7 +64,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid #B8B8B8", padding: "5px" }}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(2)}
           onMouseLeave={handleLeave}
         >
@@ -68,10 +78,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "blue",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Log Analyzer (LA)
@@ -87,7 +102,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid #B8B8B8", padding: "5px"}}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(3)}
           onMouseLeave={handleLeave}
         >
@@ -96,10 +116,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "orange",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Netfkow Traffic Analyzer (NTA)
@@ -114,10 +139,11 @@ const Box = () => {
         </div>
         <div
           style={{
-            flex: 1,
+            flex: 1.5,
             border: "1px solid #B8B8B8",
             padding: "5px",
             borderTopRightRadius: "20px",
+            position: "relative"
           }}
           onMouseEnter={() => handleHover(4)}
           onMouseLeave={handleLeave}
@@ -127,10 +153,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "darkred",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
@@ -150,8 +181,13 @@ const Box = () => {
 
       {/* Second Row */}
       <div style={{ display: "flex" }}>
-        <div
-          style={{ flex: 1, border: "1px solid  #B8B8B8", padding: "5px" }}
+      <div
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(5)}
           onMouseLeave={handleLeave}
         >
@@ -160,10 +196,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "#c18109",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Server Application Monitor (SAM)
@@ -177,7 +218,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid  #B8B8B8", padding: "5px" }}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(6)}
           onMouseLeave={handleLeave}
         >
@@ -186,10 +232,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "#0075de",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
@@ -203,7 +254,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid  #B8B8B8", padding: "5px" }}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(7)}
           onMouseLeave={handleLeave}
         >
@@ -212,10 +268,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "#96a50a",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
@@ -231,7 +292,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid  #B8B8B8", padding: "5px" }}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(8)}
           onMouseLeave={handleLeave}
         >
@@ -240,10 +306,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "blue",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
@@ -377,12 +448,13 @@ const Box = () => {
 
       {/* Fourth Row */}
       <div style={{ display: "flex" }}>
-        <div
+      <div
           style={{
-            flex: 1,
-            border: "1px solid  #B8B8B8",
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
             padding: "5px",
             borderBottomLeftRadius: "20px",
+            position: "relative"
           }}
           onMouseEnter={() => handleHover(13)}
           onMouseLeave={handleLeave}
@@ -396,6 +468,11 @@ const Box = () => {
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
@@ -413,10 +490,11 @@ const Box = () => {
         </div>
         <div
           style={{
-            flex: 1,
-            border: "1px solid  #B8B8B8",
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
             padding: "5px",
             borderBottomRightRadius: "20px",
+            position: "relative"
           }}
           onMouseEnter={() => handleHover(14)}
           onMouseLeave={handleLeave}
@@ -426,10 +504,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "#547574",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-50px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
