@@ -35,7 +35,7 @@ const row1 = [projImg1, projImg2, projImg3, projImg4, projImg5, projImg6, projIm
 
   const AppContainer = styled.div`
   width: 100vw;
-  height: 25vh;
+  height: 35vh;
   color: #000000;
 
   position: relative;
@@ -83,8 +83,8 @@ const common = css`
   align-items: center;
   justify-content: space-around;
   white-space: nowrap;
-  width: 270%;
-  animation: ${scrollX} 70s linear infinite;
+  width: 390%;
+  animation: ${scrollX} 100s linear infinite;
 `;
 
 const MarqueeGroup = styled.div`
@@ -94,7 +94,7 @@ const MarqueeGroup = styled.div`
 const ImageGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr); // Adjusted to display 5 images at a time
-  gap: 10px; // Added gap for spacing between images
+  gap: 15px; // Added gap for spacing between images
   place-items: center;
   width: 100%; // Adjusted width to take the full width
 `;

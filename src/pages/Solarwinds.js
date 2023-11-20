@@ -2,6 +2,7 @@ import React from "react";
 import { NavBar } from "../component/NavBar";
 import { Container } from "react-bootstrap";
 import { Footer } from "../component/Footer";
+import { Solarwinds } from "../component/SolarWinds/Solarwinds";
 
 const solarwinds = () => {
   return (
@@ -9,7 +10,7 @@ const solarwinds = () => {
       <NavBar />
       <Container>
       <div className="solarwinds">
-       sadhuHQ WGY
+       <Solarwinds />
       </div>
       </Container>
       <Footer />
