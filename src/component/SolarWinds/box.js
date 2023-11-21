@@ -179,7 +179,6 @@ const Box = () => {
         </div>
       </div>
 
-      {/* Second Row */}
       <div style={{ display: "flex" }}>
       <div
           style={{
@@ -332,7 +331,6 @@ const Box = () => {
         </div>
       </div>
 
-      {/* Third Row */}
       <div style={{ display: "flex" }}>
       <div
           style={{
@@ -486,7 +484,6 @@ const Box = () => {
         </div>
       </div>
 
-      {/* Fourth Row */}
       <div style={{ display: "flex" }}>
       <div
           style={{

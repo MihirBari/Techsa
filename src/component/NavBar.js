@@ -44,10 +44,8 @@ export const NavBar = () => {
   };
 
   const handleSearch = () => {
-    // Implement your search functionality here using the searchQuery state.
     console.log("Searching for: " + searchQuery);
-    // You can perform your search and update the UI accordingly.
-    // Close the search modal if needed
+    
     toggleSearch();
   };
 
@@ -72,6 +70,7 @@ export const NavBar = () => {
               >
                 Home
               </Nav.Link>
+              <br />
               <Nav.Link
                 href="/AboutUs"
                 className={

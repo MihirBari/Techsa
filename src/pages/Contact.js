@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { Container, Col, Row } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg"
 import { NavBar } from "../component/NavBar";
 import { Footer } from "../component/Footer";
 import { Loader } from "../component/loader";
+import Map from "../component/Contact/Map";
 
 export const Contact = () => {
   const [loading, setLoading] = useState(true);
@@ -63,11 +63,11 @@ export const Contact = () => {
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
+        <h2 style={{textAlign:"center"}} >Get in Touch</h2>
           <Col md={6}>
-            <img src={contactImg} alt="contact" />
+            <Map />
           </Col>
           <Col md={6}>
-            <h2>Get in Touch</h2>
             <form onSubmit={handleSubmit} >
               <Row>
                 <Col sm={6} className="px-1" >

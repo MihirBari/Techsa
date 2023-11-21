@@ -30,7 +30,7 @@ const HomePage = () => {
           <br />
           <Skills />
           <Products />
-          <Image />
+          {/* <Image /> */}
           <br></br>
           <br />
           <GeoLocationDisplay />
