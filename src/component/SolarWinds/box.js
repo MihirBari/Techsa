@@ -44,7 +44,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-90px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
@@ -121,7 +121,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-70px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
@@ -158,13 +158,13 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-70px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
               }}
             >
-              Network Performance Monitor (NPM)
+             Server Application Monitor (SAM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkred" }}>
@@ -201,7 +201,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-70px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
@@ -237,7 +237,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-90px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
@@ -279,7 +279,7 @@ const Box = () => {
                 zIndex: 1
               }}
             >
-              Network Performance Monitor (NPM)
+             Storage
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "#96a50a" }}>
@@ -311,7 +311,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-90px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
@@ -334,8 +334,13 @@ const Box = () => {
 
       {/* Third Row */}
       <div style={{ display: "flex" }}>
-        <div
-          style={{ flex: 2, border: "1px solid  #B8B8B8", padding: "5px" }}
+      <div
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(9)}
           onMouseLeave={handleLeave}
         >
@@ -344,13 +349,18 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "darkcyan",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-70px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
-              Network Performance Monitor (NPM)
+              Server Application Monitor (SAM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkcyan" }}>
@@ -363,7 +373,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid  #B8B8B8", padding: "5px" }}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(10)}
           onMouseLeave={handleLeave}
         >
@@ -372,13 +387,18 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "orange",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-70px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
-              Network Performance Monitor (NPM)
+             Server Application Monitor (SAM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "orange" }}>
@@ -391,7 +411,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid  #B8B8B8", padding: "5px" }}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(11)}
           onMouseLeave={handleLeave}
         >
@@ -400,13 +425,18 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "purple",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-70px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
-              Network Performance Monitor (NPM)
+             Storage Resource Manager (SRM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "purple" }}>Storage</h4>
@@ -417,7 +447,12 @@ const Box = () => {
           </p>
         </div>
         <div
-          style={{ flex: 1, border: "1px solid  #B8B8B8", padding: "5px" }}
+          style={{
+            flex: 1.5,
+            border: "1px solid #B8B8B8",
+            padding: "5px",
+            position: "relative"
+          }}
           onMouseEnter={() => handleHover(12)}
           onMouseLeave={handleLeave}
         >
@@ -426,10 +461,15 @@ const Box = () => {
               style={{
                 color: "white",
                 marginTop: "5px",
-                backgroundColor: "darkviolet",
+                backgroundColor: "darkblue",
                 padding: "10px 5px",
                 borderRadius: "5px",
                 textAlign: "center",
+                position: "absolute",
+                top: "-90px", 
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 1
               }}
             >
               Network Performance Monitor (NPM)
@@ -475,7 +515,7 @@ const Box = () => {
                 zIndex: 1
               }}
             >
-              Network Performance Monitor (NPM)
+              Network Configuration Manager (NPM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkblue" }}>
