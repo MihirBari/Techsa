@@ -158,7 +158,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-70px", 
+                top: "-90px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
@@ -200,7 +200,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-70px", 
+                top: "-90px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
@@ -506,13 +506,13 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-70px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1
               }}
             >
-              Network Configuration Manager (NPM)
+              Network Configuration Manager (NCM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkblue" }}>
@@ -546,7 +546,7 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px", 
+                top: "-70px", 
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1

@@ -7,7 +7,9 @@ import "../App.css";
 import { Image } from "../component/Image/Image";
 import { GeoLocationDisplay } from "../component/GeoLocationDisplay";
 import { Footer } from "../component/Footer";
-import { Loader } from "../component/loader"; 
+import { Loader } from "../component/loader";
+import Box from "../assets/img/box.svg";
+import HeroClaravineAnimation from "../component/HeroClaravineAnimation" 
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -15,7 +17,7 @@ const HomePage = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000); 
+    }, 1000);
   }, []);
 
   return (
@@ -26,6 +28,18 @@ const HomePage = () => {
         <div className="App">
           <NavBar />
           <Banner />
+     
+          <img
+            style={{
+              height: "450px",
+              width: "350px",
+              display: "block",
+              margin: "auto",
+            }}
+            src={Box}
+            alt=""
+          />
+          {/* <HeroClaravineAnimation /> */}
           <br />
           <br />
           <Skills />

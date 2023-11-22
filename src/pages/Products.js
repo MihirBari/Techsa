@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { NavBar } from "../component/NavBar";
 import { Loader } from "../component/loader";
 import { Footer } from "../component/Footer";
-import { Solarwinds } from "../component/ProductPage/Solarwinds";
-import { BigFix } from "../component/ProductPage/BigFix";
-import { FreshWorks } from "../component/ProductPage/FreshWorks";
+import { Solarwinds } from "./ProductPage/Solarwinds";
+import { BigFix } from "./ProductPage/BigFix";
+import { FreshWorks } from "./ProductPage/FreshWorks";
 export const Products = () => {
   const [loading, setLoading] = useState(true);
 

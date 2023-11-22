@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { AboutCard } from "./AboutCard";
-import projImg1 from "../../assets/img/SolarWindsLogo-featured-image.jpg";
-import projImg2 from "../../assets/img/136048.png";
+import projImg1 from "../../assets/img/RaviKhanchandani.jpg";
+import projImg2 from "../../assets/img/SanjivSachdev.jpg";
 
 import { Testimonial } from "./Testimonial";
 import { Awards } from "./Awards";

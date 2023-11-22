@@ -7,7 +7,7 @@ const Bigfix = () => {
     <> 
     <NavBar />
     <Container>
-    <div className="App">LoremahuHDAGui dbsyuag dnuiwjquu qdhuwh</div>
+    <div className="bigfix">LoremahuHDAGui dbsyuag dnuiwjquu qdhuwh</div>
     </Container>
     </>
   )
