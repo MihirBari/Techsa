@@ -310,7 +310,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 100%;
 }
 .project .nav.nav-pills {
   display: flex; /* Make the pills appear in a row */
@@ -558,6 +558,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-sizing: border-box;
   border-radius: 35px;
   border-right: none; 
+  /* background-color: #eee; */
 }
 
 .content {
@@ -614,15 +615,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
 }
 
-.productPrice{
-  font-size: 1.5rem;
-  font-weight: bold;
+@media screen and (max-width: 480px) {
+  .Cardd {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  
 }
 
 /*********Products Page**********/
 .ProductsPage {
-  padding: 30px 0 200px 0;
+  padding: 50px 30px 200px 30px;
   margin-top: 111px;
+
 }
 
 .product-Solar {
@@ -636,7 +642,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 250px;
   width: 250px;
   border-radius: 25px;
-  margin-left: 140px;
+  float: left;
   box-shadow: -3px 4px 11px 0px #888888;
 }
 
@@ -670,13 +676,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 250px;
   width: 250px;
   border-radius: 25px;
-  margin-left: 220px;
+  float: right;
   box-shadow: -3px 4px 11px 0px #888888;
 }
 
 .product-Big div {
-  width: 50%; /* Set the width to 50% for each child div */
-  margin-left: 50px;
+  width: 50%; 
 }
 
 .product-Big p {
@@ -696,19 +701,60 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
+  .ProductsPage {
+    padding: 50px 0 200px 0;
+    margin-top: 85px;
+  
+  }
+
   .product-Solar {
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
   }
 
+  .product-Solar p {
+    color: #B8B8B8;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.2em;
+}
+
   .product-Solar img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%; 
+    margin-bottom: 20px;
+} 
+  .product-Big{
+    display: flex;
+  flex-direction: column-reverse;
+  align-items: center; 
+    justify-content: center; 
+    text-align: center;
+  }
+
+  .product-Big p {
+    color: #B8B8B8;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.2em;
+}
+
+  .product-Big img {
+    Display: block;
+    max-width: 100%;
+    max-height: 100%; 
     margin-bottom: 20px; 
   }
 
-  .product-Solar p {
-    width: 100%; 
+  .product-Big button {
+    margin-bottom: 20px;
   }
 }
+
 
 /*************Solarwind*************/
 .solarwinds{
@@ -721,3 +767,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 30px 0 200px 0;
   margin-top: 111px;
 }
+
+/*************Testimonial*************/
+.productCardd{
+  position: relative;
+  background-color: #fff;
+  margin: 1rem;
+  flex: 1 0 25rem;
+  max-width: 30rem;
+  max-height: 25rem;
+  transition: 0.2s;
+  box-shadow: -3px 4px 11px 0px #888888;
+}
+
+.productCard:hover{
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+}
+
+.productImage{
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.productCard__content {
+  margin: 1rem;
+}
+
+.productNamE{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.displayStack__2{
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #888888;
+}
+
+.displayStack__3{
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #76b040;
+}
+

@@ -65,9 +65,6 @@ export const Contact = () => {
         <Row className="align-items-center">
         <h2 style={{textAlign:"center"}} >Get in Touch</h2>
           <Col md={6}>
-            <Map />
-          </Col>
-          <Col md={6}>
             <form onSubmit={handleSubmit} >
               <Row>
                 <Col sm={6} className="px-1" >
@@ -89,7 +86,7 @@ export const Contact = () => {
                 <Col>
                   <textarea rows="6" value={formDetails.message} placeholder="Message"
                     onChange={(e) => onFormUpdate('message', e.target.value)} />
-                  <button type="submit"><span>{buttonText}</span> </button>
+                  <button style={{marginBottom:"60px"}} type="submit"><span>{buttonText}</span> </button>
                 </Col>
                 {
                   status.message &&
@@ -99,6 +96,9 @@ export const Contact = () => {
                 }
               </Row>
             </form>
+          </Col>
+          <Col md={6}>
+            <Map />
           </Col>
         </Row>
       </Container>
