@@ -73,7 +73,6 @@ export const NavBar = () => {
               >
                 Home
               </Nav.Link>
-              <br />
               <Nav.Link
                 href="/AboutUs"
                 className={

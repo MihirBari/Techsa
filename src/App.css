@@ -95,6 +95,7 @@ nav.navbar  {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
+  background-color: #ffffff;
 }
 nav.navbar.scrolled {
   padding: 0px 0;
@@ -103,7 +104,6 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
   width: 9%;
 }
-
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -130,7 +130,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link::before {
 
 nav.navbar .navbar-nav a.nav-link.navbar-link.nav-link:hover {
   color: white;
-  background-color: transparent; 
+ 
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover::before {
@@ -179,9 +179,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 	background-color: #fff;
 	height: 2px;
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-	border-color: transparent;
-}
+
 
 /************ Banner Css ************/
 .banner {
@@ -313,7 +311,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 .project .nav.nav-pills {
-  display: flex; /* Make the pills appear in a row */
+  display: flex;
   width: 100%;
   margin: 0 auto;
   border-radius: 50px;
@@ -647,7 +645,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .product-Solar div {
-  width: 50%; /* Set the width to 50% for each child div */
+  width: 50%;
 }
 
 .product-Solar p {
@@ -762,6 +760,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 111px;
 }
 
+.solar{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .solar{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /*************bigfix*************/
 .bigfix{
   padding: 30px 0 200px 0;
@@ -818,3 +828,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #76b040;
 }
 
+@media (max-width: 768px) {
+  .productCardd{
+    position: relative;
+    background-color: #fff;
+    flex: 1 0 25rem;
+    max-width: 20rem;
+    max-height: 27rem;
+    transition: 0.2s;
+    box-shadow: -3px 4px 11px 0px #888888;
+  }
+}

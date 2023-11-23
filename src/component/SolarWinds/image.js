@@ -8,8 +8,6 @@ const Image = () => {
         marginTop:"50px",
         width: "460px",
         height: "360px",
-        display: 'block',
-        margin: 'auto',
       }}
       src={sol}
       alt='sol'
