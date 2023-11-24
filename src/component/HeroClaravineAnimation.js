@@ -2,105 +2,114 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 
 const HeroClaravineAnimation = () => {
-	// useEffect(() => {
-	// 	function moveIcon(iconObj, mX, mY, del, pData, carrot, num) {
-	// 		let prcnt = { val: 1 };
-	
-	// 		gsap.to(iconObj, 5, {
-	// 			x: mX,
-	// 			ease: 'sine.inOut',
-	// 			yoyo: true,
-	// 			repeat: -1,
-	// 			delay: 0 + del,
-	// 			onUpdate: function () {
-	// 				let x = gsap.getProperty(iconObj, 'x');
-	// 				let y = gsap.getProperty(iconObj, 'y');
-	// 				let d = 'M' + (pData.x[num] + x) + ',' + (pData.y[num] + y) + pData.d[num];
-	// 				pData.redLines[num].setAttribute('d', d);
-	// 				pData.greenLines[num].setAttribute('d', d);
-	// 				pData.redDots[num].setAttribute('d', d);
-	// 				pData.greenDots[num].setAttribute('d', d);
-	
-	// 				let prcntLength = prcnt.val * pData.redLines[num].getTotalLength();
-	// 				let pt = pData.redLines[num].getPointAtLength(prcntLength);
-	// 				gsap.set(carrot.icon[num], { x: pt.x, y: pt.y });
-	// 			},
-	// 		});
-	
-	// 		gsap.to(iconObj, 5, { y: mY, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: -2.5 + del });
-	// 		gsap.to(prcnt, carrot.dur, { val: carrot.position[num], ease: 'sine.out', delay: carrot.delay, repeat: -1, repeatDelay: carrot.loop - carrot.dur });
-	// 	}
-	
-	// 	function initHeroClaravineAnimation() {
-	// 		let idSVG = '#hero-claravine';
-	// 		let icons = document.querySelectorAll(idSVG + ' #icons > g');
-	// 		let redLines = document.getElementById('red-lines').getElementsByTagName('path');
-	
-	// 		if (!redLines || redLines.length === 0) {
-	// 			console.error('No elements found for selector:', idSVG + ' #red-lines > path');
-	// 			return;
-	// 		}
-	
-	// 		let pathData = {};
-	// 		pathData.redLines = Array.from(redLines);
-	// 		pathData.redDots = Array.from(document.querySelectorAll(idSVG + ' #red-dots > path'));
-	// 		pathData.greenLines = Array.from(document.querySelectorAll(idSVG + ' #green-lines > path'));
-	// 		pathData.greenDots = Array.from(document.querySelectorAll(idSVG + ' #green-dots > path'));
-	
-	// 		pathData.d = ['C1013.12,287.91,982.26,421.85,986.92,503.31', 'C1118,398.32,1063.52,422.1,1050.92,503.32', 'C1181.78,559.35,1118.57,552.93,1050.92,543.33', 'C1053.14,744.46,1011.76,632.97,1017.25,568.35', 'C939.92,757.4,936.18,637.5,932.92,568.35', 'C817.8,697.62,867.64,661.3,873.92,583.35', 'C811.47,423,855.17,488.9,867,506.73', 'C899.69,417.27,900.16,460.57,894.49,470.07'];
-	// 		pathData.x = [1073.92, 1187.14, 1236.92, 1138.76, 914.92, 726.8, 720, 852.49];
-	// 		pathData.y = [284.31, 390.32, 560, 744.46, 808.15, 693.82, 432.57, 320.07];
-	
-	// 		let carrots = {};
-	// 		carrots.icon = document.querySelectorAll(idSVG + '.carrot');
-	// 		carrots.position = [0.5, 0.4, 0.4, 0.5, 0.5, 0.4, 0.3, 0.4];
-	// 		carrots.dur = 1.5;
-	// 		carrots.delay = 5;
-	// 		carrots.loop = 16.5 + carrots.delay;
-	
-	// 		let greenLineStop = [385, 340, 320, 380, 370, 370, 350, 300];
-	
-	// 		moveIcon(icons[0], 50, -50, 0, pathData, carrots, 0);
-	// 		moveIcon(icons[1], -20, 50, -2, pathData, carrots, 1);
-	// 		moveIcon(icons[2], 45, -20, -5, pathData, carrots, 2);
-	// 		moveIcon(icons[3], -20, -40, -8, pathData, carrots, 3);
-	// 		moveIcon(icons[4], 70, 20, -1, pathData, carrots, 4);
-	// 		moveIcon(icons[5], 20, -50, -3, pathData, carrots, 5);
-	// 		moveIcon(icons[6], -30, 50, -6, pathData, carrots, 6);
-	// 		moveIcon(icons[7], 40, 30, -9, pathData, carrots, 7);
-	
-	// 		gsap.set(icons, { scale: 0, opacity: 1, transformOrigin: '50% 50%' });
-	// 		gsap.set(idSVG + '#shapeMask-green', { scale: 0, transformOrigin: '50% 50%' });
-	// 		gsap.set(idSVG + '#green-lines', { opacity: 1 });
-	
-	// 		gsap.to(idSVG + '#icons > g', 1, { scale: 1, ease: 'back.out(1.4)', stagger: 0.05, delay: 0.5 });
-	// 		gsap.to(redLines, 1, { opacity: 0 });
-	// 		let cliravineAnim = gsap.timeline({ defaults: { ease: 'sine.inOut' }, repeat: -1, repeatDelay: 0.5, delay: 0.5 });
-	// 		cliravineAnim
-	// 			.to(idSVG + '#red-lines > path', 1.2, { strokeDashoffset: 0, stagger: 0.05 }, 1)
-	// 			.to(idSVG + '#t-data1 > rect', 0.75, { opacity: 1, stagger: 0.35 }, 2)
-	// 			.to(idSVG + '#t-data2 > rect', 0.75, { opacity: 1, stagger: 0.35 }, carrots.delay + 0.5)
-	// 			.to(idSVG + '#t-data1 > rect', 0.75, { fill: '#7ec83b', stagger: 0.4 }, carrots.delay + 1.5)
-	// 			.to(idSVG + '#red-dots > path:nth-child(2n)', 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 1)
-	// 			.to(idSVG + '#red-dots > path:nth-child(2n+1)', 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 2)
-	// 			.to(idSVG + '#green-dots > path:nth-child(2n)', 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 1)
-	// 			.to(idSVG + '#green-dots > path:nth-child(2n+1)', 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 2)
-	// 			.to(pathData.greenLines, 1.5, { strokeDashoffset: function (index, element) { return greenLineStop[index]; }, ease: 'sine.out' }, carrots.delay - 0.5)
-	// 			.to(idSVG + '#shapeMask-green', 1.5, { scale: 1, ease: 'sine.out' }, carrots.delay - 0.5)
-	// 			.to(carrots.icon, 0.1, { opacity: 1 }, carrots.delay - 0.5)
-	// 			.to(idSVG + '.carrot-icon', 2, { rotate: 360, transformOrigin: '50% 50%', ease: 'none', repeat: 5 }, carrots.delay - 0.5)
-	// 			.to(idSVG + '.carrot-icon', 1, { scale: 0, transformOrigin: '50% 50%' }, carrots.delay + 9.5)
-	// 			.to(idSVG + '.checkmark-icon', 1, { scale: 1, rotate: 0, transformOrigin: '50% 50%' }, carrots.delay + 10.2)
-	// 			.to(idSVG + '.bg-carrot', 1.5, { fill: '#fff' }, carrots.delay + 9.5)
-	// 			.to(pathData.greenLines, 1.5, { strokeDashoffset: function (index, element) { return gsap.getProperty(element, 'strokeDasharray') * 2; } }, carrots.delay + 9.5)
-	// 			.to(pathData.redLines, 0.5, { opacity: 0 }, carrots.delay + 11)
-	// 			.to([idSVG + '#t-data1 > rect', idSVG + '#t-data2 > rect'], 1.5, { opacity: 0 }, carrots.delay + 14)
-	// 			.to(carrots.icon, 1.5, { scale: 0, transformOrigin: '50% 50%' }, carrots.delay + 14)
-	// 			.to(pathData.greenLines, 1.5, { strokeDashoffset: function (index, element) { return gsap.getProperty(element, 'strokeDasharray') * 3; } }, carrots.delay + 14.5);
-	// 	}
-	
-	// 	initHeroClaravineAnimation();
-	// }, []);
+  useEffect(() => {
+    function moveIcon(iconObj, mX, mY, del, pData, carrot, num) {
+      let prcnt = { val: 1 };
+
+      gsap.to(iconObj, 5, {
+        x: mX,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: -1,
+        delay: 0 + del,
+        onUpdate: function () {
+          let x = gsap.getProperty(iconObj, 'x');
+          let y = gsap.getProperty(iconObj, 'y');
+          let d = 'M' + (pData.x[num] + x) + ',' + (pData.y[num] + y) + pData.d[num];
+
+          updatePathAttribute(pData.redLines[num], 'd', d);
+          updatePathAttribute(pData.greenLines[num], 'd', d);
+          updatePathAttribute(pData.redDots[num], 'd', d);
+          updatePathAttribute(pData.greenDots[num], 'd', d);
+
+          let prcntLength = prcnt.val * pData.redLines[num].getTotalLength();
+          let pt = pData.redLines[num].getPointAtLength(prcntLength);
+          gsap.set(carrot.icon[num], { x: pt.x, y: pt.y });
+        },
+      });
+
+      gsap.to(iconObj, 5, { y: mY, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: -2.5 + del });
+      gsap.to(prcnt, carrot.dur, { val: carrot.position[num], ease: 'sine.out', delay: carrot.delay, repeat: -1, repeatDelay: carrot.loop - carrot.dur });
+    }
+
+    function updatePathAttribute(element, attributeName, value) {
+      if (element && element.setAttribute) {
+        element.setAttribute(attributeName, value);
+      }
+    }
+
+    function heroClaravineAnimation() {
+      let idSVG = '#hero-claravine' + ' ';
+      let icons = document.querySelectorAll(idSVG + '#icons > g');
+
+      let pathData = {};
+      pathData.redLines = Array.from(document.querySelectorAll(idSVG + '#red-lines > path'));
+      pathData.redDots = Array.from(document.querySelectorAll(idSVG + '#red-dots > path'));
+      pathData.greenLines = Array.from(document.querySelectorAll(idSVG + '#green-lines > path'));
+      pathData.greenDots = Array.from(document.querySelectorAll(idSVG + '#green-dots > path'));
+      pathData.d = [
+        'C1013.12,287.91,982.26,421.85,986.92,503.31',
+        'C1118,398.32,1063.52,422.1,1050.92,503.32',
+        'C1181.78,559.35,1118.57,552.93,1050.92,543.33',
+        'C1053.14,744.46,1011.76,632.97,1017.25,568.35',
+        'C939.92,757.4,936.18,637.5,932.92,568.35',
+        'C817.8,697.62,867.64,661.3,873.92,583.35',
+        'C811.47,423,855.17,488.9,867,506.73',
+        'C899.69,417.27,900.16,460.57,894.49,470.07',
+      ];
+      pathData.x = [1073.92, 1187.14, 1236.92, 1138.76, 914.92, 726.8, 720, 852.49];
+      pathData.y = [284.31, 390.32, 560, 744.46, 808.15, 693.82, 432.57, 320.07];
+
+      let carrots = {};
+      carrots.icon = Array.from(document.querySelectorAll(idSVG + '.carrot'));
+      carrots.position = [0.5, 0.4, 0.4, 0.5, 0.5, 0.4, 0.3, 0.4];
+      carrots.dur = 1.5;
+      carrots.delay = 5;
+      carrots.loop = 16.5 + carrots.delay;
+
+      let greenLineStop = [385, 340, 320, 380, 370, 370, 350, 300];
+
+      moveIcon(icons[0], 50, -50, 0, pathData, carrots, 0);
+      moveIcon(icons[1], -20, 50, -2, pathData, carrots, 1);
+      moveIcon(icons[2], 45, -20, -5, pathData, carrots, 2);
+      moveIcon(icons[3], -20, -40, -8, pathData, carrots, 3);
+      moveIcon(icons[4], 70, 20, -1, pathData, carrots, 4);
+      moveIcon(icons[5], 20, -50, -3, pathData, carrots, 5);
+      moveIcon(icons[6], -30, 50, -6, pathData, carrots, 6);
+      moveIcon(icons[7], 40, 30, -9, pathData, carrots, 7);
+
+      gsap.set(icons, { scale: 0, opacity: 1, transformOrigin: '50% 50%' });
+      gsap.set(idSVG + '#shapeMask-green', { scale: 0, transformOrigin: '50% 50%' });
+      gsap.set(idSVG + '#green-lines', { opacity: 1 });
+      gsap.to(idSVG + '#icons > g', 1, { scale: 1, ease: 'back.out(1.4)', stagger: 0.05, delay: 0.5 });
+
+      let clirivineAnim = gsap.timeline({ defaults: { ease: 'sine.inOut' }, repeat: -1, repeatDelay: 0.5, delay: 0.5 });
+      clirivineAnim
+        .to(pathData.redLines, 1.2, { strokeDashoffset: 0, stagger: 0.05 }, 1)
+        .to(document.querySelectorAll(idSVG + '#t-data1 > rect'), 0.75, { opacity: 1, stagger: 0.35 }, 2)
+        .to(document.querySelectorAll(idSVG + '#t-data2 > rect'), 0.75, { opacity: 1, stagger: 0.35 }, carrots.delay + 0.5)
+        .to(document.querySelectorAll(idSVG + '#t-data1 > rect'), 0.75, { fill: '#7ec83b', stagger: 0.4 }, carrots.delay + 1.5)
+        .to(pathData.redDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 1)
+        .to(pathData.greenDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 2)
+        .to(pathData.greenDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 1)
+        .to(pathData.greenDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 2)
+        .to(pathData.greenLines, 1.5, { strokeDashoffset: (index, element) => greenLineStop[index], ease: 'sine.out' }, carrots.delay - 0.5)
+        .to(document.querySelectorAll(idSVG + '#shapeMask-green'), 1.5, { scale: 1, ease: 'sine.out' }, carrots.delay - 0.5)
+        .to(carrots.icon, 0.1, { opacity: 1 }, carrots.delay - 0.5)
+        .to(document.querySelectorAll(idSVG + '.carrot-icon'), 2, { rotate: 360, transformOrigin: '50% 50%', ease: 'none', repeat: 5 }, carrots.delay - 0.5)
+        .to(document.querySelectorAll(idSVG + '.carrot-icon'), 1, { scale: 0, transformOrigin: '50% 50%' }, carrots.delay + 9.5)
+        .to(document.querySelectorAll(idSVG + '.checkmark-icon'), 1, { scale: 1, rotate: 0, transformOrigin: '50% 50%' }, carrots.delay + 10.2)
+        .to(document.querySelectorAll(idSVG + '.bg-carrot'), 1.5, { fill: '#fff' }, carrots.delay + 9.5)
+        .to(pathData.greenLines, 1.5, { strokeDashoffset: (index, element) => gsap.getProperty(element, 'strokeDasharray') * 2 }, carrots.delay + 9.5)
+        .to(pathData.redLines, 0.5, { opacity: 0 }, carrots.delay + 11)
+        .to(document.querySelectorAll(`${idSVG} #t-data1 > rect, ${idSVG} #t-data2 > rect`), 1.5, { opacity: 0 }, carrots.delay + 14)
+        .to(carrots.icon, 1.5, { scale: 0, transformOrigin: '50% 50%' }, carrots.delay + 14)
+        .to(pathData.greenLines, 1.5, { strokeDashoffset: (index, element) => gsap.getProperty(element, 'strokeDasharray') * 3 }, carrots.delay + 14.5);
+    }
+
+    heroClaravineAnimation();
+  }, []);
+
 	
 
   return (
@@ -120,8 +129,8 @@ const HeroClaravineAnimation = () => {
           gradientTransform="matrix(0, 202.5, 206, 0, -221823.94, 357.36)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#fff"></stop>
-          <stop offset="1" stop-color="#f2f5f9"></stop>
+          <stop offset="0" stopColor="#fff"></stop>
+          <stop offset="1" stopColor="#f2f5f9"></stop>
         </radialGradient>
         <filter
           id="filter-blur"
@@ -131,7 +140,7 @@ const HeroClaravineAnimation = () => {
           height="300%"
           filterUnits="objectBoundingBox"
           primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="linearRGB"
+          colorInterpolationFilters="linearRGB"
         >
           <feGaussianBlur
             stdDeviation="7 7"
@@ -176,72 +185,72 @@ const HeroClaravineAnimation = () => {
             d="M1096.1141,234.5232C1013.12,287.91,982.26,421.85,986.92,503.31"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="265"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="265"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
           <path
             d="M1168.0364,426.078C1118,398.32,1063.52,422.1,1050.92,503.32"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="200"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="200"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
           <path
             d="M1261.9452,559.9148C1181.78,559.35,1118.57,552.93,1050.92,543.33"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="200"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="200"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
           <path
             d="M1138.5573,720.8112C1053.14,744.46,1011.76,632.97,1017.25,568.35"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="250"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="250"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
           <path
             d="M967.1845,826.9371C939.92,757.4,936.18,637.5,932.92,568.35"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="250"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="250"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
           <path
             d="M746.5972,673.3811C817.8,697.62,867.64,661.3,873.92,583.35"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="230"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="230"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
           <path
             d="M712.3992,435.602C811.47,423,855.17,488.9,867,506.73"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="200"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="200"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
           <path
             d="M858.9926,345.9527C899.69,417.27,900.16,460.57,894.49,470.07"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="5"
-            stroke-dasharray="180"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="180"
+            strokeDashoffset="0"
             opacity="1"
           ></path>
         </g>
@@ -250,65 +259,65 @@ const HeroClaravineAnimation = () => {
             d="M1096.1141,234.5232C1013.12,287.91,982.26,421.85,986.92,503.31"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 265"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 265"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M1168.0364,426.078C1118,398.32,1063.52,422.1,1050.92,503.32"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 210"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 210"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M1261.9452,559.9148C1181.78,559.35,1118.57,552.93,1050.92,543.33"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 200"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 200"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M1138.5573,720.8112C1053.14,744.46,1011.76,632.97,1017.25,568.35"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 250"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 250"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M967.1845,826.9371C939.92,757.4,936.18,637.5,932.92,568.35"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 250"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 250"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M746.5971999999999,673.3811000000001C817.8,697.62,867.64,661.3,873.92,583.35"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 230"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 230"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M712.3992,435.602C811.47,423,855.17,488.9,867,506.73"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 200"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 200"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M858.9926,345.9527C899.69,417.27,900.16,460.57,894.49,470.07"
             fill="none"
             stroke="#f37f7f"
-            stroke-width="19"
-            stroke-dasharray="0.1 180"
-            stroke-dashoffset="0"
+            strokeWidth="19"
+            strokeDasharray="0.1 180"
+            strokeDashoffset="0"
           ></path>
         </g>
         <g id="green-lines" opacity="1">
@@ -316,65 +325,65 @@ const HeroClaravineAnimation = () => {
             d="M1096.1141,234.5232C1013.12,287.91,982.26,421.85,986.92,503.31"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="6"
-            stroke-dasharray="265"
-            stroke-dashoffset="0"
+            strokeWidth="6"
+            strokeDasharray="265"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M1168.0364,426.078C1118,398.32,1063.52,422.1,1050.92,503.32"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="6"
-            stroke-dasharray="200"
-            stroke-dashoffset="0"
+            strokeWidth="6"
+            strokeDasharray="200"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M1261.9452,559.9148C1181.78,559.35,1118.57,552.93,1050.92,543.33"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="6"
-            stroke-dasharray="200"
-            stroke-dashoffset="0"
+            strokeWidth="6"
+            strokeDasharray="200"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M1138.5573,720.8112C1053.14,744.46,1011.76,632.97,1017.25,568.35"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="6"
-            stroke-dasharray="250"
-            stroke-dashoffset="0"
+            strokeWidth="6"
+            strokeDasharray="250"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M967.1845,826.9371C939.92,757.4,936.18,637.5,932.92,568.35"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="6"
-            stroke-dasharray="250"
-            stroke-dashoffset="0"
+            strokeWidth="6"
+            strokeDasharray="250"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M746.5971999999999,673.3811000000001C817.8,697.62,867.64,661.3,873.92,583.35"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="5"
-            stroke-dasharray="230"
-            stroke-dashoffset="0"
+            strokeWidth="5"
+            strokeDasharray="230"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M712.3992,435.602C811.47,423,855.17,488.9,867,506.73"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="6"
-            stroke-dasharray="200"
-            stroke-dashoffset="0"
+            strokeWidth="6"
+            strokeDasharray="200"
+            strokeDashoffset="0"
           ></path>
           <path
             d="M858.9926,345.9527C899.69,417.27,900.16,460.57,894.49,470.07"
             fill="none"
             stroke="#5DD39E"
-            stroke-width="6"
-            stroke-dasharray="180"
-            stroke-dashoffset="0"
+            strokeWidth="6"
+            strokeDasharray="180"
+            strokeDashoffset="0"
           ></path>
         </g>
         <g mask="url(#clip-green-dots)">
@@ -383,99 +392,99 @@ const HeroClaravineAnimation = () => {
               d="M1096.1141,234.5232C1013.12,287.91,982.26,421.85,986.92,503.31"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="265"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="265"
+              strokeDashoffset="0"
             ></path>
             <path
               d="M1168.0364,426.078C1118,398.32,1063.52,422.1,1050.92,503.32"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="210"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="210"
+              strokeDashoffset="0"
             ></path>
             <path
               d="M1261.9452,559.9148C1181.78,559.35,1118.57,552.93,1050.92,543.33"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="200"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="200"
+              strokeDashoffset="0"
             ></path>
             <path
               d="M1138.5573,720.8112C1053.14,744.46,1011.76,632.97,1017.25,568.35"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="250"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="250"
+              strokeDashoffset="0"
             ></path>
             <path
               d="M967.1845,826.9371C939.92,757.4,936.18,637.5,932.92,568.35"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="250"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="250"
+              strokeDashoffset="0"
             ></path>
             <path
               d="M746.5971999999999,673.3811000000001C817.8,697.62,867.64,661.3,873.92,583.35"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="230"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="230"
+              strokeDashoffset="0"
             ></path>
             <path
               d="M712.3992,435.602C811.47,423,855.17,488.9,867,506.73"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="200"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="200"
+              strokeDashoffset="0"
             ></path>
             <path
               d="M858.9926,345.9527C899.69,417.27,900.16,460.57,894.49,470.07"
               fill="none"
               stroke="#5DD39E"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="20"
-              stroke-dasharray="180"
-              stroke-dashoffset="0"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="20"
+              strokeDasharray="180"
+              strokeDashoffset="0"
             ></path>
           </g>
         </g>
         <g id="carrots">
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,1009.812,355.09)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -485,7 +494,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -498,19 +507,19 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,1102.6072,420.1901)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -520,7 +529,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -533,19 +542,19 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,1177.2702,556.9163)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -555,7 +564,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -568,19 +577,19 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,1043.4232,677.0439)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -590,7 +599,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -603,19 +612,19 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,941.202,698.9929)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -625,7 +634,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -638,19 +647,19 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,819.7429,674.8677)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -660,7 +669,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -673,19 +682,19 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,766.3175,436.6163)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -695,7 +704,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -708,19 +717,19 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
           <g
-            class="carrot"
+            className="carrot"
             opacity="0"
             transform="matrix(1,0,0,1,882.2009,393.3381)"
             style={{ opacity: "1" }}
           >
             <circle
-              class="bg-carrot"
+              className="bg-carrot"
               r="16.85"
               fill="#5dd39e"
               style={{ fill: "rgb(93, 211, 158)" }}
             ></circle>
             <g
-              class="carrot-icon"
+              className="carrot-icon"
               transform="matrix(0.5332,0.846,-0.846,0.5332,0,0)"
             >
               <circle r="15.31" fill="#fff"></circle>
@@ -730,7 +739,7 @@ const HeroClaravineAnimation = () => {
               ></path>
             </g>
             <g
-              class="checkmark-icon"
+              className="checkmark-icon"
               opacity="0"
               transform="matrix(0,0,0,0,0,0)"
               style={{ opacity: "1" }}
@@ -1501,9 +1510,9 @@ const HeroClaravineAnimation = () => {
         </g>
       </g>
       <style>{`
-                    #hero-claravine {
-                        overflow: visible;
-                    }
+                #hero-claravine {
+                  overflow: visible;
+                 }
                 `}</style>
     </svg>
   );

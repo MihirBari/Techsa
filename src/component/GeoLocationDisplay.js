@@ -17,8 +17,7 @@ export const GeoLocationDisplay = () => {
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <h2 style={{ textAlign: "center",marginBottom: "69px" }}>Our Presence</h2>
-      <img
-        style={{ width: "50%", height: "50%", margin: "auto" }}
+      <img className="presence"
         src={gifUrl}
         alt="Local GIF"
       />

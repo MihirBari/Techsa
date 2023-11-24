@@ -4,11 +4,10 @@ import { Banner } from "../component/Banner";
 import { Skills } from "../component/Points/skills";
 import { Products } from "../component/Products/Products";
 import "../App.css";
-import { Image } from "../component/Image/Image";
 import { GeoLocationDisplay } from "../component/GeoLocationDisplay";
 import { Footer } from "../component/Footer";
 import { Loader } from "../component/loader";
-import Box from "../assets/img/box.svg";
+
 import HeroClaravineAnimation from "../component/HeroClaravineAnimation" 
 
 const HomePage = () => {
@@ -28,23 +27,11 @@ const HomePage = () => {
         <div className="App">
           <NavBar />
           <Banner />
-     
-          <img
-            style={{
-              height: "450px",
-              width: "350px",
-              display: "block",
-              margin: "auto",
-            }}
-            src={Box}
-            alt=""
-          />
-          {/* <HeroClaravineAnimation /> */}
+          <HeroClaravineAnimation />
           <br />
           <br />
           <Skills />
           <Products />
-          {/* <Image /> */}
           <br></br>
           <br />
           <GeoLocationDisplay />
