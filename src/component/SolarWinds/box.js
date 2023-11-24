@@ -15,7 +15,7 @@ const Box = () => {
     <div className="box">
       <div className="box1">
         <div
-          className="box2"
+          className="box2 boxItem"
           onMouseEnter={() => handleHover(1)}
           onMouseLeave={handleLeave}
         >
@@ -38,7 +38,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem "
           onMouseEnter={() => handleHover(2)}
           onMouseLeave={handleLeave}
         >
@@ -60,7 +60,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(3)}
           onMouseLeave={handleLeave}
         >
@@ -80,7 +80,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box4"
+          className="box4 boxItem" 
           onMouseEnter={() => handleHover(4)}
           onMouseLeave={handleLeave}
         >
@@ -106,7 +106,7 @@ const Box = () => {
 
       <div className="box1">
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(5)}
           onMouseLeave={handleLeave}
         >
@@ -121,7 +121,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(6)}
           onMouseLeave={handleLeave}
         >
@@ -136,7 +136,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(7)}
           onMouseLeave={handleLeave}
         >
@@ -167,7 +167,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(8)}
           onMouseLeave={handleLeave}
         >
@@ -188,7 +188,7 @@ const Box = () => {
 
       <div className="box1">
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(9)}
           onMouseLeave={handleLeave}
         >
@@ -210,7 +210,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(10)}
           onMouseLeave={handleLeave}
         >
@@ -232,7 +232,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(11)}
           onMouseLeave={handleLeave}
         >
@@ -252,7 +252,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box3"
+          className="box3 boxItem"
           onMouseEnter={() => handleHover(12)}
           onMouseLeave={handleLeave}
         >
@@ -272,7 +272,7 @@ const Box = () => {
 
       <div className="box1">
         <div
-          className="box6"
+          className="box6 boxItem"
           onMouseEnter={() => handleHover(13)}
           onMouseLeave={handleLeave}
         >
@@ -295,7 +295,7 @@ const Box = () => {
           </p>
         </div>
         <div
-          className="box5"
+          className="box5 boxItem"
           onMouseEnter={() => handleHover(14)}
           onMouseLeave={handleLeave}
         >
