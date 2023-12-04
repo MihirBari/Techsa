@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from "../../assets/img/136048.png"
+import img1 from "../../assets/inventory/bigfix-on-cloud.png"
 
 export const Summary = () => {
   return (

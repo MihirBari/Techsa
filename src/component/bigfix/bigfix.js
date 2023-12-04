@@ -2,6 +2,9 @@ import React from 'react'
 import { Summary } from './summary'
 import { Patch } from './Patch'
 import { Workspace } from './Workspace'
+import { Compliance } from './Compliance'
+import { Inventory } from './Inventory'
+import { LifeCycle } from './LifeCycle'
 
 const Bigfixs = () => {
   return (
@@ -12,6 +15,15 @@ const Bigfixs = () => {
      <Patch />
      <div style={{ margin:"40px 0 40px 0" }}>
      <Workspace />
+     </div>
+     <div style={{ margin:"40px 0 40px 0" }}>
+     <Compliance />
+     </div>
+     <div style={{ margin:"40px 0 40px 0" }}>
+     <Inventory />
+     </div>
+     <div style={{ margin:"40px 0 40px 0" }}>
+     <LifeCycle />
      </div>
     </>
   )

@@ -1,23 +1,20 @@
 import React from 'react';
 import { Module } from './Module';
+import img1 from "../../assets/inventory/Reduce+audit+fines+and+software+costs.png"
+import img2 from "../../assets/inventory/Deliver+comprehensive+visibility.png"
 
 const modules = [
   {
-    title: "SolarWinds",
-    description: `SolarWinds stands out as the sole unified platform that seamlessly combines monitoring, observability, and service management. It empowers users with comprehensive insight into their IT infrastructure, enabling proactive identification of bottlenecks across the entire system.`,
+    image: img1,
+    title: "Patch Management",
+    description: ` BigFix  includes ready-to-deploy patch content for hundreds of different operating systems and third-party applications, eliminating the associated development and test time of IT staff often required by other solutions.`,
   },
   {
-    title: "BigFix",
-    description: `BigFix is the result of IBM's purchase of BigFix, Inc. Enabling it to offer additional security and compliance services. The software provides endpoint and security management in a single solution and enables organizations to see and manage physical and virtual endpoints.`,
+    image: img2,
+    title: "Report and Management",
+    description: `Track the effectiveness of compliance efforts and quickly identify security exposures. Endpoint compliance status vs deployed policies is continuously collected, aggregated and reported on using a powerful Compliance Analytics Engine. Multiple reports are available out-of-the-box on security configurations, patching and vulnerabilities – showing current and historical trending – for entire deployments or for a single endpoint.`,
   },
-  {
-    title: "Freshworks",
-    description: `BigFix is the result of IBM's purchase of BigFix, Inc. Enabling it to offer additional security and compliance services. The software provides endpoint and security management in a single solution and enables organizations to see and manage physical and virtual endpoints.`,
-  },
-  {
-    title: "Torq",
-    description: `BigFix is the result of IBM's purchase of BigFix, Inc. Enabling it to offer additional security and compliance services. The software provides endpoint and security management in a single solution and enables organizations to see and manage physical and virtual endpoints.`,
-  },
+  
 ];
 
 export const Patch = () => {
@@ -26,16 +23,15 @@ export const Patch = () => {
       <div className="summary">
         <h2 style={{marginBottom:"20px"}}>BigFix Patch Management</h2>
         <span>
-          BigFix is the result of IBM's purchase of BigFix, Inc. Enabling it to offer additional security 
-          and compliance services. The software provides endpoint and security management
-          in a single solution and enables organizations to see and manage physical and virtual endpoints.
+        Extend the power of BigFix Patch with the industry's fastest vulnerability remediation for Tenable, Rapid7 and Qualys users.
+
         </span>
       </div>
 
       <div className='module'>
-        {modules.map(({ title, description }, index) => (
+         {modules.map(({image, title, description }, index) => (
           <div key={index} >
-            <Module title={title} description={description} />
+            <Module image={image} title={title} description={description} />
           </div>
         ))}
       </div>

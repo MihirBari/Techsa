@@ -5,7 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export const Module = ({ title, description }) => {
+export const Module = ({ image, title, description }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -20,9 +20,7 @@ export const Module = ({ title, description }) => {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ width: '39%', flexShrink: 0 }}>
-           
-          </Typography>
+          <img src={image} alt={title} style={{ width: '5%', maxWidth: '200px', marginRight: '20px' }} />
           <Typography sx={{ color: 'text.secondary' }}> {title}</Typography>
         </AccordionSummary>
         <AccordionDetails>
