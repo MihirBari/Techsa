@@ -30,11 +30,9 @@ export const Products = () => {
             title: "Freshworks",
             imgUrl: projImg4,
             link:"/FreshWorks",
-            description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
-            Enabling it to offer additional security and compliance services. 
-            The software provides endpoint and security management in a single 
-            solution and enables organizations to see and manage physical and 
-            virtual endpoints.`
+            description:`Freshworks makes it fast and easy for businesses to delight their 
+            customers and employees. We go the extra mile to meet your needs
+             and proactively work with you to achieve the results you want. Your success is our success.`
         },
          {
             title: "Torq",

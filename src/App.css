@@ -1035,17 +1035,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .big {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .big div {
-    width: auto;
-  }
-}
-
 .summary-module-container {
   display: flex;
   flex-direction: row;
@@ -1062,6 +1051,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   flex-direction: column;
 }
 
+
+@media (max-width: 768px) {
+  .big {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .big div {
+    width: auto;
+  }
+
+  .summary-module-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+}
 
 
 /*************Testimonial*************/
@@ -1169,4 +1175,10 @@ margin: auto ;
   width: 350px;
   display: block;
   margin: auto;
+}
+
+/*************Freshworks*************/
+.freshworks {
+  padding: 30px 0 200px 0;
+  margin-top: 111px;
 }

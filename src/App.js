@@ -7,9 +7,11 @@ import { Contact } from "./pages/Contact";
 import BigFix from "./pages/Bigfix.js";
 import { AboutUs } from "./pages/AboutUs";
 import { Products } from "./pages/Products.js";
-import { FreshWorks } from "./pages/FreshWorks.js";
+import { FreshWorksPage } from "./pages/FreshWorksPage.js";
 
 function App() {
+  // window.addEventListener("contextmenu", (e) => e.preventDefault());
+
   return (
     <div className="App">
       <>
@@ -20,7 +22,7 @@ function App() {
             <Route path="/SolarWinds" element={<Solarwinds />} />
             <Route path="/bigfix" element={<BigFix />} />
             <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/FreshWorks" element={<FreshWorks />} />
+            <Route path="/FreshWorks" element={<FreshWorksPage />} />
 
           </Routes>
       </>

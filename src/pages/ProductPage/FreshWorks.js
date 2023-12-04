@@ -12,10 +12,9 @@ export const FreshWorks = () => {
         <img src={projImg1} alt='FreshWorks' />
         </div>
         <div>
-        <p>SolarWinds stands out as the sole unified platform that seamlessly 
-            combines monitoring, observability, and service management. It empowers users with
-             comprehensive insight into their IT infrastructure, enabling proactive identification
-              of bottlenecks across the entire system.</p>
+        <p>Freshworks makes it fast and easy for businesses to delight their customers and employees. 
+          We go the extra mile to meet your needs and proactively work with you to achieve the results 
+          you want. Your success is our success.</p>
              <Link to='/FreshWorks'>
              <button >Read More</button>
              </Link>
