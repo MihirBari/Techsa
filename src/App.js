@@ -8,6 +8,8 @@ import BigFix from "./pages/Bigfix.js";
 import { AboutUs } from "./pages/AboutUs";
 import { Products } from "./pages/Products.js";
 import { FreshWorksPage } from "./pages/FreshWorksPage.js";
+import { TeanablePage } from "./pages/TeanablePage.js";
+import { ArmisPage } from "./pages/ArmisPage.js";
 
 function App() {
   // window.addEventListener("contextmenu", (e) => e.preventDefault());
@@ -23,7 +25,8 @@ function App() {
             <Route path="/bigfix" element={<BigFix />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/FreshWorks" element={<FreshWorksPage />} />
-
+            <Route path="/Tenable" element={<TeanablePage />} />
+            <Route path="/Armis" element={<ArmisPage />} />
           </Routes>
       </>
     </div>

@@ -2,8 +2,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../../assets/img/SolarWindsLogo-featured-image.jpg";
 import projImg2 from "../../assets/img/136048.png";
-import projImg3 from "../../assets/img/Torq.jpeg";
+import projImg3 from "../../assets/Tenable.png";
 import projImg4 from "../../assets/img/headerLogoLight.webp"
+import projImg5 from "../../assets/Armis.png"
 
 export const Products = () => {
     const projects = [
@@ -35,9 +36,9 @@ export const Products = () => {
              and proactively work with you to achieve the results you want. Your success is our success.`
         },
          {
-            title: "Torq",
+            title: "Tenable",
             imgUrl: projImg3,
-            link:"/SolarWinds",
+            link:"/Tenable",
             description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
             Enabling it to offer additional security and compliance services. 
             The software provides endpoint and security management in a single 
@@ -45,8 +46,8 @@ export const Products = () => {
             virtual endpoints.`
         },
         {
-            title: "Torq",
-            imgUrl: projImg3,
+            title: "Armis",
+            imgUrl: projImg5,
             link:"/SolarWinds",
             description:`BigFix is the result of IBM's purchase of BigFix, Inc. 
             Enabling it to offer additional security and compliance services. 

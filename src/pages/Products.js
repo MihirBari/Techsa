@@ -5,6 +5,8 @@ import { Footer } from "../component/Footer";
 import { Solarwinds } from "./ProductPage/Solarwinds";
 import { BigFix } from "./ProductPage/BigFix";
 import { FreshWorks } from "./ProductPage/FreshWorks";
+import { Tenable } from "./ProductPage/Tenable";
+import { Armis } from "./ProductPage/Armis";
 export const Products = () => {
   const [loading, setLoading] = useState(true);
 
@@ -26,6 +28,8 @@ export const Products = () => {
               <Solarwinds />
               <BigFix />
               <FreshWorks />
+              <Tenable />
+              <Armis />
             </div>
             <Footer />
           </div>

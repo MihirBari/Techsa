@@ -1181,4 +1181,17 @@ margin: auto ;
 .freshworks {
   padding: 30px 0 200px 0;
   margin-top: 111px;
+  /* background-color: rgb(220, 243, 250); */
+}
+
+/*************Tenable*************/
+.tenable {
+  padding: 30px 0 200px 0;
+  margin-top: 111px;
+}
+
+/*************armis*************/
+.armis {
+  padding: 30px 0 200px 0;
+  margin-top: 111px;
 }
