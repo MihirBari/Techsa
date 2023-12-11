@@ -14,16 +14,16 @@ const Bigfixs = () => {
      <h2 style={{ textAlign: "center",margin:"20px 0 40px 0" }}>Modules in BigFix</h2>
      <Patch />
      <div style={{ margin:"40px 0 40px 0" }}>
-     <Workspace />
+     <LifeCycle />
      </div>
      <div style={{ margin:"40px 0 40px 0" }}>
      <Compliance />
      </div>
      <div style={{ margin:"40px 0 40px 0" }}>
-     <Inventory />
+     <Workspace />
      </div>
      <div style={{ margin:"40px 0 40px 0" }}>
-     <LifeCycle />
+     <Inventory />
      </div>
     </>
   )

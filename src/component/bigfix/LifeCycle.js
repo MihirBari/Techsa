@@ -39,7 +39,7 @@ export const LifeCycle = () => {
   return (
     <div className="summary-module-container">
       <div className="summary">
-        <h2 style={{marginBottom:"20px"}}> BigFix Lifeycle</h2>
+        <h2 style={{marginBottom:"20px"}}> BigFix LifeCycle</h2>
         <span>
         Maintain software audit readiness and improve security with asset inventory and software usage analysis.
         </span>

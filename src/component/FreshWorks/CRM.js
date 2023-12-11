@@ -1,5 +1,8 @@
 import React from 'react';
 import './BoxContainer.css';
+import { useEffect } from 'react';
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const CRM = () => {
   const boxes = [
@@ -9,12 +12,22 @@ const CRM = () => {
     { title: 'Freshchat', description: 'Freshchat unifies all your customer conversations in one unified inbox and helps deliver self-service through no-code easy-to-build chatbots on your website, in-app, and across channels (email, WhatsApp, SMS, and more).' },
   ];
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+
   return (
     <>
     <h2 style={{textAlign:"center",margin:"20px"}}> CRM </h2>
     <div className="boxxx-container">
       {boxes.map((box, index) => (
-        <div key={index} className="boxxx">
+        <div key={index} className="boxxx"
+        data-aos="flip-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="600"
+        >
           <h2 style={{textAlign:"center"}}>{box.title}</h2>
           <p style={{textAlign:"center"}}>{box.description}</p>
         </div>

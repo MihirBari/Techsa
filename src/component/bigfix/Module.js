@@ -20,7 +20,7 @@ export const Module = ({ image, title, description }) => {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <img src={image} alt={title} style={{ width: '5%', maxWidth: '200px', marginRight: '20px' }} />
+          <img src={image} alt={title} style={{ width: '50px', maxWidth: '200px', marginRight: '20px' }} />
           <Typography sx={{ color: 'text.secondary' }}> {title}</Typography>
         </AccordionSummary>
         <AccordionDetails>

@@ -15,7 +15,7 @@ export const Loader = () => {
     >
       <img
         style={{
-          height: '95',
+          height: '95px',
           width: '95px',
           display: 'flex',
           alignItems: 'center',

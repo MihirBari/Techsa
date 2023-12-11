@@ -10,6 +10,7 @@ import { Products } from "./pages/Products.js";
 import { FreshWorksPage } from "./pages/FreshWorksPage.js";
 import { TeanablePage } from "./pages/TeanablePage.js";
 import { ArmisPage } from "./pages/ArmisPage.js";
+import { Career } from "./pages/Career.js";
 
 function App() {
   // window.addEventListener("contextmenu", (e) => e.preventDefault());
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/Products" element={<Products   />} />
             <Route path="/Contact" element={<Contact />} />
+            <Route path="/Career" element={<Career />} />
             <Route path="/SolarWinds" element={<Solarwinds />} />
             <Route path="/bigfix" element={<BigFix />} />
             <Route path="/AboutUs" element={<AboutUs />} />

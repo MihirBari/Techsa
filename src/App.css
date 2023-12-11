@@ -353,73 +353,53 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   display: flex;
   width: 100%;
   margin: 0 auto;
-  border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
 .project .nav.nav-pills .nav-item {
   flex: 1;
-  /* Distribute equal space to each pill */
+}
+
+.project .nav.nav-pills {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.project .nav.nav-pills .nav-item {
+  flex: 1;
+  width: 415px;
 }
 
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
-  padding: 25px 0;
+  padding: 15px 0; 
   color: #075d38;
   font-size: 17px;
   letter-spacing: 0.8px;
   font-weight: 500;
-  position: relative;
+  text-align: start;
   transition: 0.3s ease-in-out;
   text-align: center;
   z-index: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.project .nav.nav-pills .nav-link::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(90.21deg, #fffdfe -5.91%, #ff0b0b 111.58%);
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
-  border-radius: 55px 55px 55px 55px;
+.project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #ccc; 
+  border-bottom: 5px solid #0079dd;
 }
 
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
 }
 
-
-.project .nav.nav-pills .nav-link.active {
-  border: 1px solid rgb(255, 255, 255);
-}
-
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 55px 55px 55px;
-}
-
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 55px 55px 55px;
-}
-
-.nav-link#projects-tabs-tab-third {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 55px 55px 55px;
-}
-
-.nav-link#projects-tabs-tab-forth {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0px 55px 55px 0px;
-}
+/* Remove individual tab styling */
 
 .proj-imgbx {
   position: relative;
@@ -1188,6 +1168,21 @@ margin: auto ;
 .tenable {
   padding: 30px 0 200px 0;
   margin-top: 111px;
+}
+
+.ten div {
+  width: 50%;
+}
+
+.ten {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ten img{
+  width: 50%;
+  height: auto;
 }
 
 /*************armis*************/
