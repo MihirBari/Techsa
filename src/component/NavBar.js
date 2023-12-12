@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav, Modal, Button, Form, InputGroup, FormControl } from "react-bootstrap";
 import { FaSearch } from 'react-icons/fa'; // Import a search icon
 import logo from "../assets/img/techsa.png";
-import { GrResources } from "react-icons/gr";
 
 
 export const NavBar = () => {
@@ -108,9 +107,17 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("Products")}
               >
-                <GrResources />
+                Resource
               </Nav.Link>
-            
+              <Nav.Link
+                href="/career"
+                className={
+                  activeLink === "Products" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("Products")}
+              >
+                Career
+              </Nav.Link>
         
               <div className="search-icon" onClick={toggleSearch}>
                 <FaSearch />

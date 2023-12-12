@@ -19,12 +19,13 @@ export const Career = () => {
     email: "",
     phone: "",
     message: "",
+    file: null, // Initialize file as null
   };
 
   const [formDetails, setFormDetails] = useState(formInitialdetail);
   const [buttonText, setButtonText] = useState("send");
-  const [selectedOption, setSelectedOption] = useState("Select Option");
   const [status, setStatus] = useState({});
+  const [selectedOption, setSelectedOption] = useState("Select Option");
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -33,24 +34,37 @@ export const Career = () => {
     });
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    onFormUpdate("file", file);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
+
+    const formData = new FormData();
+    formData.append("firstName", formDetails.firstName);
+    formData.append("lastName", formDetails.lastName);
+    formData.append("email", formDetails.email);
+    formData.append("phone", formDetails.phone);
+    formData.append("message", formDetails.message);
+    formData.append("file", formDetails.file);
+
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
+      body: formData,
     });
+
     setButtonText("Send");
     let result = await response.json();
     setFormDetails(formInitialdetail);
+
     if (result.code === 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
+      setStatus({ success: true, message: "Message sent successfully" });
     } else {
       setStatus({
-        succes: false,
+        success: false,
         message: "Something went wrong, please try again later.",
       });
     }
@@ -104,47 +118,8 @@ export const Career = () => {
                 <Col md={6}>
                   <form onSubmit={handleSubmit}>
                     <Row>
+                      {/* Other input fields... */}
                       <Col sm={6} className="px-1">
-                        <input
-                          type="text"
-                          value={formDetails.firstName}
-                          placeholder="First Name"
-                          onChange={(e) =>
-                            onFormUpdate("firstName", e.target.value)
-                          }
-                        />
-                      </Col>
-                      <Col sm={6} className="px-1">
-                        <input
-                          type="text"
-                          value={formDetails.lastName}
-                          placeholder="Last Name"
-                          onChange={(e) =>
-                            onFormUpdate("lastName", e.target.value)
-                          }
-                        />
-                      </Col>
-                      <Col sm={6} className="px-1">
-                        <input
-                          type="text"
-                          value={formDetails.email}
-                          placeholder="Email"
-                          onChange={(e) =>
-                            onFormUpdate("email", e.target.value)
-                          }
-                        />
-                      </Col>
-                      <Col sm={6} className="px-1">
-                        <input
-                          type="text"
-                          value={formDetails.phone}
-                          placeholder="Mobile No."
-                          onChange={(e) =>
-                            onFormUpdate("phone", e.target.value)
-                          }
-                        />
-                      </Col>
-                      <Col sm={6}  className="px-1">
                         <select
                           value={selectedOption}
                           onChange={(e) => setSelectedOption(e.target.value)}
@@ -153,15 +128,21 @@ export const Career = () => {
                           <option value="Select Option" disabled>
                             Select Option
                           </option>
-                          <option value="Option 1">Technical Engineers</option>
-                          <option value="Option 2">
+                          <option value="Technical Engineers">
+                            Technical Engineers
+                          </option>
+                          <option value="Business Development Managers">
                             Business Development Managers
                           </option>
                         </select>
-                        <button style={{ marginBottom: "60px" }} type="submit">
-                          <span>{buttonText}</span>{" "}
-                        </button>
                       </Col>
+                      <Col sm={6} className="px-1">
+                        <input
+                          type="file"
+                          onChange={handleFileChange}
+                        />
+                      </Col>
+                      {/* Status message */}
                       {status.message && (
                         <Col>
                           <p
@@ -174,6 +155,11 @@ export const Career = () => {
                           </p>
                         </Col>
                       )}
+                      <Col sm={6} className="px-1">
+                        <button style={{ marginBottom: "60px" }} type="submit">
+                          <span>{buttonText}</span>{" "}
+                        </button>
+                      </Col>
                     </Row>
                   </form>
                 </Col>

@@ -62,7 +62,7 @@ export const Contact = () => {
     <NavBar />
     <section className="contact" id="connect">
       <Container>
-        <Row className="align-items-center">
+        <Row className="">
         <h2 style={{textAlign:"center"}} >Get in Touch</h2>
           <Col md={6}>
             <form onSubmit={handleSubmit} >

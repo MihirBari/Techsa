@@ -36,8 +36,8 @@ const ImageWithText = ({ onClick }) => {
   };
 
   return (
-    <div>
-      <img src={img1} alt="" onClick={handleImageClick} style={{ cursor: 'pointer', width: 'auto', height: 'auto' }} />
+    <div >
+      <img src={img1} alt="" onClick={handleImageClick} className='ImageWithText' />
       <div>{/* You can display additional information or components related to the clicked area here */}</div>
     </div>
   );
