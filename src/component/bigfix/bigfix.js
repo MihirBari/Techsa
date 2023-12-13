@@ -20,10 +20,10 @@ const Bigfixs = () => {
      <Compliance />
      </div>
      <div style={{ margin:"40px 0 40px 0" }}>
-     <Workspace />
+     <Inventory />
      </div>
      <div style={{ margin:"40px 0 40px 0" }}>
-     <Inventory />
+     <Workspace />
      </div>
     </>
   )

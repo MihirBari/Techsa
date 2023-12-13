@@ -287,7 +287,30 @@ const Box = () => {
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkblue" }}>
-            Configuration Monitoring
+          Network Configuration Monitoring
+          </h4>
+          <p className="boxMessage">
+            Monitor and alert on configuration changes across multiple networks,
+            data centers or customer locations
+          </p>
+        </div>
+        <div
+          className="box3 boxItem"
+          onMouseEnter={() => handleHover(15)}
+          onMouseLeave={handleLeave}
+        >
+          {hoveredColumn === 15 && (
+            <p
+              className="boxHover"
+              style={{
+                top: "-50px",
+              }}
+            >
+              Network Configuration Manager (NCM)
+            </p>
+          )}
+          <h4 style={{ textAlign: "center", color: "darkblue" }}>
+          Server Configuration Monitoring
           </h4>
           <p className="boxMessage">
             Monitor and alert on configuration changes across multiple networks,
@@ -310,7 +333,7 @@ const Box = () => {
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "#547574" }}>
-            AlOps Early Warning System
+          Anomaly Detection
           </h4>
           <p className="boxMessage">
             Pinpoint problems and reduce MTTR with root cause analysis and

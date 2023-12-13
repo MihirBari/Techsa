@@ -1,13 +1,14 @@
-import React from 'react';
-import { Module } from './Module';
-import img1 from "../../assets/compliance/Pass+audits+and+avoid+fines+with+continuous+compliance.png"
-import img2 from "../../assets/compliance/Improve+visibility+and+reduce+risk.png"
-import img3 from "../../assets/compliance/Prioritize+remediation+with+compliance.png"
+import React from "react";
+import { Module } from "./Module";
+import img1 from "../../assets/compliance/Pass+audits+and+avoid+fines+with+continuous+compliance.png";
+import img2 from "../../assets/compliance/Improve+visibility+and+reduce+risk.png";
+import img3 from "../../assets/compliance/Prioritize+remediation+with+compliance.png";
 
 const modules = [
   {
     image: img1,
-    title: "Pass audits and avoid fines with continuous compliance and configuration management",
+    title:
+      "Pass audits and avoid fines with continuous compliance and configuration management",
     description: `Accurate and real-time visibility and continuous enforcement of security configurations and
      patches to address configuration drifts. Security and compliance analytics identify, manage and report 
      on policy exceptions and deviations. Out-ot-the-box, the software supports security benchmarks such as
@@ -15,7 +16,8 @@ const modules = [
   },
   {
     image: img2,
-    title: "Improve visibility and reduce risk with device discovery and patch management",
+    title:
+      "Improve visibility and reduce risk with device discovery and patch management",
     description: `
     Support a large variety of endpoints including cloud, server, and desktop 
     devices, as well as specialized equipment such as point-of-sale (POS) devices,
@@ -27,7 +29,8 @@ const modules = [
     as well as third-party applications and policy-based patches - regardless of connection type or status.
   `,
   },
-  { image: img3,
+  {
+    image: img3,
     title: "Prioritize remediation with compliance analytics and reporting",
     description: `
     Track the effectiveness of compliance efforts and quickly identify security exposures. Endpoint compliance status vs deployed policies is continuously collected, aggregated and reported on using a powerful Compliance Analytics Engine. Multiple reports are available out-of-the-box on security configurations, patching and vulnerabilities – showing current and historical trending – for entire deployments or for a single endpoint.
@@ -39,17 +42,21 @@ export const Compliance = () => {
   return (
     <div className="summary-module-container">
       <div className="summary">
-        <h2 style={{marginBottom:"20px"}}> BigFix Compliance</h2>
+        <h2 style={{ marginBottom: "20px" }}> BigFix Compliance</h2>
         <span>
-        Continuously monitor and enforce endpoint security configurations to ensure
-         compliance with regulatory or organizational security policies using out-of-the-box 
-         compliance checklists.
+          BigFix Compliance can help organizations both protect endpoints and
+          meet security compliance requirements and policies. This
+          easy-to-manage,quick-to-deploy solution supports security in an
+          environment that is likely to include a large variety and largenumbers
+          of endpoints—from servers to desktop PCs, and “roaming”
+          Internet-connected laptops, as well asspecialized equipment such as
+          point-of-sale devices, ATMs and self-service kiosks.
         </span>
       </div>
 
-      <div className='module'>
-      {modules.map(({image, title, description }, index) => (
-          <div key={index} >
+      <div className="module">
+        {modules.map(({ image, title, description }, index) => (
+          <div key={index}>
             <Module image={image} title={title} description={description} />
           </div>
         ))}

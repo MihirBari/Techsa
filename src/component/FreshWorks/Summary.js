@@ -3,7 +3,7 @@ import img1 from "../../assets/img/headerLogoLight.webp"
 
 export const Summary = () => {
   return (
-    <div className='big'>
+    <div className='fresh'>
         <div>
             <img src={img1} alt='' />
         </div>

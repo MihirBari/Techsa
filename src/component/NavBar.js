@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav, Modal, Button, Form, InputGroup, FormControl } from "react-bootstrap";
-import { FaSearch } from 'react-icons/fa'; // Import a search icon
+import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import logo from "../assets/img/techsa.png";
-
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -31,7 +32,7 @@ export const NavBar = () => {
       setActiveLink("About Us");
     } else if (currentPathname === "/Products") {
       setActiveLink("Products");
-    }  else if (currentPathname === "/Contact") {
+    } else if (currentPathname === "/Contact") {
       setActiveLink("Contact");
     }
   }, []);
@@ -44,9 +45,17 @@ export const NavBar = () => {
     setShowSearch(!showSearch);
   };
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     console.log("Searching for: " + searchQuery);
-    
+
+    try {
+      const response = await fetch(`/api/search?query=${searchQuery}`);
+      const data = await response.json();
+      setSearchResults(data);
+    } catch (error) {
+      console.error("Error fetching search results:", error);
+    }
+
     toggleSearch();
   };
 
@@ -61,64 +70,51 @@ export const NavBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto">     
-            
+            <Nav className="ms-auto">
               <Nav.Link
                 href="/"
-                className={
-                  activeLink === "home" ? "active navbar-link" : "navbar-link"
-                }
+                className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
                 onClick={() => onUpdateActiveLink("home")}
               >
                 Home
               </Nav.Link>
               <Nav.Link
                 href="/AboutUs"
-                className={
-                  activeLink === "About Us" ? "active navbar-link" : "navbar-link"
-                }
+                className={activeLink === "About Us" ? "active navbar-link" : "navbar-link"}
                 onClick={() => onUpdateActiveLink("About Us")}
               >
                 About Us
               </Nav.Link>
               <Nav.Link
                 href="/Products"
-                className={
-                  activeLink === "Products" ? "active navbar-link" : "navbar-link"
-                }
+                className={activeLink === "Products" ? "active navbar-link" : "navbar-link"}
                 onClick={() => onUpdateActiveLink("Products")}
               >
                 Products
               </Nav.Link>
               <Nav.Link
                 href="/Contact"
-                className={
-                  activeLink === "Contact" ? "active navbar-link" : "navbar-link"
-                }
+                className={activeLink === "Contact" ? "active navbar-link" : "navbar-link"}
                 onClick={() => onUpdateActiveLink("Contact")}
               >
                 Contact
-              </Nav.Link>    
-            
+              </Nav.Link>
+
               <Nav.Link
-                href="/Products"
-                className={
-                  activeLink === "Products" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("Products")}
+                href="/Resource"
+                className={activeLink === "Resource" ? "active navbar-link" : "navbar-link"}
+                onClick={() => onUpdateActiveLink("Resource")}
               >
                 Resource
               </Nav.Link>
               <Nav.Link
-                href="/career"
-                className={
-                  activeLink === "Products" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("Products")}
+                href="/Career"
+                className={activeLink === "Career" ? "active navbar-link" : "navbar-link"}
+                onClick={() => onUpdateActiveLink("Career")}
               >
                 Career
               </Nav.Link>
-        
+
               <div className="search-icon" onClick={toggleSearch}>
                 <FaSearch />
               </div>
@@ -126,7 +122,7 @@ export const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      
+
       <Modal show={showSearch} onHide={toggleSearch} centered>
         <Modal.Header closeButton>
           <Modal.Title>Search</Modal.Title>
@@ -147,6 +143,19 @@ export const NavBar = () => {
           </Form>
         </Modal.Body>
       </Modal>
+
+      {searchResults.length > 0 && (
+        <div>
+          <h3>Search Results:</h3>
+          <ul>
+            {searchResults.map((result, index) => (
+              <li key={index}>
+                <Link to={`/page/${index + 1}`}>{result.page}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

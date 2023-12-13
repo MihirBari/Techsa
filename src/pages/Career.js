@@ -118,7 +118,46 @@ export const Career = () => {
                 <Col md={6}>
                   <form onSubmit={handleSubmit}>
                     <Row>
-                      {/* Other input fields... */}
+                      <Col sm={6} className="px-1">
+                        <input
+                          type="text"
+                          value={formDetails.firstName}
+                          placeholder="First Name"
+                          onChange={(e) =>
+                            onFormUpdate("firstName", e.target.value)
+                          }
+                        />
+                      </Col>
+                      <Col sm={6} className="px-1">
+                        <input
+                          type="text"
+                          value={formDetails.lastName}
+                          placeholder="Last Name"
+                          onChange={(e) =>
+                            onFormUpdate("lastName", e.target.value)
+                          }
+                        />
+                      </Col>
+                      <Col sm={6} className="px-1">
+                        <input
+                          type="text"
+                          value={formDetails.email}
+                          placeholder="Email"
+                          onChange={(e) =>
+                            onFormUpdate("email", e.target.value)
+                          }
+                        />
+                      </Col>
+                      <Col sm={6} className="px-1">
+                        <input
+                          type="text"
+                          value={formDetails.phone}
+                          placeholder="Mobile No."
+                          onChange={(e) =>
+                            onFormUpdate("phone", e.target.value)
+                          }
+                        />
+                      </Col>
                       <Col sm={6} className="px-1">
                         <select
                           value={selectedOption}
@@ -137,10 +176,7 @@ export const Career = () => {
                         </select>
                       </Col>
                       <Col sm={6} className="px-1">
-                        <input
-                          type="file"
-                          onChange={handleFileChange}
-                        />
+                        <input type="file" onChange={handleFileChange} />
                       </Col>
                       {/* Status message */}
                       {status.message && (
