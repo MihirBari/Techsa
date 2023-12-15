@@ -99,14 +99,6 @@ export const NavBar = () => {
               >
                 Contact
               </Nav.Link>
-
-              <Nav.Link
-                href="/Resource"
-                className={activeLink === "Resource" ? "active navbar-link" : "navbar-link"}
-                onClick={() => onUpdateActiveLink("Resource")}
-              >
-                Resource
-              </Nav.Link>
               <Nav.Link
                 href="/Career"
                 className={activeLink === "Career" ? "active navbar-link" : "navbar-link"}
@@ -114,10 +106,16 @@ export const NavBar = () => {
               >
                 Career
               </Nav.Link>
-
-              <div className="search-icon" onClick={toggleSearch}>
+              <Nav.Link
+                href="/Resource"
+                className={activeLink === "Resource" ? "active navbar-link" : "navbar-link"}
+                onClick={() => onUpdateActiveLink("Resource")}
+              >
+                Resource
+              </Nav.Link>
+              {/* <div className="search-icon" onClick={toggleSearch}>
                 <FaSearch />
-              </div>
+              </div> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

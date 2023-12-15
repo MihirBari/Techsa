@@ -10,16 +10,22 @@ import { Awards } from "./Awards";
 export const About = () => {
   const projects = [
     {
-      title: "SolarWinds",
+    
       imgUrl: projImg1,
       caption: "Ravi Khanchandani",
-      link: "https://www.linkedin.com/in/ravikhanchandani"
+      link: "https://www.linkedin.com/in/ravikhanchandani",
+      description:`Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+      dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+      ac consectetur ac, vestibulum at eros.`
     },
     {
-      title: "BigFix",
+  
       imgUrl: projImg2,
       caption: "Sanjiv Sachdev",
-      link: "https://www.linkedin.com/in/sanjivsachdev"
+      link: "https://www.linkedin.com/in/sanjivsachdev",
+      description:`  Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+      dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+      ac consectetur ac, vestibulum at eros.`
     },
   ];
 
@@ -46,10 +52,12 @@ export const About = () => {
                   <div className="Cardd">
                     {projects.map((contents) => (
                       <AboutCard
+                      
                         key={contents.id}
                         image={contents.imgUrl}
                         name={contents.caption}
                         link={contents.link}
+                        description={contents.description}
                       />
                     ))}
                   </div>

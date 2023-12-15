@@ -8,19 +8,20 @@ const HeroClaravineAnimation = () => {
 
       gsap.to(iconObj, 5, {
         x: mX,
-        ease: 'sine.inOut',
+        ease: "sine.inOut",
         yoyo: true,
         repeat: -1,
         delay: 0 + del,
         onUpdate: function () {
-          let x = gsap.getProperty(iconObj, 'x');
-          let y = gsap.getProperty(iconObj, 'y');
-          let d = 'M' + (pData.x[num] + x) + ',' + (pData.y[num] + y) + pData.d[num];
+          let x = gsap.getProperty(iconObj, "x");
+          let y = gsap.getProperty(iconObj, "y");
+          let d =
+            "M" + (pData.x[num] + x) + "," + (pData.y[num] + y) + pData.d[num];
 
-          updatePathAttribute(pData.redLines[num], 'd', d);
-          updatePathAttribute(pData.greenLines[num], 'd', d);
-          updatePathAttribute(pData.redDots[num], 'd', d);
-          updatePathAttribute(pData.greenDots[num], 'd', d);
+          updatePathAttribute(pData.redLines[num], "d", d);
+          updatePathAttribute(pData.greenLines[num], "d", d);
+          updatePathAttribute(pData.redDots[num], "d", d);
+          updatePathAttribute(pData.greenDots[num], "d", d);
 
           let prcntLength = prcnt.val * pData.redLines[num].getTotalLength();
           let pt = pData.redLines[num].getPointAtLength(prcntLength);
@@ -28,8 +29,20 @@ const HeroClaravineAnimation = () => {
         },
       });
 
-      gsap.to(iconObj, 5, { y: mY, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: -2.5 + del });
-      gsap.to(prcnt, carrot.dur, { val: carrot.position[num], ease: 'sine.out', delay: carrot.delay, repeat: -1, repeatDelay: carrot.loop - carrot.dur });
+      gsap.to(iconObj, 5, {
+        y: mY,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+        delay: -2.5 + del,
+      });
+      gsap.to(prcnt, carrot.dur, {
+        val: carrot.position[num],
+        ease: "sine.out",
+        delay: carrot.delay,
+        repeat: -1,
+        repeatDelay: carrot.loop - carrot.dur,
+      });
     }
 
     function updatePathAttribute(element, attributeName, value) {
@@ -39,29 +52,41 @@ const HeroClaravineAnimation = () => {
     }
 
     function heroClaravineAnimation() {
-      let idSVG = '#hero-claravine' + ' ';
-      let icons = document.querySelectorAll(idSVG + '#icons > g');
+      let idSVG = "#hero-claravine" + " ";
+      let icons = document.querySelectorAll(idSVG + "#icons > g");
 
       let pathData = {};
-      pathData.redLines = Array.from(document.querySelectorAll(idSVG + '#red-lines > path'));
-      pathData.redDots = Array.from(document.querySelectorAll(idSVG + '#red-dots > path'));
-      pathData.greenLines = Array.from(document.querySelectorAll(idSVG + '#green-lines > path'));
-      pathData.greenDots = Array.from(document.querySelectorAll(idSVG + '#green-dots > path'));
+      pathData.redLines = Array.from(
+        document.querySelectorAll(idSVG + "#red-lines > path")
+      );
+      pathData.redDots = Array.from(
+        document.querySelectorAll(idSVG + "#red-dots > path")
+      );
+      pathData.greenLines = Array.from(
+        document.querySelectorAll(idSVG + "#green-lines > path")
+      );
+      pathData.greenDots = Array.from(
+        document.querySelectorAll(idSVG + "#green-dots > path")
+      );
       pathData.d = [
-        'C1013.12,287.91,982.26,421.85,986.92,503.31',
-        'C1118,398.32,1063.52,422.1,1050.92,503.32',
-        'C1181.78,559.35,1118.57,552.93,1050.92,543.33',
-        'C1053.14,744.46,1011.76,632.97,1017.25,568.35',
-        'C939.92,757.4,936.18,637.5,932.92,568.35',
-        'C817.8,697.62,867.64,661.3,873.92,583.35',
-        'C811.47,423,855.17,488.9,867,506.73',
-        'C899.69,417.27,900.16,460.57,894.49,470.07',
+        "C1013.12,287.91,982.26,421.85,986.92,503.31",
+        "C1118,398.32,1063.52,422.1,1050.92,503.32",
+        "C1181.78,559.35,1118.57,552.93,1050.92,543.33",
+        "C1053.14,744.46,1011.76,632.97,1017.25,568.35",
+        "C939.92,757.4,936.18,637.5,932.92,568.35",
+        "C817.8,697.62,867.64,661.3,873.92,583.35",
+        "C811.47,423,855.17,488.9,867,506.73",
+        "C899.69,417.27,900.16,460.57,894.49,470.07",
       ];
-      pathData.x = [1073.92, 1187.14, 1236.92, 1138.76, 914.92, 726.8, 720, 852.49];
-      pathData.y = [284.31, 390.32, 560, 744.46, 808.15, 693.82, 432.57, 320.07];
+      pathData.x = [
+        1073.92, 1187.14, 1236.92, 1138.76, 914.92, 726.8, 720, 852.49,
+      ];
+      pathData.y = [
+        284.31, 390.32, 560, 744.46, 808.15, 693.82, 432.57, 320.07,
+      ];
 
       let carrots = {};
-      carrots.icon = Array.from(document.querySelectorAll(idSVG + '.carrot'));
+      carrots.icon = Array.from(document.querySelectorAll(idSVG + ".carrot"));
       carrots.position = [0.5, 0.4, 0.4, 0.5, 0.5, 0.4, 0.3, 0.4];
       carrots.dur = 1.5;
       carrots.delay = 5;
@@ -78,39 +103,162 @@ const HeroClaravineAnimation = () => {
       moveIcon(icons[6], -30, 50, -6, pathData, carrots, 6);
       moveIcon(icons[7], 40, 30, -9, pathData, carrots, 7);
 
-      gsap.set(icons, { scale: 0, opacity: 1, transformOrigin: '50% 50%' });
-      gsap.set(idSVG + '#shapeMask-green', { scale: 0, transformOrigin: '50% 50%' });
-      gsap.set(idSVG + '#green-lines', { opacity: 1 });
-      gsap.to(idSVG + '#icons > g', 1, { scale: 1, ease: 'back.out(1.4)', stagger: 0.05, delay: 0.5 });
+      gsap.set(icons, { scale: 0, opacity: 1, transformOrigin: "50% 50%" });
+      gsap.set(idSVG + "#shapeMask-green", {
+        scale: 0,
+        transformOrigin: "50% 50%",
+      });
+      gsap.set(idSVG + "#green-lines", { opacity: 1 });
+      gsap.to(idSVG + "#icons > g", 1, {
+        scale: 1,
+        ease: "back.out(1.4)",
+        stagger: 0.05,
+        delay: 0.5,
+      });
 
-      let clirivineAnim = gsap.timeline({ defaults: { ease: 'sine.inOut' }, repeat: -1, repeatDelay: 0.5, delay: 0.5 });
+      let clirivineAnim = gsap.timeline({
+        defaults: { ease: "sine.inOut" },
+        repeat: -1,
+        repeatDelay: 0.5,
+        delay: 0.5,
+      });
       clirivineAnim
         .to(pathData.redLines, 1.2, { strokeDashoffset: 0, stagger: 0.05 }, 1)
-        .to(document.querySelectorAll(idSVG + '#t-data1 > rect'), 0.75, { opacity: 1, stagger: 0.35 }, 2)
-        .to(document.querySelectorAll(idSVG + '#t-data2 > rect'), 0.75, { opacity: 1, stagger: 0.35 }, carrots.delay + 0.5)
-        .to(document.querySelectorAll(idSVG + '#t-data1 > rect'), 0.75, { fill: '#7ec83b', stagger: 0.4 }, carrots.delay + 1.5)
-        .to(pathData.redDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 1)
-        .to(pathData.greenDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 2)
-        .to(pathData.greenDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 1)
-        .to(pathData.greenDots, 2.5, { strokeDashoffset: 0, ease: 'none', stagger: { each: 0.75, repeat: 4 } }, 2)
-        .to(pathData.greenLines, 1.5, { strokeDashoffset: (index, element) => greenLineStop[index], ease: 'sine.out' }, carrots.delay - 0.5)
-        .to(document.querySelectorAll(idSVG + '#shapeMask-green'), 1.5, { scale: 1, ease: 'sine.out' }, carrots.delay - 0.5)
+        .to(
+          document.querySelectorAll(idSVG + "#t-data1 > rect"),
+          0.75,
+          { opacity: 1, stagger: 0.35 },
+          2
+        )
+        .to(
+          document.querySelectorAll(idSVG + "#t-data2 > rect"),
+          0.75,
+          { opacity: 1, stagger: 0.35 },
+          carrots.delay + 0.5
+        )
+        .to(
+          document.querySelectorAll(idSVG + "#t-data1 > rect"),
+          0.75,
+          { fill: "#7ec83b", stagger: 0.4 },
+          carrots.delay + 1.5
+        )
+        .to(
+          pathData.redDots,
+          2.5,
+          {
+            strokeDashoffset: 0,
+            ease: "none",
+            stagger: { each: 0.75, repeat: 4 },
+          },
+          1
+        )
+        .to(
+          pathData.greenDots,
+          2.5,
+          {
+            strokeDashoffset: 0,
+            ease: "none",
+            stagger: { each: 0.75, repeat: 4 },
+          },
+          2
+        )
+        .to(
+          pathData.greenDots,
+          2.5,
+          {
+            strokeDashoffset: 0,
+            ease: "none",
+            stagger: { each: 0.75, repeat: 4 },
+          },
+          1
+        )
+        .to(
+          pathData.greenDots,
+          2.5,
+          {
+            strokeDashoffset: 0,
+            ease: "none",
+            stagger: { each: 0.75, repeat: 4 },
+          },
+          2
+        )
+        .to(
+          pathData.greenLines,
+          1.5,
+          {
+            strokeDashoffset: (index, element) => greenLineStop[index],
+            ease: "sine.out",
+          },
+          carrots.delay - 0.5
+        )
+        .to(
+          document.querySelectorAll(idSVG + "#shapeMask-green"),
+          1.5,
+          { scale: 1, ease: "sine.out" },
+          carrots.delay - 0.5
+        )
         .to(carrots.icon, 0.1, { opacity: 1 }, carrots.delay - 0.5)
-        .to(document.querySelectorAll(idSVG + '.carrot-icon'), 2, { rotate: 360, transformOrigin: '50% 50%', ease: 'none', repeat: 5 }, carrots.delay - 0.5)
-        .to(document.querySelectorAll(idSVG + '.carrot-icon'), 1, { scale: 0, transformOrigin: '50% 50%' }, carrots.delay + 9.5)
-        .to(document.querySelectorAll(idSVG + '.checkmark-icon'), 1, { scale: 1, rotate: 0, transformOrigin: '50% 50%' }, carrots.delay + 10.2)
-        .to(document.querySelectorAll(idSVG + '.bg-carrot'), 1.5, { fill: '#fff' }, carrots.delay + 9.5)
-        .to(pathData.greenLines, 1.5, { strokeDashoffset: (index, element) => gsap.getProperty(element, 'strokeDasharray') * 2 }, carrots.delay + 9.5)
+        .to(
+          document.querySelectorAll(idSVG + ".carrot-icon"),
+          2,
+          { rotate: 360, transformOrigin: "50% 50%", ease: "none", repeat: 5 },
+          carrots.delay - 0.5
+        )
+        .to(
+          document.querySelectorAll(idSVG + ".carrot-icon"),
+          1,
+          { scale: 0, transformOrigin: "50% 50%" },
+          carrots.delay + 9.5
+        )
+        .to(
+          document.querySelectorAll(idSVG + ".checkmark-icon"),
+          1,
+          { scale: 1, rotate: 0, transformOrigin: "50% 50%" },
+          carrots.delay + 10.2
+        )
+        .to(
+          document.querySelectorAll(idSVG + ".bg-carrot"),
+          1.5,
+          { fill: "#fff" },
+          carrots.delay + 9.5
+        )
+        .to(
+          pathData.greenLines,
+          1.5,
+          {
+            strokeDashoffset: (index, element) =>
+              gsap.getProperty(element, "strokeDasharray") * 2,
+          },
+          carrots.delay + 9.5
+        )
         .to(pathData.redLines, 0.5, { opacity: 0 }, carrots.delay + 11)
-        .to(document.querySelectorAll(`${idSVG} #t-data1 > rect, ${idSVG} #t-data2 > rect`), 1.5, { opacity: 0 }, carrots.delay + 14)
-        .to(carrots.icon, 1.5, { scale: 0, transformOrigin: '50% 50%' }, carrots.delay + 14)
-        .to(pathData.greenLines, 1.5, { strokeDashoffset: (index, element) => gsap.getProperty(element, 'strokeDasharray') * 3 }, carrots.delay + 14.5);
+        .to(
+          document.querySelectorAll(
+            `${idSVG} #t-data1 > rect, ${idSVG} #t-data2 > rect`
+          ),
+          1.5,
+          { opacity: 0 },
+          carrots.delay + 14
+        )
+        .to(
+          carrots.icon,
+          1.5,
+          { scale: 0, transformOrigin: "50% 50%" },
+          carrots.delay + 14
+        )
+        .to(
+          pathData.greenLines,
+          1.5,
+          {
+            strokeDashoffset: (index, element) =>
+              gsap.getProperty(element, "strokeDasharray") * 3,
+          },
+          carrots.delay + 14.5
+        );
     }
 
     heroClaravineAnimation();
   }, []);
-
-	
 
   return (
     <svg
@@ -752,6 +900,35 @@ const HeroClaravineAnimation = () => {
             </g>
           </g>
         </g>
+        <text
+          style={{ fontSize: "40px", fontFamily: "sans-serif" }}
+          x="650.92"
+          y="290.35"
+        >
+          Monitor
+        </text>
+        <text
+          style={{ fontSize: "40px", fontFamily: "sans-serif" }}
+          x="1125.92"
+          y="325.35"
+        >
+          Manage
+        </text>
+        <text
+          style={{ fontSize: "40px", fontFamily: "sans-serif" }}
+          x="650.92"
+          y="810.35"
+        >
+          Analyze
+        </text>
+        <text
+          style={{ fontSize: "40px", fontFamily: "sans-serif" }}
+          x="1125.92"
+          y="810.3"
+        >
+          Secure
+        </text>
+
         <g id="table">
           <g>
             <path
@@ -772,7 +949,14 @@ const HeroClaravineAnimation = () => {
           </g>
           <g id="table-data-new">
             <g id="t-data1">
-              <rect
+              <text
+                style={{ fontSize: "70px", fontFamily: "Adverta", fill: "red" }}
+                x="853.92"
+                y="560.35"
+              >
+                techsa
+              </text>
+              {/* <rect
                 opacity="0"
                 x="873.92"
                 y="588.35"
@@ -942,10 +1126,10 @@ const HeroClaravineAnimation = () => {
                 height="15"
                 fill="#fecdde"
                 style={{ opacity: 0.787, fill: "rgb(254, 205, 222)" }}
-              />
+              /> */}
             </g>
             <g id="t-data2">
-              <rect
+              {/* <rect
                 opacity="0"
                 x="932.92"
                 y="548.35"
@@ -1043,11 +1227,11 @@ const HeroClaravineAnimation = () => {
                 height="15"
                 fill="#7ec83b"
                 style={{ opacity: "0" }}
-              ></rect>
+              ></rect> */}
             </g>
           </g>
           <g>
-            <rect
+            {/* <rect
               x="873.92"
               y="468.35"
               width="54"
@@ -1081,7 +1265,7 @@ const HeroClaravineAnimation = () => {
               width="54"
               height="15"
               fill="#30505a"
-            ></rect>
+            ></rect> */}
           </g>
         </g>
         <g id="icons">

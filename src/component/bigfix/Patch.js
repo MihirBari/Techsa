@@ -11,7 +11,7 @@ const modules = [
   },
   {
     image: img2,
-    title: "Report and Management",
+    title: "Patch Compliance and reporting",
     description: `Track the effectiveness of compliance efforts and quickly identify security exposures. Endpoint compliance status vs deployed policies is continuously collected, aggregated and reported on using a powerful Compliance Analytics Engine. Multiple reports are available out-of-the-box on security configurations, patching and vulnerabilities – showing current and historical trending – for entire deployments or for a single endpoint.`,
   },
   

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Summary } from './Summary'
 import BoxContainer from './BoxContainer'
-import CRM from './CRM'
 
 export const FreshWorks = () => {
   return (
@@ -9,7 +8,7 @@ export const FreshWorks = () => {
       <h2 style={{ textAlign: "center" }}>FreshWorks</h2>
       <Summary />
      <BoxContainer />
-     <CRM />
+
     </>
   )
 }

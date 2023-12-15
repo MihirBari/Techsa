@@ -46,7 +46,7 @@ const Box = () => {
             <p
               className="boxHover"
               style={{
-                top: "-50px",
+                top: "-75px",
               }}
             >
               Log Analyzer (LA)
@@ -74,13 +74,15 @@ const Box = () => {
               Netfkow Traffic Analyzer (NTA)
             </p>
           )}
-          <h4 style={{ textAlign: "center", color: "orange" }}>Network</h4>
+          <h4 style={{ textAlign: "center", color: "orange" }}>
+            Traffic Insights
+          </h4>
           <p className="boxMessage">
             Track flow data with Netflow, JFlow, NBAR or SFlow
           </p>
         </div>
         <div
-          className="box4 boxItem" 
+          className="box4 boxItem"
           onMouseEnter={() => handleHover(4)}
           onMouseLeave={handleLeave}
         >
@@ -88,7 +90,7 @@ const Box = () => {
             <p
               className="boxHover"
               style={{
-                top: "-70px",
+                top: "-95px",
               }}
             >
               Server Application Monitor (SAM)
@@ -98,9 +100,7 @@ const Box = () => {
             {" "}
             Cloud Monitoring
           </h4>
-          <p className="boxMessage">
-            Integrate with AWS, Azure, and GCP out of the box
-          </p>
+          <p className="boxMessage">Integrate with AWS, Azure</p>
         </div>
       </div>
 
@@ -111,7 +111,7 @@ const Box = () => {
           onMouseLeave={handleLeave}
         >
           {hoveredColumn === 5 && (
-            <p className="boxHover" style={{ top: "-70px" }}>
+            <p className="boxHover" style={{ top: "-90px" }}>
               Server Application Monitor (SAM)
             </p>
           )}
@@ -127,7 +127,7 @@ const Box = () => {
         >
           {hoveredColumn === 6 && (
             <p className="boxHover" style={{ top: "-90px" }}>
-              Network Performance Monitor (NPM)
+              Web Performance Monitor (WPM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "#0075de" }}>Websites</h4>
@@ -150,13 +150,13 @@ const Box = () => {
                 borderRadius: "5px",
                 textAlign: "center",
                 position: "absolute",
-                top: "-50px",
+                top: "-90px",
                 left: "50%",
                 transform: "translateX(-50%)",
                 zIndex: 1,
               }}
             >
-              Storage
+              Server Application Monitor (SAM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "#96a50a" }}>
@@ -172,16 +172,15 @@ const Box = () => {
           onMouseLeave={handleLeave}
         >
           {hoveredColumn === 8 && (
-            <p className="boxHover" style={{ top: "-90px" }}>
-              Network Performance Monitor (NPM)
+            <p className="boxHover" style={{ top: "-70px" }}>
+              IP Address Manager  (IPAM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "blue" }}>
-            Remote Monitoring
+            IP Address Manager
           </h4>
           <p className="boxMessage">
-            Ensure your remote workforce has access to the tools they need to
-            maintain business
+          Simplify and automate DHCP, DNS, and IP address monitoring
           </p>
         </div>
       </div>
@@ -221,7 +220,7 @@ const Box = () => {
                 top: "-70px",
               }}
             >
-              Server Application Monitor (SAM)
+             Database Performance Analyzer(DPA)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "orange" }}>
@@ -262,7 +261,7 @@ const Box = () => {
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkviolet" }}>
-            Dynamic Services
+            Intelligent Mapping
           </h4>
           <p className="boxMessage">
             Assess whole service health and monitor underlying resources
@@ -287,7 +286,7 @@ const Box = () => {
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkblue" }}>
-          Network Configuration Monitoring
+            Network Configuration Monitoring
           </h4>
           <p className="boxMessage">
             Monitor and alert on configuration changes across multiple networks,
@@ -306,11 +305,11 @@ const Box = () => {
                 top: "-50px",
               }}
             >
-              Network Configuration Manager (NCM)
+              Server Configuration Manager (SCM)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "darkblue" }}>
-          Server Configuration Monitoring
+            Server Configuration Monitoring
           </h4>
           <p className="boxMessage">
             Monitor and alert on configuration changes across multiple networks,
@@ -329,11 +328,11 @@ const Box = () => {
                 top: "-50px",
               }}
             >
-              Network Performance Monitor (NPM)
+              Observability (HCO)
             </p>
           )}
           <h4 style={{ textAlign: "center", color: "#547574" }}>
-          Anomaly Detection
+            Anomaly Based Alerts
           </h4>
           <p className="boxMessage">
             Pinpoint problems and reduce MTTR with root cause analysis and

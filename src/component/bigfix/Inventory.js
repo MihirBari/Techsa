@@ -13,7 +13,7 @@ const modules = [
   },
   {
     image: img2,
-    title: "Deliver comprehensive visibility across the endpoint landscape",
+    title: "Comprehensive Software Audit",
     description: `
     Provides a comprehensive, real-time view of all assets to ensure software audit readiness across hundreds of thousands of endpoints. Includes information on over 9,100 software publishers, 38,000 software products and 105,000 application signatures and can easily accommodate homegrown and proprietary applications. Plus, it supports six different forms of discovery including a Software Identification Catalog (ISO 19770 enabled), customized template signatures, an installation registry, vendor-specific discover solutions, ISO SWID tags and hardware discovery
   `,
@@ -22,12 +22,12 @@ const modules = [
     image: img3,
     title: " Improve security posture",
     description: `
-    Enables you to set security compliance policies for software and system configurations – helping IT and Security organizations collaborate to secure the enterprise by monitoring for unauthorized software while removing software which poses a security threat. Provides reports on the health and compliance of software assets in minutes, regardless of the size of the environment. It has also been verified as equivalent to the IBM License Metric Tool (ILMT) to manage your IBM software licensing requirements and help maintain an audit ready posture.
+    Enables you to set security compliance policies for software and system configurations – helping IT and Security organizations collaborate to secure the enterprise by monitoring for unauthorized software while removing software which poses a security threat. Provides reports on the health and compliance of software assets in minutes, regardless of the size of the environment.
   `,
   },
   {
     image: img4,
-    title: " Increase efficiency by streamlining asset inventory processes",
+    title: "Efficient Inventory Automation",
     description: `
     Automates inventory operations using a single solution – enabling IT organizations to reduce the number of hours and resources spent on inventory activities. Provides the ability to handle hundreds of thousands of endpoints using a single HCL BigFix server and intelligent agent, which reduces hardware and staffing costs compared to traditional asset management methods.
   `,

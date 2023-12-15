@@ -17,6 +17,20 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: Adverta;
+  src: url('./assets/font/Advert-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: AdvertaI;
+  src: url('./assets/font/Advert-Italic.ttf');
+  font-weight: 400;
+}
+
+
+
 /************ Default Css ************/
 * {
   margin: 0;
@@ -710,6 +724,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   padding: 15px;
   border-radius: 25px;
   margin-top: 25px;
+  box-shadow: 0px 0px 7px 1px #888888;
 }
 
 .product-Big {
@@ -745,6 +760,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   padding: 15px;
   border-radius: 25px;
   margin-top: 25px;
+  box-shadow: 0px 0px 7px 1px #888888;
 }
 
 /* Media Query for responsiveness */
@@ -843,7 +859,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   border: 1px solid grey;
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 80px;
   border-radius: 20px;
   box-shadow: 6px 4px 10px 0px rgb(147 113 113);
 }
@@ -1167,6 +1183,13 @@ width: 50% ;
 margin: auto ;
 }
 
+.animated-hero-svg{
+  height: 500px;
+  width: 450px;
+  display: block;
+  margin: auto;
+}
+
 @media (max-width: 768px) {
   .presence{
     width: 100% ;
@@ -1174,17 +1197,11 @@ margin: auto ;
     }
 
     .animated-hero-svg{
-      height: 350px;
-      width: 250px;
+      height: 100%;
+      width: 100%;
     }
 }
 
-.animated-hero-svg{
-  height: 450px;
-  width: 350px;
-  display: block;
-  margin: auto;
-}
 
 /*************Freshworks*************/
 .freshworks {
@@ -1204,7 +1221,7 @@ margin: auto ;
 }
 
 .fresh img{
-  width: 85%;
+  width: 50%;
   height: auto;
 }
 

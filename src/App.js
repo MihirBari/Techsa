@@ -13,7 +13,7 @@ import { ArmisPage } from "./pages/ArmisPage.js";
 import { Career } from "./pages/Career.js";
 
 function App() {
-  // window.addEventListener("contextmenu", (e) => e.preventDefault());
+ //window.addEventListener("contextmenu", (e) => e.preventDefault());
 
   return (
     <div className="App">

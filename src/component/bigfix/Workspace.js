@@ -7,12 +7,12 @@ import img3 from "../../assets/workspace/Manage+mobile+devices+alongside+traditi
 const modules = [
   {
     image: img1,
-    title: "One solution to manage and secure all end user workspaces",
+    title: "Unified Endpoint Management",
     description: `Maintain real-time visibility into all desktops, laptops, and mobile devices through a single pane of glass. Reduce cyber risk and optimize endpoint management practices across all end user devices.`,
   },
   {
     image: img2,
-    title: "Reduce workstation management complexity and cost",
+    title: "Client Device Lifecycle Management",
     description: `
     Address the full system lifecycle of client devices including asset discovery, 
     software distribution, operating system deployment/updates, multiplatform matching, vulnerability 
@@ -22,7 +22,7 @@ const modules = [
   },
   {
     image: img3,
-    title: "Manage mobile devices alongside traditional workstations",
+    title: "Centralized Endpoint Management",
     description: `
     Manage up to 300,000 end user workstation devices -- desktops, laptops, and mobile devices -- using a single HCL BigFix Enterprise Server.  Maintain full visibility to all endpoint devices from a single management interface which improves security and simplifies IT management. 
   `,

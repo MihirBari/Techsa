@@ -15,7 +15,7 @@ const modules = [
   },
   {
     image: img2,
-    title: "Patch compliance reporting",
+    title: "Patch compliance",
     description: `
     Manage up to 300,000 endpoints, regardless of location, connection type or operating system from a single management server and one intelligent agent supporting more than 100 operating system versions.
   `,
@@ -29,7 +29,7 @@ const modules = [
   },
   {
     image: img4,
-    title: " OS Deployment – Bare Metal, Wipe & Load, Updates & Migration",
+    title: " OS Deployment",
     description: `
     The OS Deployment product offering within BigFix  is accessed through the OS Deployment and Bare Metal Imaging site included with BigFix Lifecycle. This site uses Tivoli Provisioning Manager for OS Deployment for bare metal imaging. This site deprecates the "OS Deployment" and "BigFix OS Deployment for Windows" sites.
   `,
@@ -43,9 +43,16 @@ const modules = [
   },
   {
     image: img4,
-    title: "PC/Mac Energy Management",
+    title: "PC/Mac Power Management",
     description: `
     Maintain real-time visibility into your entire endpoint landscape including cloud, virtual, on-premise and roaming devices – all through a single pane of glass. Accelerate patch cycles, improve patch success rates, reduce downtime and minimize security risks.
+  `,
+  },
+  {
+    image: img4,
+    title: "Software Distribution",
+    description: `
+    The BigFix Software Distribution applications to deploy software to endpoints across your network from a single location. Maintain control and visibility into software delivery and installation. Device owners can use the Self Service Application to manage software and other BigFix actions that are deployed to them as offers.
   `,
   },
   {

@@ -8,7 +8,8 @@ const modules = [
   {
     image: img1,
     title:
-      "Pass audits and avoid fines with continuous compliance and configuration management",
+      `Continuous Compliance Platform`
+      ,
     description: `Accurate and real-time visibility and continuous enforcement of security configurations and
      patches to address configuration drifts. Security and compliance analytics identify, manage and report 
      on policy exceptions and deviations. Out-ot-the-box, the software supports security benchmarks such as
@@ -17,7 +18,7 @@ const modules = [
   {
     image: img2,
     title:
-      "Improve visibility and reduce risk with device discovery and patch management",
+      "Endpoint Management Solution",
     description: `
     Support a large variety of endpoints including cloud, server, and desktop 
     devices, as well as specialized equipment such as point-of-sale (POS) devices,
@@ -31,7 +32,7 @@ const modules = [
   },
   {
     image: img3,
-    title: "Prioritize remediation with compliance analytics and reporting",
+    title: "Continuous Compliance Monitoring",
     description: `
     Track the effectiveness of compliance efforts and quickly identify security exposures. Endpoint compliance status vs deployed policies is continuously collected, aggregated and reported on using a powerful Compliance Analytics Engine. Multiple reports are available out-of-the-box on security configurations, patching and vulnerabilities – showing current and historical trending – for entire deployments or for a single endpoint.
   `,
