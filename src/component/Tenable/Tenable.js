@@ -5,7 +5,7 @@ import {Products} from './Products'
 export const Tenable = () => {
   return (
     <>
-    <h2 style={{ textAlign: "center" }}>Tenable</h2>
+    <h2 style={{ textAlign: "center" }}>TENABLE</h2>
     <Summary />
     <Products />
   </>

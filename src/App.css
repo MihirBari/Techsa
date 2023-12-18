@@ -629,7 +629,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 .Cardd {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .productList {
@@ -1318,3 +1318,138 @@ margin: auto ;
     height: auto;
   }
 }
+
+/*********************RESOURCE***********************/
+.resource {
+  padding: 30px 0 200px 0;
+  margin-top: 111px;
+}
+
+.Carddd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.ResourceList {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.ResourceCardd {
+  position: relative;
+  background-color: #fff;
+  margin: 1rem;
+  flex: 1 0 calc(30% - 2rem); /* Adjust the width based on the number of columns */
+  max-width: 20rem;
+  max-height: 25rem;
+  transition: 0.2s;
+  box-shadow: -3px 4px 11px 0px #888888;
+}
+
+
+
+.ResourceCardd_content {
+  margin: 1rem;
+}
+
+.ResourceName {
+  font-size: 1.2rem;
+  text-align: start;
+}
+
+.displayStack__4 {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modalHeader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+.modalHeaders{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: flex-start;
+  color: rgb(11, 10, 10);
+}
+
+.modalHeadersP{
+margin-left: 130px;
+}
+
+.modalFooter{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ justify-content: space-between;
+  color: grey;
+}
+
+.contentt {
+
+  position: relative;
+}
+
+
+@media (max-width: 768px) {
+  .Carddd {
+    justify-content: space-evenly;
+  }
+  .ResourceCardd {
+    position: relative;
+    background-color: #fff;
+    flex: 1 0 calc(50% - 2rem); /* Adjust the width for smaller screens */
+    max-width: 20rem;
+    max-height: 27rem;
+    transition: 0.2s;
+    box-shadow: -3px 4px 11px 0px #888888;
+  }
+
+  .displayStack__4 {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .modalHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(2, 2, 2);
+  }
+  
+  .modalHeaders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    color: rgb(0, 0, 0);
+  }
+  
+  .modalHeaders p{
+    margin-left: 0px;
+    }
+    
+
+  .modalFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   justify-content: space-between;
+    color: rgb(0, 0, 0);
+  }
+  
+}
+

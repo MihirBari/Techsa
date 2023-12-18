@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Tenable = () => {
   return (
     <>
-    <h2 style={{ textAlign: "center", marginTop:'50px' }}>Tenable</h2>
+    <h2 style={{ textAlign: "center", marginTop:'50px' }}>TENABLE</h2>
     <div className='product-Big'>
         <div>
         <p>Your attack surface is growing, always changing and more interconnected than ever. With specialized security tools offering an incomplete picture, it can feel impossible to answer the question, “How secure are we?”

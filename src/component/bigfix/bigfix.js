@@ -9,7 +9,7 @@ import { LifeCycle } from './LifeCycle'
 const Bigfixs = () => {
   return (
     <>
-    <h2 style={{ textAlign: "center" }}>BigFix</h2>
+    <h2 style={{ textAlign: "center" }}>BIGFIX</h2>
      <Summary />
      <h2 style={{ textAlign: "center",margin:"20px 0 40px 0" }}>Modules in BigFix</h2>
      <Patch />

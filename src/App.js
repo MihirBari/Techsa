@@ -10,6 +10,7 @@ import { Products } from "./pages/Products.js";
 import { FreshWorksPage } from "./pages/FreshWorksPage.js";
 import { TeanablePage } from "./pages/TeanablePage.js";
 import { ArmisPage } from "./pages/ArmisPage.js";
+import { ResourcePage } from "./pages/ResourcePage.js";
 import { Career } from "./pages/Career.js";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/FreshWorks" element={<FreshWorksPage />} />
             <Route path="/Tenable" element={<TeanablePage />} />
             <Route path="/Armis" element={<ArmisPage />} />
+            <Route path="/Resource" element={<ResourcePage />} />
           </Routes>
       </>
     </div>

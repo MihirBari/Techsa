@@ -9,27 +9,27 @@ import projImg5 from "../../assets/Armis.png";
 export const Products = () => {
   const projects = [
     {
-      title: "SolarWinds",
+      title: "SOLARWINDS",
       imgUrl: projImg1,
       link: "/SolarWinds",
     },
     {
-      title: "BigFix",
+      title: "BIGFIX",
       imgUrl: projImg2,
       link: "/bigfix",
     },
     {
-      title: "Freshworks",
+      title: "FRESHWORKS",
       imgUrl: projImg4,
       link: "/FreshWorks",
     },
     {
-      title: "Tenable",
+      title: "TENABLE",
       imgUrl: projImg3,
       link: "/Tenable",
     },
     {
-      title: "Armis",
+      title: "ARMIS",
       imgUrl: projImg5,
       link: "/Armis",
     },
