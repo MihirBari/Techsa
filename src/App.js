@@ -12,6 +12,7 @@ import { TeanablePage } from "./pages/TeanablePage.js";
 import { ArmisPage } from "./pages/ArmisPage.js";
 import { ResourcePage } from "./pages/ResourcePage.js";
 import { Career } from "./pages/Career.js";
+import { Database } from "./component/SolarWinds/Database.js";
 
 function App() {
  //window.addEventListener("contextmenu", (e) => e.preventDefault());
@@ -31,6 +32,7 @@ function App() {
             <Route path="/Tenable" element={<TeanablePage />} />
             <Route path="/Armis" element={<ArmisPage />} />
             <Route path="/Resource" element={<ResourcePage />} />
+            <Route path="/Database" element={<Database />} />
           </Routes>
       </>
     </div>

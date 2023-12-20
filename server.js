@@ -1,52 +1,71 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
+const express = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios');
 
-// server used to send send emails
 const app = express();
-app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+const port = 5000; // Choose a port number
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: "********@gmail.com",
-    pass: ""
-  },
-});
+app.use(bodyParser.json());
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
+app.post('/contact', async (req, res) => {
+  try {
+    const inputArray = req.body;
+
+    if (
+      inputArray &&
+      inputArray.response &&
+      inputArray.name &&
+      inputArray.email &&
+      inputArray.message
+    ) {
+      const recaptchaResponse = await verifyHuman(inputArray);
+
+      if (recaptchaResponse.success) {
+        await pushMessage(
+          inputArray.name,
+          inputArray.email,
+          inputArray.message,
+          inputArray.phone
+        );
+        res.status(200).json({ status: 200, message: 'Success' });
+      } else {
+        res.status(501).json({ status: 501, message: 'Failed captcha verification' });
+      }
+    } else {
+      res.status(250).json({ status: 250, message: 'Incomplete data' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ status: 500, message: 'Internal Server Error' });
   }
 });
 
-router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
-  const phone = req.body.phone;
-  const mail = {
-    from: name,
-    to: "********@gmail.com",
-    subject: "Contact Form Submission - Portfolio",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
+async function verifyHuman(inputArray) {
+  const recaptchaSecret = 'YOUR_RECAPTCHA_SECRET_KEY';
+  const recaptchaResponse = await axios.post(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${inputArray.response}`
+  );
+  return recaptchaResponse.data;
+}
+
+async function pushMessage(name, email, message, phone = '000') {
+  const pushbulletAccessToken = 'YOUR_PUSHBULLET_ACCESS_TOKEN';
+  const messageType = inputArray.type === 'contact' ? 'Contact Form' : 'Careers Form';
+
+  const messageBody = {
+    title: `${messageType} (Website) - ${name}`,
+    body: `Name: ${name}\nMessage: ${message}\nEmail: ${email}\nPhone: ${phone}`,
+    type: 'note',
   };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
-    }
+
+  await axios.post('https://api.pushbullet.com/v2/pushes', messageBody, {
+    headers: {
+      'Access-Token': pushbulletAccessToken,
+      'Content-Type': 'application/json',
+    },
   });
+}
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

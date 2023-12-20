@@ -28,7 +28,7 @@ export function AboutCard(props) {
           <h3 className="productName">{props.name}</h3>
           <div className="displayStack__1">
             <Link to={props.link}>
-              <FaLinkedin className="productPrice" />
+              <FaLinkedin size={30} className="productPrice" />
             </Link>
           </div>
         </div>
@@ -39,6 +39,7 @@ export function AboutCard(props) {
         onHide={closeModal}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
+        style={{ zIndex: 100090 }} 
         centered
       >
         <Modal.Header closeButton>
@@ -60,7 +61,7 @@ export function AboutCard(props) {
             alt="product-img"
             className="productImage"
           />
-          <p>{props.description}</p>
+          <p style={{marginLeft:'25px'}}>{props.description}</p>
          
         </Modal.Body>
         <Modal.Footer style={{
@@ -72,7 +73,7 @@ export function AboutCard(props) {
           }}>
         <div className="displayStack__1">
             <Link to={props.link}>
-              <FaLinkedin className="productPrice" />
+              <FaLinkedin size={30} className="productPrice" />
             </Link>
           </div>
           <Button onClick={closeModal}>Close</Button>

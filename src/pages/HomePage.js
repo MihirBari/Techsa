@@ -27,7 +27,7 @@ const HomePage = () => {
         <div className="App">
           <NavBar />
           <Banner />
-          <HeroClaravineAnimation />
+          {/* <HeroClaravineAnimation /> */}
           <br />
           <br />
           <Skills />

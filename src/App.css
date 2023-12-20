@@ -845,9 +845,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   align-items: center;
 }
 
-.solar div {
+/* .solar div {
   width: 50%;
-}
+} */
 
 .ImageWithText {
   cursor: pointer;
@@ -1420,7 +1420,7 @@ margin-left: 130px;
     margin: 2rem 0;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .modalHeader{
@@ -1453,3 +1453,62 @@ margin-left: 130px;
   
 }
 
+/************Database*************/
+.Database{
+  padding: 30px 0 0 0;
+  margin-top: 111px;
+}
+
+.Database {
+  text-align: center;
+}
+
+.Database h2, .Database h3, .Database p {
+  margin-top: 10px;
+}
+
+.Database .flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Database .button-container {
+  margin-bottom: 20px;
+}
+
+.Database .product-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #eaeeee;
+}
+
+.Database h3 {
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff 60%, #eaeeee 40%);
+  padding: 10px; /* Add padding as needed */
+}
+
+.Database .product {
+  display: flex;
+  flex-direction: row;
+}
+
+.Database .product div {
+  margin-right: 10px;
+}
+
+.Database .product p {
+  width: 246px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.custom-button{
+  background-color: #7EDA3B;
+  color: #000;
+  border-radius: 20px;
+  margin-top: 25px;
+}
