@@ -1,56 +1,132 @@
-import React from 'react';
-import { Module } from './Module';
-import img1 from "../../assets/inventory/Reduce+audit+fines+and+software+costs.png"
-import img2 from "../../assets/inventory/Deliver+comprehensive+visibility.png"
-import img3 from "../../assets/inventory/Improve+security+posture.png"
-import img4 from "../../assets/inventory/Increase+efficiency+by+streamlining.png"
+import React from "react";
+import { Module } from "./Module";
+import img1 from "../../assets/inventory/Reduce+risk+and+manage+the+entire+endpoint+system+lifecycle.png";
+import img2 from "../../assets/compliance/Improve+visibility+and+reduce+risk.png";
+import img3 from "../../assets/compliance/Prioritize+remediation+with+compliance.png";
+import img5 from "../../assets/inventory/Improve+security+posture.png";
+import img4 from "../../assets/inventory/Increase+efficiency+by+streamlining.png";
 
 const modules = [
   {
+    image: img2,
+    title: "Patch Compliance and reporting",
+    description: `
+    Efficiently monitor and analyze compliance effectiveness with real-time endpoint status. 
+    The Compliance Analytics Engine provides instant insights into security configurations, 
+    patching, and vulnerabilities across deployments.`,
+  },
+  {
     image: img1,
-    title: "Reduce audit fines and software costs",
-    description: `Discovers licensed and unlicensed software with drill-down granularity to reduce annual software expenditures and vendor-imposed software compliance penalties. Uses a consolidated console, single server, and single intelligent agent to compare discovered software against the number of available licenses. This visibility into software license consumption helps you plan software budgets based on inventory and usage trends. It also helps you plan for software upgrades and migrations by enabling administrators to determine which endpoints meet prerequisites.`,
+    title: "Unified Endpoint Management",
+    description: `
+    BigFix provides a unified architecture, leveraging AI technology, to effectively manage and assure
+    compliance of all servers, desktops, and mobile devices, whether they are in the office, at home, or
+    in the cloud.
+    `,
   },
   {
     image: img2,
-    title: "Comprehensive Software Audit",
+    title: "Client Device Management",
     description: `
-    Provides a comprehensive, real-time view of all assets to ensure software audit readiness across hundreds of thousands of endpoints. Includes information on over 9,100 software publishers, 38,000 software products and 105,000 application signatures and can easily accommodate homegrown and proprietary applications. Plus, it supports six different forms of discovery including a Software Identification Catalog (ISO 19770 enabled), customized template signatures, an installation registry, vendor-specific discover solutions, ISO SWID tags and hardware discovery
-  `,
+Comprehensively manage client devices from discovery to resolution. Streamline tasks, empower self-service, and minimize service desk tickets.
+`,
   },
   {
     image: img3,
     title: " Improve security posture",
     description: `
-    Enables you to set security compliance policies for software and system configurations – helping IT and Security organizations collaborate to secure the enterprise by monitoring for unauthorized software while removing software which poses a security threat. Provides reports on the health and compliance of software assets in minutes, regardless of the size of the environment.
+Enables collaboration between IT and Security to set and monitor security compliance policies for 
+software and configurations, ensuring enterprise security through rapid health and compliance reporting.
   `,
   },
   {
     image: img4,
     title: "Efficient Inventory Automation",
     description: `
-    Automates inventory operations using a single solution – enabling IT organizations to reduce the number of hours and resources spent on inventory activities. Provides the ability to handle hundreds of thousands of endpoints using a single HCL BigFix server and intelligent agent, which reduces hardware and staffing costs compared to traditional asset management methods.
+    Automates inventory tasks, streamlining operations and cutting resource hours. Manages large-scale endpoints efficiently, reducing costs compared to traditional methods.
+  `,
+  },
+  {
+    image: img5,
+    title: "Continuous Compliance Monitoring",
+    description: `
+  
+Efficiently monitor and assess compliance effectiveness through real-time tracking and 
+reporting. Gain insights on endpoint compliance status and security exposures with a robust
+Compliance Analytics Engine, offering out-of-the-box reports on security configurations and patching.
+`,
+  },
+];
+
+const modules1 = [
+  {
+    image: img2,
+    title: "Software Distribution",
+    description: `
+    BigFix Software Distribution applications to deploy software to endpoints across your network from a single location.
+     Maintain control and visibility into software delivery and installation.
+    `,
+  },
+  {
+    image: img4,
+    title: " OS Deployment",
+    description: `
+    BigFix OS Deployment, which is part of the BigFix Lifecycle Management suite, provides a consolidated, comprehensive solution to quickly deploy new workstations and servers throughout a network from a single, centralized location. 
+  `,
+  },
+  {
+    image: img3,
+    title: "Centralized Endpoint Management",
+    description: `
+    Manage up to 300,000 endpoints, regardless of location, connection type or operating system from a single management server and one intelligent agent supporting more than 100 operating system versions.
+  `,
+  },
+  {
+    image: img3,
+    title: " Remote control",
+    description: `
+    BigFix Remote Control application helps to communicate between different components, clients, and endpoints within BigFix environment.
+  `,
+  },
+  {
+    image: img1,
+    title: "Modern Client Management",
+    description: `
+    BigFix WebUI facilitates to manage modern devices that do not have a BigFix agent installed as well as to manage traditional devices that have BigFix agent installed.
+    `
+  },
+  {
+    image: img4,
+    title: "Insights for Vulnerability Remediation",
+    description: `
+    BigFix Insights for Vulnerability Remediation integrates BigFix with sources of vulnerability data. The purpose is to guide BigFix users on how to apply the best patch and configuration settings to remediate discovered vulnerabilities, and thus reduce risk and improve security.
   `,
   },
 ];
 
 export const Inventory = () => {
   return (
-    <div className="summary-module-container">
-      <div className="summary">
-        <h2 style={{marginBottom:"20px"}}> BigFix Inventory</h2>
-        <span>
-        Maintain software audit readiness and improve security with asset inventory and software usage analysis.
-        </span>
-      </div>
+    <>
+      {/* <h2 style={{ textAlign: "center", marginBottom: "40px" }}>
+        Features of BigFix{" "}
+      </h2> */}
+      <div className="summary-module-container">
+        <div className="modules">
+          {modules.map(({ image, title, description }, index) => (
+            <div key={index}>
+              <Module image={image} title={title} description={description} />
+            </div>
+          ))}
+        </div>
 
-      <div className='module'>
-      {modules.map(({image, title, description }, index) => (
-          <div key={index} >
-            <Module image={image} title={title} description={description} />
-          </div>
-        ))}
+        <div className="modules">
+          {modules1.map(({ image, title, description }, index) => (
+            <div key={index}>
+              <Module image={image} title={title} description={description} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };

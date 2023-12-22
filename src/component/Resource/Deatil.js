@@ -19,7 +19,7 @@ export function Detail(props) {
         <div className="ResourceCardd_content">
           <h3 className="ResourceName">{props.name}</h3>
           <div className="displayStack__4">
-            <b>Issue Summary </b> {props.Summary}
+            <b>Issue</b> {props.Summary}
             <br />
             <br />
             <div style={{display:'flex', flexDirection:'row'}}> 

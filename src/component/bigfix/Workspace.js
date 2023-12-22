@@ -33,19 +33,18 @@ export const Workspace = () => {
   return (
     <div className="summary-module-container">
       <div className="summary">
-        <h2 style={{marginBottom:"20px"}}> BigFix Workspace</h2>
-        <span>
+        <h2 style={{marginBottom:"20px",textAlign:'center' }}> BigFix Workspace</h2>
+        <span style={{textAlign:'center' }}>
         Improve employee experience, reduce help desk calls, and
          enhance endpoint security regardless of employee location, connection
         </span>
       </div>
 
       <div className='module'>
-        {modules.map(({image, title, description }, index) => (
-          <div key={index} >
-            <Module image={image} title={title} description={description} />
-          </div>
-        ))}
+      <h2 style={{marginBottom:"20px",textAlign:'center' }}> BigFix Inventory</h2>
+        <span style={{textAlign:'center' }}>
+        Maintain software audit readiness and improve security with asset inventory and software usage analysis.
+        </span>
       </div>
     </div>
   );

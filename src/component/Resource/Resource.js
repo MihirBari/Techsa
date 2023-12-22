@@ -7,7 +7,7 @@ export const Resource = () => {
   return (
     <div>
         <h2 style={{textAlign:'center'}}>CASE STUDIES</h2>
-        <div className="project" id="project">
+        <div className="resource" id="project">
                          <Tab.Container id="projects-tabs" defaultActiveKey="first" >
                         <Nav variant="pills" className="nav-pills 
                          justify-content-center align-items-center" 

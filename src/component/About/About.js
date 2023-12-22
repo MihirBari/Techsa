@@ -21,11 +21,18 @@ export const About = () => {
       imgUrl: projImg2,
       caption: "Sanjiv Sachdev",
       link: "https://www.linkedin.com/in/sanjivsachdev",
-      description: ` Sanjiv holds a Bachelor's Degree in Engineering with specialisation in Electronics. Sanjiv is a passionate and adventurous technologist with core strengths in result-oriented Business Development & Growth Management. Sanjiv brings with him close to 3 decades of experience in the Information Technology Industry. 
- 
-Based out of India, Sanjiv has worked extensively with global clients in North America and EMEA. Sanjiv has built a niche for Techsa Services that is known to be a specialist in the domain and solutions offered by them.  
- 
-Prior to founding and managing the Sales & General Administration of Techsa Services Pvt Ltd for close to 14 years, Sanjiv has held various leadership profiles in Account Management, Team & Territory Management in companies like Wipro Infotech, Nortel Networks and Cisco Systems. Sanjiv is an animal lover with huge empathy for humanity & sensitivity of giving back to the society. Sanjiv also specialises in Commercial Innovation, P&L Management and supporting Start-ups. Sanjiv believes in building high performance teams and carries the philosophy of ‘Work Hard; Play Hard’ at Techsa Services.
+      description: `
+    Sanjiv holds a Bachelor's Degree in Engineering with specialization in Electronics. 
+    He is a passionate and adventurous technologist with core strengths in result-oriented Business Development & Growth Management. 
+    With nearly three decades of experience in the Information Technology Industry, Sanjiv has established himself as a seasoned professional.
+
+    Based out of India, Sanjiv has worked extensively with global clients in North America and EMEA. 
+    He has successfully built a niche for Techsa Services, known as a specialist in the domain and solutions offered by them.
+
+    Prior to founding and managing the Sales & General Administration of Techsa Services Pvt Ltd for close to 14 years, 
+    Sanjiv held various leadership profiles in Account Management, Team & Territory Management in companies like Wipro Infotech, 
+    Nortel Networks, and Cisco Systems. An animal lover with immense empathy for humanity, Sanjiv is also committed to giving back to society. 
+    He specializes in Commercial Innovation, P&L Management, and supporting Start-ups, adhering to the philosophy of 'Work Hard; Play Hard' at Techsa Services.
 `,
     },
   ];

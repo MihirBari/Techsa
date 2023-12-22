@@ -1,20 +1,9 @@
 import React from "react";
 import { Module } from "./Module";
-import img1 from "../../assets/compliance/Pass+audits+and+avoid+fines+with+continuous+compliance.png";
 import img2 from "../../assets/compliance/Improve+visibility+and+reduce+risk.png";
 import img3 from "../../assets/compliance/Prioritize+remediation+with+compliance.png";
 
 const modules = [
-  {
-    image: img1,
-    title:
-      `Continuous Compliance Platform`
-      ,
-    description: `Accurate and real-time visibility and continuous enforcement of security configurations and
-     patches to address configuration drifts. Security and compliance analytics identify, manage and report 
-     on policy exceptions and deviations. Out-ot-the-box, the software supports security benchmarks such as
-      CIS, DISA STIG, USGCB, and PCI-DSS. It also shows trending and analysis of security configuration changes. The HCL BigFix intelligent agent provides continuous compliance with automated audit cycles measured in minutes rather than weeks.`,
-  },
   {
     image: img2,
     title:
@@ -43,24 +32,11 @@ export const Compliance = () => {
   return (
     <div className="summary-module-container">
       <div className="summary">
-        <h2 style={{ marginBottom: "20px" }}> BigFix Compliance</h2>
-        <span>
+        <h2 style={{ marginBottom: "20px", textAlign:'center' }}> BigFix Compliance</h2>
+        <span style={{textAlign:'center' }}>
           BigFix Compliance can help organizations both protect endpoints and
-          meet security compliance requirements and policies. This
-          easy-to-manage,quick-to-deploy solution supports security in an
-          environment that is likely to include a large variety and largenumbers
-          of endpoints—from servers to desktop PCs, and “roaming”
-          Internet-connected laptops, as well asspecialized equipment such as
-          point-of-sale devices, ATMs and self-service kiosks.
+          meet security compliance requirements and policies.
         </span>
-      </div>
-
-      <div className="module">
-        {modules.map(({ image, title, description }, index) => (
-          <div key={index}>
-            <Module image={image} title={title} description={description} />
-          </div>
-        ))}
       </div>
     </div>
   );

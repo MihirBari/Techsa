@@ -44,7 +44,10 @@ export const  Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">TECHSA SERVICE PRIVATE LTD.</span>
             <h1><span className="wrap">{text}</span></h1>
-            <p>Our mission is to diligently monitor, expertly manage, meticulously analyze, and unwaveringly secure the entirety of our customers' IT infrastructure. Through our dedicated efforts and innovative solutions, we ensure comprehensive protection, optimal performance, and strategic insights.</p>
+            <p>Our mission is to diligently monitor, expertly manage, meticulously analyze, and 
+              unwaveringly secure our customer's IT infrastructure. Through our
+               dedicated efforts and innovative solutions, we ensure comprehensive protection, 
+              performance, and strategic insights related to your hybrid IT infrastructure.</p>
             <button onClick={handleScrollDown}>Let's Explore <ArrowRightCircle size={25} /></button>
           </Col>
           <Col xs={12} md={6} xl={5}>

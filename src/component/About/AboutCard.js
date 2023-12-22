@@ -47,14 +47,7 @@ export function AboutCard(props) {
             {props.name}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            color:"grey"
-          }}
-        >
+        <Modal.Body className="aboutModal"  >
           <img
             style={{ width: "150px", height: "200px" }}
             src={props.image}

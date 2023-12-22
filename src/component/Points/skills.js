@@ -51,9 +51,9 @@ export const Skills = () => {
               <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <DevicesMonitored />
               </div>
-              <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
+              {/* <div className="item" style={{ flex: "1 1 25%", textAlign: "center" }}>
                 <DevicesMonitored />
-              </div>
+              </div> */}
             </div>
           </Col>
         </Row>

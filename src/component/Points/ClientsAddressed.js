@@ -18,7 +18,7 @@ export const ClientsAddressed = () => {
       <div>
         <p >{count}+
         <br />
-        Clients Addressed
+        Clients
         </p>
       </div>
       </div>

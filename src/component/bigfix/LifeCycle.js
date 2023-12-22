@@ -8,26 +8,6 @@ import img4 from "../../assets/inventory/Deliver+comprehensive+visibility.png"
 
 const modules = [
   {
-    image: img1,
-    title: "Asset Discovery",
-    description: `BigFix Asset Discovery works by designating certain computers as Scan Points. Any agent can be designated as a Scan Point if it is running a supported operating system. These Scan Points query the unmanaged assets in your network. The following image illustrates this process.
-    `,
-  },
-  {
-    image: img2,
-    title: "Patch compliance",
-    description: `
-    Manage up to 300,000 endpoints, regardless of location, connection type or operating system from a single management server and one intelligent agent supporting more than 100 operating system versions.
-  `,
-  },
-  {
-    image: img3,
-    title: "3rd party App Patching",
-    description: `
-    Traditional BigFix Patch content focuses on a limited set of vendors with a specialty in operating system and security patching. The Updates for Windows Applications – extended content site, provides coverage for upgrades to a growing list of third-party applications. This expansion helps you fill gap in proactive patching processes.
-  `,
-  },
-  {
     image: img4,
     title: " OS Deployment",
     description: `
@@ -35,28 +15,21 @@ const modules = [
   `,
   },
   {
-    image: img4,
+    image: img3,
     title: " Remote control",
     description: `
     BigFix Remote Control application helps to communicate between different components, clients, and endpoints within BigFix environment.
   `,
   },
   {
-    image: img4,
-    title: "PC/Mac Power Management",
-    description: `
-    Maintain real-time visibility into your entire endpoint landscape including cloud, virtual, on-premise and roaming devices – all through a single pane of glass. Accelerate patch cycles, improve patch success rates, reduce downtime and minimize security risks.
-  `,
-  },
-  {
-    image: img4,
+    image: img2,
     title: "Software Distribution",
     description: `
     The BigFix Software Distribution applications to deploy software to endpoints across your network from a single location. Maintain control and visibility into software delivery and installation. Device owners can use the Self Service Application to manage software and other BigFix actions that are deployed to them as offers.
   `,
   },
   {
-    image: img4,
+    image: img1,
     title: "Modern Client Management",
     description: `
     This section guides you through BigFix Modern Client Management (MCM) and BigFix Mobile to understand the MCM concepts, terminologies, features, and functionality. You can find detailed instructions for managing the complete lifecycle of your MDM managed endpoints here.
