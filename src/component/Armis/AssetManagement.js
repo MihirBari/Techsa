@@ -42,14 +42,14 @@ const modules = [
 export const AssetManagement = () => {
   return (
     <div className="summary-module-container">
-      <div className="summary">
+      <div className="sum">
         <h2 style={{ marginBottom: "20px" }}>Armis Centrix™ for Asset Management and Security</h2>
         <span>
         Complete inventory of all asset types to see and secure your attack surface
         </span>
       </div>
 
-      <div className="module">
+      <div className="mod">
         {modules.map(({ image, title, description }, index) => (
           <div key={index}>
             <Module image={image} title={title} description={description} />

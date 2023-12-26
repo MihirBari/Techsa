@@ -8,33 +8,23 @@ const modules = [
   {
     image: img1,
     title:
-      `Continuous Compliance Platform`
+      `Inherent Security Control Limitations`
       ,
-    description: `Accurate and real-time visibility and continuous enforcement of security configurations and
-     patches to address configuration drifts. Security and compliance analytics identify, manage and report 
-     on policy exceptions and deviations. Out-ot-the-box, the software supports security benchmarks such as
-      CIS, DISA STIG, USGCB, and PCI-DSS. It also shows trending and analysis of security configuration changes. The HCL BigFix intelligent agent provides continuous compliance with automated audit cycles measured in minutes rather than weeks.`,
+    description: `Medical devices are often un-agentable or unscannable, can’t install security software or leverage traditional security methods on them, and are unable be patched or modified in any way (including disabling services or otherwise normal operating system tasks).`,
   },
   {
     image: img2,
     title:
-      "Endpoint Management Solution",
+      "Legacy Devices",
     description: `
-    Support a large variety of endpoints including cloud, server, and desktop 
-    devices, as well as specialized equipment such as point-of-sale (POS) devices,
-     ATMs and self-service kiosks. The device discovery capabilities find all endpoints
-      that you know about as well as previously unknown endpoints in your environment. 
-      You can even quarantine endpoints that are out of compliance. Plus, it’s easy to deploy patches to
-       distributed and virtual endpoints using multiple versions of the top twelve operating systems 
-       (e.g. Windows, UNIX, Linux and MacOS etc.), 
-    as well as third-party applications and policy-based patches - regardless of connection type or status.
+    Many healthcare institutions continue to rely on outdated medical devices with limited security features, creating a vulnerability gap as these devices lack robust defenses against modern cyber threats. Integrating these legacy devices into a cohesive security strategy requires striking a balance between preserving functionality, implementing necessary safeguards, and cost.
   `,
   },
   {
     image: img3,
-    title: "Continuous Compliance Monitoring",
+    title: "Diverse Device Profiles",
     description: `
-    Track the effectiveness of compliance efforts and quickly identify security exposures. Endpoint compliance status vs deployed policies is continuously collected, aggregated and reported on using a powerful Compliance Analytics Engine. Multiple reports are available out-of-the-box on security configurations, patching and vulnerabilities – showing current and historical trending – for entire deployments or for a single endpoint.
+    The proliferation of interconnected medical devices, each with its unique operating system and communication protocols, poses a challenge in maintaining a standardized security framework.
   `,
   },
 ];
@@ -42,14 +32,14 @@ const modules = [
 export const Remediation = () => {
   return (
     <div className="summary-module-container">
-      <div className="summary">
+      <div className="sum">
         <h2 style={{ marginBottom: "20px" }}>Armis Centrix™ for Vulnerability Prioritization and Remediation</h2>
         <span>
         See, consolidate, prioritize, and remediate all vulnerabilities
         </span>
       </div>
 
-      <div className="module">
+      <div className="mod">
         {modules.map(({ image, title, description }, index) => (
           <div key={index}>
             <Module image={image} title={title} description={description} />

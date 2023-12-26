@@ -8,33 +8,24 @@ const modules = [
   {
     image: img1,
     title:
-      `Continuous Compliance Platform`
+      `Lack of Discovery `
       ,
-    description: `Accurate and real-time visibility and continuous enforcement of security configurations and
-     patches to address configuration drifts. Security and compliance analytics identify, manage and report 
-     on policy exceptions and deviations. Out-ot-the-box, the software supports security benchmarks such as
-      CIS, DISA STIG, USGCB, and PCI-DSS. It also shows trending and analysis of security configuration changes. The HCL BigFix intelligent agent provides continuous compliance with automated audit cycles measured in minutes rather than weeks.`,
+    description: `You can’t protect what you can’t see. Complex OT networks need a holistic approach to asset discovery, including safe passive and active scanning.
+    Discover and locate up to 5x more assets than traditional tools find- managed and unmanaged- and create real time, complete inventories without manual intervention by IT teams.`,
   },
   {
     image: img2,
     title:
-      "Endpoint Management Solution",
+      "Out of Control IT/OT Convergence",
     description: `
-    Support a large variety of endpoints including cloud, server, and desktop 
-    devices, as well as specialized equipment such as point-of-sale (POS) devices,
-     ATMs and self-service kiosks. The device discovery capabilities find all endpoints
-      that you know about as well as previously unknown endpoints in your environment. 
-      You can even quarantine endpoints that are out of compliance. Plus, it’s easy to deploy patches to
-       distributed and virtual endpoints using multiple versions of the top twelve operating systems 
-       (e.g. Windows, UNIX, Linux and MacOS etc.), 
-    as well as third-party applications and policy-based patches - regardless of connection type or status.
+    Armis delivers 10x deeper contextual asset awareness, streamlines workflows and speeds up remediation efforts. With easy access to granular industrial control systems (ICS) and OT device details you can prioritize and take action on risk-related insights and their connections.
   `,
   },
   {
     image: img3,
-    title: "Continuous Compliance Monitoring",
+    title: "Ransomware Attacks and Data Breaches",
     description: `
-    Track the effectiveness of compliance efforts and quickly identify security exposures. Endpoint compliance status vs deployed policies is continuously collected, aggregated and reported on using a powerful Compliance Analytics Engine. Multiple reports are available out-of-the-box on security configurations, patching and vulnerabilities – showing current and historical trending – for entire deployments or for a single endpoint.
+    Reputation, Trust and ROI are all impacted by the growing attacks on critical infrastructure. Implementing Armis for OT instantly helps to improve your cyber and operational resilience.
   `,
   },
 ];
@@ -42,14 +33,14 @@ const modules = [
 export const IoTSecurity = () => {
   return (
     <div className="summary-module-container">
-      <div className="summary">
+      <div className="sum">
         <h2 style={{ marginBottom: "20px" }}>Armis Centrix™ for OT/ IoT Security</h2>
         <span>
         See and secure OT networks and physical assets, ensure uptime, and build an effective and comprehensive security strategy
         </span>
       </div>
 
-      <div className="module">
+      <div className="mod">
         {modules.map(({ image, title, description }, index) => (
           <div key={index}>
             <Module image={image} title={title} description={description} />

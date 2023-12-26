@@ -31,7 +31,7 @@ export const Skills = () => {
         <Row>
           <Col>
             <div>
-              <h2 style={{ textAlign: "center" }}>Achievements</h2>
+              <h2 style={{ textAlign: "center",color:"red" }}>Achievements</h2>
             </div>
             <div
               style={{

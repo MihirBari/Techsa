@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
+const cors = require('cors'); // Add cors module
 
 const app = express();
 const port = 5000; // Choose a port number
 
 app.use(bodyParser.json());
+app.use(cors()); // Enable CORS for all routes
 
 app.post('/contact', async (req, res) => {
   try {
@@ -25,7 +27,8 @@ app.post('/contact', async (req, res) => {
           inputArray.name,
           inputArray.email,
           inputArray.message,
-          inputArray.phone
+          inputArray.phone,
+          inputArray  
         );
         res.status(200).json({ status: 200, message: 'Success' });
       } else {
@@ -41,15 +44,15 @@ app.post('/contact', async (req, res) => {
 });
 
 async function verifyHuman(inputArray) {
-  const recaptchaSecret = 'YOUR_RECAPTCHA_SECRET_KEY';
+  const recaptchaSecret = '6LcTvUUUAAAAAJoIV78vMg5cO6Th7E1ZEZfKjFSo';
   const recaptchaResponse = await axios.post(
     `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${inputArray.response}`
   );
   return recaptchaResponse.data;
 }
 
-async function pushMessage(name, email, message, phone = '000') {
-  const pushbulletAccessToken = 'YOUR_PUSHBULLET_ACCESS_TOKEN';
+async function pushMessage(name, email, message, phone = '000', inputArray) {
+  const pushbulletAccessToken = 'o.rstVetu3DZE7HF7zVa05fmjdOlFJJ4jE';
   const messageType = inputArray.type === 'contact' ? 'Contact Form' : 'Careers Form';
 
   const messageBody = {

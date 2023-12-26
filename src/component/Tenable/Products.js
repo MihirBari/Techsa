@@ -62,7 +62,7 @@ export const Products = () => {
   return (
     <>
     <div className="project" id="project">
-      <h1 className="heading" style={{ textAlign: 'center' }}>
+      <h1 className="heading" style={{ textAlign: 'center',color:'red' }}>
         Featured Solutions
       </h1>
       {isWideScreen ? (
@@ -105,7 +105,7 @@ export const Products = () => {
               </Nav.Link>
             </Nav.Item>
           </Nav>
-          <Tab.Content className="ml-3" style={{ width: '60%', border: '1px solid #ddd', padding: '20px', marginBottom: '15px' }}>
+          <Tab.Content className="ml-3" style={{ width: '60%', border: '1px solid #ddd', padding: '20px', marginBottom: '15px',backgroundColor:'lightgreen' }}>
             {[
               {
                 eventKey: 'first',

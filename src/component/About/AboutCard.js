@@ -54,8 +54,17 @@ export function AboutCard(props) {
             alt="product-img"
             className="productImage"
           />
-          <p style={{marginLeft:'25px'}}>{props.description}</p>
-         
+          <div>
+          <p style={{marginLeft:'25px'}}>{props.description}
+          </p>
+          <br />
+          <p style={{marginLeft:'25px'}}>{props.description1}
+          </p>
+          <br />
+          <p style={{marginLeft:'25px'}}>{props.description2}
+          </p>
+          </div>
+
         </Modal.Body>
         <Modal.Footer style={{
             display: "flex",

@@ -236,6 +236,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   display: inline-block;
 }
 
+.wrap{
+  color: red;
+}
+
 .banner h1 {
   font-size: 65px;
   font-weight: 700;
@@ -246,7 +250,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 .banner p {
-  color: #B8B8B8;
+  color: #476930;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -261,6 +265,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+}
+
+.tagline{
+  color: darkred;
 }
 
 .banner button svg {
@@ -315,7 +323,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 .skill p {
-  color: #B8B8B8;
+  color: #476930;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -352,10 +360,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
+  color: red;
 }
 
 .project p {
-  color: #B8B8B8;
+  color: #476930;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -406,8 +415,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 .project .nav.nav-pills .nav-link.active {
   border: 1px solid rgb(255, 255, 255);
-  background-color: #ccc; 
-  border-bottom: 5px solid #0079dd;
+  background-color: #76e02f;
+  border-bottom: 5px solid red;
 }
 
 .project .nav.nav-pills .nav-link.active::before {
@@ -509,10 +518,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 .contact form input,
 .contact form textarea {
   width: 100%;
-  background: rgba(5, 5, 5, 0.1);
+  background: rgb(194, 240, 194);;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  color: #000000;
+  color: #304522;
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
@@ -523,20 +532,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 .contact form input:focus,
 .contact form textarea:focus {
-  background: rgb(255, 255, 255);
-  color: #121212;
+  background: rgb(194, 240, 194);
+  color: #476930;
 }
 
 .contact form input::placeholder,
 .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #1e1c1c;
+  color: #476930;
 }
 
 .contact form input:focus::placeholder,
 .contact form textarea:focus::placeholder {
-  color: #121212;
+  color: #476930;
   opacity: 0.8;
 }
 
@@ -613,7 +622,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   left: 0;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
-  border: 2px solid #000;
+  border: 2px solid #6ca645;
   box-sizing: border-box;
   border-radius: 35px;
   border-right: none;
@@ -672,6 +681,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 
@@ -724,14 +734,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 .product-Solar p {
-  color: #B8B8B8;
+  color: #476930;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
 }
 
 .product-Solar button {
-  background-color: blue;
+  background-color: green;
   color: white;
   padding: 15px;
   border-radius: 25px;
@@ -760,14 +770,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 .product-Big p {
-  color: #B8B8B8;
+  color: #476930;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
 }
 
 .product-Big button {
-  background-color: blue;
+  background-color: green;
   color: white;
   padding: 15px;
   border-radius: 25px;
@@ -801,7 +811,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   }
 
   .product-Solar p {
-    color: #B8B8B8;
+    color: #476930;
     font-size: 16px;
     letter-spacing: 0.8px;
     line-height: 1.2em;
@@ -825,7 +835,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   }
 
   .product-Big p {
-    color: #B8B8B8;
+    color: #476930;
     font-size: 16px;
     letter-spacing: 0.8px;
     line-height: 1.2em;
@@ -1193,6 +1203,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 .productNamE {
   font-size: 1.5rem;
   text-align: center;
+  color: #476930;
 }
 
 .displayStack__2 {
@@ -1201,7 +1212,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  color: #888888;
+  color: #53a74d;
 }
 
 .displayStack__3 {
@@ -1210,7 +1221,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  color: #76b040;
+  color: #1f3906;
 }
 
 @media (max-width: 768px) {
@@ -1304,8 +1315,12 @@ margin: auto ;
     width: auto;
   }
 
+.fresh p {
+  text-align: center;
+}
+
   .fresh img{
-    width: auto;
+  
   height: auto;
   }
 }
@@ -1371,6 +1386,25 @@ margin: auto ;
   width: 60%;
   height: auto;
 }
+
+.sum {
+  flex: 1;
+ 
+  padding: 20px; 
+  margin: 20px auto 0px; 
+  max-width: 400px; 
+}
+
+.mod {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  margin: 20px auto 0px; 
+  max-width: 400px; 
+}
+
 
 @media (max-width: 768px) {
   .arm {

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const FreshWorks = () => {
   return (
     <>
-    <h2 style={{ textAlign: "center" }}>FRESHWORKS</h2>
+    <h2 style={{ textAlign: "center",color:'red'  }}>FRESHWORKS</h2>
     <div className='product-Solar'>
         <div>
         <img src={projImg1} alt='FreshWorks' />

@@ -10,7 +10,7 @@ export const SolarwindCase = () => {
       Summary: "Firmware upgrade activities for their branch devices ",
       BreifSummary: `During the beginning of the lockdown, the customer reported that they had to perform mass level firmware upgrade activities for their branch devices (7000+ Cisco Devices). This activity was to be completed within a set timeframe and due to lockdown, physical visit to branches was impossible. `,
       Resolution: `Solarwinds NCM has a feature called firmware upgrades. Using that, and without any physical presence of any engineer on site, the bank customer successfully upgraded 7000+ devices in a staggered manner within 1 month.`,
-      Tag: "Asset Discovery,  Nmap, Npcap",
+      Tag: "NCM",
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export const SolarwindCase = () => {
       BreifSummary: `The customer reported poor performance on the MSSQL database server and during each CPU peak, wanted to know the details of queries hogging the resources.
          `,
       Resolution: `Using Server & Application Monitoring (SAM) module’s AppInsight for SQL template, which polls for most expensive queries by CPU time. In a customized alert, we put the condition to send the details of the most expensive queries in mail whenever there was a peak in CPU utilization.`,
-      Tag: "Patch Management,  Endpoints",
+      Tag: "SAM, SQL, CPU ",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ export const SolarwindCase = () => {
       Summary: "Performance issues of an in-house application",
       BreifSummary: `The users in a large IT company used to regularly complain for performance issues of an in-house application.`,
       Resolution: `Using Solarwinds DPA, we worked with the developers of the in-house application, to identify long running queries, most expensive queries, queries that caused deadlocks, blocks, queries with highest wait times, table tuning advisories, index recommendations, etc. All these inputs highly helped the developers to fine tune and highly improve the application performance. `,
-      Tag: "Asset Discovery  Nmap Npcap",
+      Tag: "DPA, SQL, Performance",
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ export const SolarwindCase = () => {
       BreifSummary: `At all our customer environments, we have met with requirements for highly customizable dashboards for various teams and levels.`,
       Resolution: `We have created L1/L2/L3 dashboards catering individually to Network/Server/DB/Storage teams which contain more granular data pertaining to their devices and CXO dashboards with a high-level overview of their environment to provide overall performance status, health & infrastructure visibility.
             `,
-      Tag: "Asset Discovery  Nmap Npcap",
+      Tag: "Database, SQL, Server, Network",
     },
     {
       id: 5,
@@ -45,19 +45,13 @@ export const SolarwindCase = () => {
       Summary: "unable to troubleshoot the issues faced in application stack",
       BreifSummary: `Customer brought a case where they were unable to troubleshoot the issues faced in application stack for which their customers complained of poor performance.`,
       Resolution: `The first step was to create NPM’s NetPath and WPM from remote locations for checking service availability and website performance. It was observed that the website often gave out connection reset error,  after which the whole ongoing transaction was lost.
-    
     Next, we put the database under DPA monitoring, but even the database performance did not give out any issues and database reported back relatively normal.
-    
     For the next step in troubleshooting, we monitored all the services and processes related to the complete application stack and the database servers as well. Here, using the SAM application dependency feature, it was observed that there was a very high amount of packet loss between the application and the database layer servers. 
-    
-    
-    
     To confirm this, we created customized templates, which constantly checked for a few parameters between the application and DB servers, such as ping, traceroute, and port connectivity. It was identified that the connectivity between the servers broke a lot during the whole day, and using the Perfstack feature, it was identified that those times coincide with the times when the website gave out connection reset error. 
     Alongside, in the Perfstack, we also observed that there was very high resource utilization on the host server as well, and coincidentally, there were spikes in the host utilization which occurred around the same time as website reset errors.
-    
     The customer took the decision to move the complete setup to physical hardware. The platform was still under the same rigorous monitoring after movement to the physical setup, and no issues were reported after that. The errors from the customer side stopped, and the connection reset error vanished.
     .`,
-      Tag: "Asset Discovery  Nmap Npcap",
+      Tag: "NPM, SAM, DPA, DB, Server",
     },
     {
       id: 6,
@@ -67,7 +61,7 @@ export const SolarwindCase = () => {
       Resolution: `The customer brought this concern to us during implementation phase. We created a website transaction and put it under monitoring from various locations. Upon checking the TCP waterfall chart, it was found that the image used on the website was very large in size, hence always took time to load. 
     On changing the image to a smaller size, the website loading time reduced and the performance improved greatly. The customer website slowness issue was resolved.
     `,
-      Tag: "Asset Discovery  Nmap Npcap",
+      Tag: "TCP",
     },
     {
       id: 7,
@@ -75,7 +69,7 @@ export const SolarwindCase = () => {
       Summary: "Complaints of poor wireless connectivity ",
       BreifSummary: `The customer often faced complaints of poor wireless connectivity from their users.`,
       Resolution: `After putting the whole wireless infra under monitoring, it was observed that there were some clusters with a very high number of users connected to a single access point. Through custom properties, the team had exact idea of the region, office, location, floor of the device and through the wireless data, the users connected on the access point and their signal strength values as well. Accordingly, customer understood the need to expanding the wireless infrastructure. In a course of few months, the customer resolved the issues at all their sites, and they saw a drastic decrease in the number of cases reported for network issues.`,
-      Tag: "Asset Discovery,  Nmap, Npcap",
+      Tag: "NPM",
     },
     {
       id: 8,
@@ -103,7 +97,7 @@ export const SolarwindCase = () => {
       Resolution: `
               Using the SolarWinds NetPath feature, we created multiple NetPath from their various locations. NetPath showed slowness whenever it occurred and also demonstrated which hop was the culprit. Through NetPath, the customer was able to identify slowness in the ISP environment, and get it rectified.
               `,
-      Tag: "Asset Discovery  Nmap Npcap",
+      Tag: "NetPath",
     },
     {
       id: 11,
@@ -113,7 +107,7 @@ export const SolarwindCase = () => {
       BreifSummary: `The customer having large number of branches and each branch connected with more than one ISP link. Often the engineers would shut one of the links if they experienced some packet loss or latency in order to use a more efficient link during the day. But often the engineers would forget to up the links and hence the traffic flowing through the secondary link instead of primary.`,
       Resolution: `We Created a BGP neighbor down alert. On detecting a BGP neighbor down event, SolarWinds NCM would take a backup of the router’s configuration. Which would then be used by NCM compliance to search for the neighbor shutdown command. If the command was present, then this would show up in the report.
               `,
-      Tag: "Asset Discovery  Nmap Npcap",
+      Tag: "NCM",
     },
     {
       id: 12,
@@ -121,7 +115,7 @@ export const SolarwindCase = () => {
       Summary: "The last reload reason for Branch routers after an outage.",
       BreifSummary: `One of our banking customer wanted to know the last reload reason for Branch routers after an outage.`,
       Resolution: `We first identified the specific OID value, then used the UnDP to create a custom poller to poll the OID specific value and once we received this value, the value was passed on to the incident ticket information.`,
-      Tag: "Asset Discovery  Nmap Npcap",
+      Tag: "NPM",
     },
   ];
   return (

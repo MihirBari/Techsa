@@ -9,6 +9,7 @@ import { Footer } from "../component/Footer";
 import { Loader } from "../component/loader";
 
 import HeroClaravineAnimation from "../component/HeroClaravineAnimation" 
+import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,10 @@ const HomePage = () => {
         <Loader />
       ) : (
         <div className="App">
+              <Helmet>
+            <title>Home | Techsa Services Pvt Ltd.</title>
+            <meta name="description" content="Description of your About Us page" />
+          </Helmet>
           <NavBar />
           <Banner />
           {/* <HeroClaravineAnimation /> */}

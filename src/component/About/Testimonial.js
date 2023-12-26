@@ -4,7 +4,7 @@ import {Testimonials} from "../Testimonials/Testimonial"
 export const Testimonial = () => {
   return (
     <>
-    <h2 style={{textAlign:'center'}}>Testimonial</h2>
+    <h2 style={{textAlign:'center',color:'red'}}>Testimonial</h2>
           <div>
             <Testimonials />
           </div>

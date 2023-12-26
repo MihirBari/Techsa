@@ -3,6 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import { NavBar } from "../component/NavBar";
 import { Footer } from "../component/Footer";
 import { Loader } from "../component/loader";
+import { Helmet } from "react-helmet";
 
 export const Career = () => {
   const [loading, setLoading] = useState(true);
@@ -76,11 +77,15 @@ export const Career = () => {
         <Loader />
       ) : (
         <div>
+          <Helmet>
+            <title>Career | Techsa Services Pvt Ltd.</title>
+            <meta name="description" content="Description of your About Us page" />
+          </Helmet>
           <NavBar />
           <section className="contact" id="connect">
             <Container>
               <Row className="align-items-center">
-                <h2 style={{ textAlign: "center" }}>Careers @ Techsa</h2>
+                <h2 style={{ textAlign: "center",color:'red' }}>Careers <span style={{color:'#476930'}}>@ Techsa</span></h2>
                 <Col md={6}>
                   <div>
                     <div style={{ textAlign: "center" }}>
@@ -175,9 +180,9 @@ export const Career = () => {
                           </option>
                         </select>
                       </Col>
-                      <Col sm={6} className="px-1">
+                      {/* <Col sm={6} className="px-1">
                         <input type="file" onChange={handleFileChange} />
-                      </Col>
+                      </Col> */}
                       {/* Status message */}
                       {status.message && (
                         <Col>

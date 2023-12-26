@@ -1,9 +1,14 @@
 import React from "react";
 import img1 from "../../assets/Tenable.png";
+import { Helmet } from "react-helmet";
 
 export const Summary = () => {
   return (
     <div className="ten">
+          <Helmet>
+            <title>Tenable | Techsa Services Pvt Ltd.</title>
+            <meta name="description" content="Description of your About Us page" />
+          </Helmet>
       <div>
         <img src={img1} alt="" />
       </div>

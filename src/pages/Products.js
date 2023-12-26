@@ -9,6 +9,7 @@ import { Tenable } from "./ProductPage/Tenable";
 import { Armis } from "./ProductPage/Armis";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 export const Products = () => {
   const [loading, setLoading] = useState(true);
 
@@ -29,6 +30,10 @@ export const Products = () => {
       ) : (
         <>
           <div className="App">
+          <Helmet>
+            <title>Products | Techsa Services Pvt Ltd.</title>
+            <meta name="description" content="Description of our Product page" />
+          </Helmet>
             <NavBar />
             <div className="ProductsPage">
               <Solarwinds />
