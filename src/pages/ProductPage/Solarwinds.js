@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const Solarwinds = () => {
   return (
     <>  
-    <h2 style={{ textAlign: "center",color:'red'  }}>SOLARWINDS</h2>
+    <h2 style={{ textAlign: "center"  }}>SOLARWINDS</h2>
     <div className='product-Solar'>
         <div>
         <img src={projImg1} alt='Solarwinds' />

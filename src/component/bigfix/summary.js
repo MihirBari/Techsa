@@ -9,9 +9,9 @@ export const Summary = () => {
         </div>
         <div>
             <p>
-            BigFix is the result of IBM's purchase of BigFix, Inc. Enabling it to offer additional security 
-            and compliance services. The software provides endpoint and security management
-             in a single solution and enables organizations to see and manage physical and virtual endpoints.
+            BigFix provides a unified architecture, leveraging AI technology, to effectively manage and
+            assure compliance of all servers, desktops, and mobile devices, whether they are in the office, 
+            at home, or in the cloud.
             </p>
         </div>
     </div>

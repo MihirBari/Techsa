@@ -35,7 +35,7 @@ export const DeviceSecurity = () => {
       <div className="sum">
         <h2 style={{ marginBottom: "20px" }}>Armis Centrix™ for Medical Device Security</h2>
         <span>
-        Complete visibility and security for all medical devices, clinical assets, and the entire healthcare ecosystem
+        Complete visibility and security for all medical devices, clinical assets, and the entire healthcare ecosystem.
         </span>
       </div>
 

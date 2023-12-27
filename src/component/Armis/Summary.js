@@ -9,9 +9,11 @@ export const Summary = () => {
         </div>
         <div>
             <p>
-            BigFix is the result of IBM's purchase of BigFix, Inc. Enabling it to offer additional security 
-            and compliance services. The software provides endpoint and security management
-             in a single solution and enables organizations to see and manage physical and virtual endpoints.
+            Armis, the asset intelligence cybersecurity company, protects the entire attack surface 
+            and manages the organization’s cyber risk exposure in real time. In a rapidly evolving, 
+            perimeter-less world, Armis ensures that organizations continuously see, protect and manage
+            all critical assets. Armis secures and helps to keep critical infrastructure, economies and society 
+            stay safe and secure 24/7.
             </p>
         </div>
     </div>

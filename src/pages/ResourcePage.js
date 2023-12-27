@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Loader } from '../component/loader.js'
 import { NavBar } from '../component/NavBar'
 import { Footer } from '../component/Footer'
 import  {Resource} from '../component/Resource/Resource.js'
 import { Helmet } from 'react-helmet'
 
 export const ResourcePage = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+   
   return (
     <>
-     <Helmet>
+     {loading ? (
+          <Loader />
+        ) : (
+    <div>
+      <Helmet>
             <title>Resource | Techsa Services Pvt Ltd.</title>
             <meta name="description" content="Description of your About Us page" />
           </Helmet>
@@ -16,6 +28,7 @@ export const ResourcePage = () => {
         <Resource />
     </div>
     <Footer />
+      </div>)}
     </>
   )
 }

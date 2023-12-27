@@ -8,33 +8,25 @@ const modules = [
   {
     image: img1,
     title:
-      `Continuous Compliance Platform`
+      `Siloed Asset Management`
       ,
-    description: `Accurate and real-time visibility and continuous enforcement of security configurations and
-     patches to address configuration drifts. Security and compliance analytics identify, manage and report 
-     on policy exceptions and deviations. Out-ot-the-box, the software supports security benchmarks such as
-      CIS, DISA STIG, USGCB, and PCI-DSS. It also shows trending and analysis of security configuration changes. The HCL BigFix intelligent agent provides continuous compliance with automated audit cycles measured in minutes rather than weeks.`,
+    description: `
+    The average security organization has 76 security tools to manage. Each of these tools generates independent data points, leading to a fragmented view of security.
+    `,
   },
   {
     image: img2,
     title:
-      "Endpoint Management Solution",
+      "No Time for Manual and Complicated Reports or Audits",
     description: `
-    Support a large variety of endpoints including cloud, server, and desktop 
-    devices, as well as specialized equipment such as point-of-sale (POS) devices,
-     ATMs and self-service kiosks. The device discovery capabilities find all endpoints
-      that you know about as well as previously unknown endpoints in your environment. 
-      You can even quarantine endpoints that are out of compliance. Plus, it’s easy to deploy patches to
-       distributed and virtual endpoints using multiple versions of the top twelve operating systems 
-       (e.g. Windows, UNIX, Linux and MacOS etc.), 
-    as well as third-party applications and policy-based patches - regardless of connection type or status.
+    There are hundreds of security controls, as defined by common security frameworks by organizations such as the National Institute of Standards and Technology (NIST) and the Center for Internet Security (CIS). However, identifying gaps in security controls can be difficult, and reporting is made almost impossible.
   `,
   },
   {
     image: img3,
-    title: "Continuous Compliance Monitoring",
+    title: "Constant Change",
     description: `
-    Track the effectiveness of compliance efforts and quickly identify security exposures. Endpoint compliance status vs deployed policies is continuously collected, aggregated and reported on using a powerful Compliance Analytics Engine. Multiple reports are available out-of-the-box on security configurations, patching and vulnerabilities – showing current and historical trending – for entire deployments or for a single endpoint.
+    The attack surface is constantly changing as assets are added or removed and as OS, apps, configurations and connections evolve. In a rapidly evolving, perimeter-less world, organizations must continuously see, secure, protect and manage all critical assets.
   `,
   },
 ];

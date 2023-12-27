@@ -11,9 +11,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 export const Armis = () => {
   return (
     <>
+    <div>
     <h2 style={{ textAlign: "center" }}>ARMIS</h2>
      <Summary />
- 
+     <h2 style={{textAlign:'center'}}>Featured Solutions</h2>
      <div style={{ margin:"40px 0 40px 0" }}>
      <AssetManagement />
      </div>
@@ -33,6 +34,7 @@ export const Armis = () => {
           </Button>
         </Link>
       </div>
+    </div>
   </>
   )
 }

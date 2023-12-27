@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const BigFix = () => {
   return (
     <>
-    <h2 style={{ textAlign: "center", marginTop:'50px',color:'red'  }}>BIGFIX</h2>
+    <h2 style={{ textAlign: "center", marginTop:'50px'  }}>BIGFIX</h2>
     <div className='product-Big'>
         <div>
         <p>BigFix is the result of IBM's purchase of BigFix, Inc. 

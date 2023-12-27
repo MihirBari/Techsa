@@ -35,8 +35,7 @@ export const IoTSecurity = () => {
     <div className="summary-module-container">
       <div className="sum">
         <h2 style={{ marginBottom: "20px" }}>Armis Centrix™ for OT/ IoT Security</h2>
-        <span>
-        See and secure OT networks and physical assets, ensure uptime, and build an effective and comprehensive security strategy
+        <span>A powerful cybersecurity solution specifically designed to see, protect, manage and optimize all OT, IoT and ICS assets, systems, and processes in your environment.
         </span>
       </div>
 

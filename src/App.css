@@ -268,7 +268,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 .tagline{
-  color: darkred;
+  color: rgb(0, 0, 0);
 }
 
 .banner button svg {
@@ -518,7 +518,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 .contact form input,
 .contact form textarea {
   width: 100%;
-  background: rgb(194, 240, 194);;
+  background: rgb(249, 250, 249);;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   color: #304522;
@@ -724,9 +724,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   height: 250px;
   width: 250px;
   border-radius: 25px;
-  float: left;
-  margin-left: 30px;
+  float: right;
+  margin-right: 12rem;
   box-shadow: -3px 4px 11px 0px #888888;
+}
+
+.product-Solar1 img {
+  height: 250px;
+  width: 250px;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  box-shadow: -3px 4px 11px 0px #888888;
+  cursor:pointer;
 }
 
 .product-Solar div {
@@ -760,8 +769,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   height: 250px;
   width: 250px;
   border-radius: 25px;
-  float: right;
-  margin-right: 30px;
+  float: left;
+  margin-left: 12rem;
   box-shadow: -3px 4px 11px 0px #888888;
 }
 
@@ -823,8 +832,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     max-width: 100%;
     max-height: 100%;
     margin-bottom: 20px;
-    margin-left: 0px;
+    margin-right: 0px;
   }
+
+
 
   .product-Big {
     display: flex;
@@ -846,7 +857,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     max-width: 100%;
     max-height: 100%;
     margin-bottom: 20px;
-    margin-right: 0px;
+    margin-left: 0px;
   }
 
   .product-Big button {
@@ -1089,21 +1100,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 .summary {
-  flex: 1;
-  border: 2px solid #000; 
-  padding: 20px; 
-  margin: 20px auto 0px; 
-  max-width: 400px; 
+  flex: 1 1;
+  border: 2px solid #f7f0f0;
+  padding: 20px;
+  margin: 20px auto 0px;
+  max-width: 400px;
+  background-color: #f7f0f0; 
+  box-shadow: 0 10px 15px rgb(0 0 0 / 3%);
 }
 
+
 .module {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #000; 
+  flex: 1 1;
+  border: 2px solid #f7f0f0;
   padding: 20px;
-  margin: 20px auto 0px; 
-  max-width: 400px; 
+  margin: 20px auto 0px;
+  max-width: 400px;
+  background-color: #f7f0f0;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 3%);
+}
+
+.summary,
+.module {
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+  &:hover {
+    background: #EFF0F6;
+    border: 1px solid;
+  }
 }
 
 .modules{
@@ -1327,7 +1351,7 @@ margin: auto ;
 
 /*************Tenable*************/
 .tenable {
-  padding: 30px 0 200px 0;
+  padding: 60px 0 200px 0;
   margin-top: 111px;
 }
 

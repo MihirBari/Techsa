@@ -7,26 +7,22 @@ import { Helmet } from "react-helmet";
 
 export const Career = () => {
   const [loading, setLoading] = useState(true);
+  const [formDetails, setFormDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [buttonText, setButtonText] = useState("Send");
+  const [status, setStatus] = useState({});
+  const [selectedOption, setSelectedOption] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
   }, []);
-
-  const formInitialdetail = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-    file: null, // Initialize file as null
-  };
-
-  const [formDetails, setFormDetails] = useState(formInitialdetail);
-  const [buttonText, setButtonText] = useState("send");
-  const [status, setStatus] = useState({});
-  const [selectedOption, setSelectedOption] = useState("Select Option");
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -35,39 +31,66 @@ export const Career = () => {
     });
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    onFormUpdate("file", file);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formDetails.firstName || !formDetails.lastName || !formDetails.email  || !selectedOption) {
+      setStatus({ success: false, message: 'Please fill out all required fields.' });
+      return;
+    }
+
     setButtonText("Sending...");
 
-    const formData = new FormData();
-    formData.append("firstName", formDetails.firstName);
-    formData.append("lastName", formDetails.lastName);
-    formData.append("email", formDetails.email);
-    formData.append("phone", formDetails.phone);
-    formData.append("message", formDetails.message);
-    formData.append("file", formDetails.file);
+    try {
+      await pushMessage(
+        `${formDetails.firstName} ${formDetails.lastName}`,
+        formDetails.email,
+        formDetails.message,
+        formDetails.phone
+      );
 
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      body: formData,
-    });
-
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialdetail);
-
-    if (result.code === 200) {
-      setStatus({ success: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        success: false,
-        message: "Something went wrong, please try again later.",
+      setButtonText("Send");
+      setFormDetails({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
       });
+      setSelectedOption("");
+      setStatus({ success: true, message: "Message sent successfully" });
+    } catch (error) {
+      console.error(error);
+      setStatus({ success: false, message: "Something went wrong." });
+    } finally {
+      setButtonText("Send");
+    }
+  };
+
+  const pushMessage = async (name, email, message, phone = "000") => {
+    const messageType = "contact"; 
+    const messageBody = {
+      title: `${messageType} Form (Website) - ${name}`,
+      body: `Name: ${name}\nMessage: ${message}\nEmail: ${email}\nPhone: ${phone}`,
+      type: "note",
+    };
+
+    const pushbulletResponse = await fetch(
+      "https://api.pushbullet.com/v2/pushes",
+      {
+        method: "POST",
+        headers: {
+          "Access-Token": "o.5i7m1y7IULdmnfNMDFdexsWTZidy1D6K",
+          "Content-Type": "application/json",
+          "Connection" : "keep-alive",
+          "cache-control": "no-cache",
+        },
+        body: JSON.stringify(messageBody),
+      }
+    );
+
+    if (!pushbulletResponse.ok) {
+      throw new Error("Pushbullet API request failed");
     }
   };
 
@@ -85,7 +108,7 @@ export const Career = () => {
           <section className="contact" id="connect">
             <Container>
               <Row className="align-items-center">
-                <h2 style={{ textAlign: "center",color:'red' }}>Careers <span style={{color:'#476930'}}>@ Techsa</span></h2>
+                <h2 style={{ textAlign: "center", color: 'red' }}>Careers <span style={{ color: '#476930' }}>@ Techsa</span></h2>
                 <Col md={6}>
                   <div>
                     <div style={{ textAlign: "center" }}>
@@ -183,7 +206,6 @@ export const Career = () => {
                       {/* <Col sm={6} className="px-1">
                         <input type="file" onChange={handleFileChange} />
                       </Col> */}
-                      {/* Status message */}
                       {status.message && (
                         <Col>
                           <p

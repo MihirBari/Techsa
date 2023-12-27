@@ -8,6 +8,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 export const FreshWorks = () => {
   return (
     <>
+    <div>
       <h2 style={{ textAlign: "center" }}>FRESHWORKS</h2>
       <Summary />
       <BoxContainer />
@@ -18,6 +19,7 @@ export const FreshWorks = () => {
           </Button>
         </Link>
       </div>
+    </div>
     </>
   );
 };

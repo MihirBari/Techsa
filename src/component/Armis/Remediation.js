@@ -35,7 +35,7 @@ export const Remediation = () => {
       <div className="sum">
         <h2 style={{ marginBottom: "20px" }}>Armis Centrix™ for Vulnerability Prioritization and Remediation</h2>
         <span>
-        See, consolidate, prioritize, and remediate all vulnerabilities
+        Go beyond vulnerability scanning to address the full cyber risk management lifecycle. Consolidate, prioritize and remediate all vulnerabilities based on potential risk to the business.
         </span>
       </div>
 

@@ -72,9 +72,7 @@ import { Helmet } from "react-helmet";
     };
   
     const pushMessage = async (name, email, message, phone = "000") => {
-      const pushbulletAccessToken = "o.5i7m1y7IULdmnfNMDFdexsWTZidy1D6K";
-      const messageType = "contact"; // or 'career' based on your logic
-  
+      const messageType = "contact"; 
       const messageBody = {
         title: `${messageType} Form (Website) - ${name}`,
         body: `Name: ${name}\nMessage: ${message}\nEmail: ${email}\nPhone: ${phone}`,
@@ -87,8 +85,10 @@ import { Helmet } from "react-helmet";
         {
           method: "POST",
           headers: {
-            "Access-Token": pushbulletAccessToken,
+            "Access-Token": "o.5i7m1y7IULdmnfNMDFdexsWTZidy1D6K",
             "Content-Type": "application/json",
+            "Connection" : "keep-alive",
+            "cache-control": "no-cache",
           },
           body: JSON.stringify(messageBody),
         }
@@ -97,26 +97,7 @@ import { Helmet } from "react-helmet";
       if (!pushbulletResponse.ok) {
         throw new Error("Pushbullet API request failed");
       }
-  
-      //Add your code here to send the form data to your API endpoint
-      const yourApiUrl = "http//:localhost:5000/contact"; // Replace with your actual API endpoint
-  
-      const yourApiResponse = await fetch(yourApiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-          phone,
-        }),
-      });
-  
-      if (!yourApiResponse.ok) {
-        throw new Error("Failed to send form data to your API");
-      }
+     
     };
     
     return (
@@ -172,6 +153,7 @@ import { Helmet } from "react-helmet";
                             type="text"
                             value={formDetails.phone}
                             placeholder="Mobile No."
+                            maxLength={10}
                             onChange={(e) =>
                               onFormUpdate("phone", e.target.value)
                             }

@@ -13,6 +13,8 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 const Bigfixs = () => {
   return (
     <>
+    <div>
+
     <Helmet>
             <title>Bigfix | Techsa Services Pvt Ltd.</title>
             <meta name="description" content="Description of your About Us page" />
@@ -38,6 +40,7 @@ const Bigfixs = () => {
           </Button>
         </Link>
       </div>
+    </div>
     </>
   )
 }
