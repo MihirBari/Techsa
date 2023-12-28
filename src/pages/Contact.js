@@ -7,6 +7,7 @@ import Map from "../component/Contact/Map";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 
   export const Contact = () => {
@@ -19,7 +20,7 @@ import { Helmet } from "react-helmet";
       message: "",
     });
     const [buttonText, setButtonText] = useState("Send");
-    const [status, setStatus] = useState({});
+
   
     useEffect(() => {
       setTimeout(() => {
@@ -39,9 +40,10 @@ import { Helmet } from "react-helmet";
   
       // Client-side form validation
       if (!formDetails.firstName || !formDetails.lastName || !formDetails.email || !formDetails.message) {
-        setStatus({ success: false, message: 'Please fill out all required fields.' });
+        toast.error("Please Fill all the field")
         return;
       }
+
   
       setButtonText("Sending...");
   
@@ -62,10 +64,10 @@ import { Helmet } from "react-helmet";
           phone: "",
           message: "",
         });
-        setStatus({ success: true, message: "Message sent successfully" });
+       toast.success("Delivered")
       } catch (error) {
         console.error(error);
-        setStatus({ success: false, message: "Something went wrong." });
+       toast.error("Please switch of your ad blocker")
       } finally {
         setButtonText("Send");
       }
@@ -140,7 +142,7 @@ import { Helmet } from "react-helmet";
                         </Col>
                         <Col sm={6} className="px-1">
                           <input
-                            type="text"
+                            type="email"
                             value={formDetails.email}
                             placeholder="Email"
                             onChange={(e) =>
@@ -179,18 +181,6 @@ import { Helmet } from "react-helmet";
                             />
                           </Link>
                         </Col>
-                        {status.message && (
-                          <Col>
-                            <p
-                              className={
-                                status.success === false ? "danger" : "success"
-                              }
-                            >
-                              {" "}
-                              {status.message}
-                            </p>
-                          </Col>
-                        )}
                       </Row>
                     </form>
                   </Col>

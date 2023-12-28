@@ -27,7 +27,7 @@ export const SolarwindCase = () => {
       Summary: "Performance issues of an in-house application",
       BreifSummary: `The users in a large IT company used to regularly complain for performance issues of an in-house application.`,
       Resolution: `Using Solarwinds DPA, we worked with the developers of the in-house application, to identify long running queries, most expensive queries, queries that caused deadlocks, blocks, queries with highest wait times, table tuning advisories, index recommendations, etc. All these inputs highly helped the developers to fine tune and highly improve the application performance. `,
-      Tag: "DPA, SQL, Performance",
+      Tag: "DPA, SQL",
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ export const SolarwindCase = () => {
       BreifSummary: `At all our customer environments, we have met with requirements for highly customizable dashboards for various teams and levels.`,
       Resolution: `We have created L1/L2/L3 dashboards catering individually to Network/Server/DB/Storage teams which contain more granular data pertaining to their devices and CXO dashboards with a high-level overview of their environment to provide overall performance status, health & infrastructure visibility.
             `,
-      Tag: "Database, SQL, Server, Network",
+      Tag: "SQL, NPM",
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ export const SolarwindCase = () => {
       Resolution: `The customer brought this concern to us during implementation phase. We created a website transaction and put it under monitoring from various locations. Upon checking the TCP waterfall chart, it was found that the image used on the website was very large in size, hence always took time to load. 
     On changing the image to a smaller size, the website loading time reduced and the performance improved greatly. The customer website slowness issue was resolved.
     `,
-      Tag: "TCP",
+      Tag: "NPM",
     },
     {
       id: 7,
@@ -76,9 +76,10 @@ export const SolarwindCase = () => {
       caption: "Identifying causes of slowness",
       Summary: "Slowness in the network.",
       BreifSummary: `We asked the network team to configure NetFlow on their routers. Using NTA, it was found that their patching activity was being carried out unthrottled, which was causing the bandwidth to be completely utilized. Also, there were some machines which were not getting patched through their relay architecture, and were directly reporting to the main server, hence hogging bandwidth on both sides.
-    After reporting this, the customer improved their relay architecture, changed the scheduled timings for patching activity and throttled the maximum bandwidth that could be taken by their patching solution. After a few weeks, customer saw drastic improvement in their network performance.
+                     After reporting this, the customer improved their relay architecture, changed the scheduled timings for patching activity and throttled the maximum bandwidth that could be taken by their patching solution. After a few weeks, customer saw drastic improvement in their network performance.
               `,
-      Tag: "Patch Management,  Endpoints",
+
+      Tag: "NPM",
     },
     {
       id: 9,
@@ -94,14 +95,13 @@ export const SolarwindCase = () => {
       caption: "Identifying ISP Slowness",
       Summary: "Observed latency from their ISP end",
       BreifSummary: `Customer reported that they have observed latency from their ISP end, but were not able to completely confirm it.`,
-      Resolution: `
-              Using the SolarWinds NetPath feature, we created multiple NetPath from their various locations. NetPath showed slowness whenever it occurred and also demonstrated which hop was the culprit. Through NetPath, the customer was able to identify slowness in the ISP environment, and get it rectified.
+      Resolution: ` Using the SolarWinds NetPath feature, we created multiple NetPath from their various locations. NetPath showed slowness whenever it occurred and also demonstrated which hop was the culprit. Through NetPath, the customer was able to identify slowness in the ISP environment, and get it rectified.
               `,
       Tag: "NetPath",
     },
     {
       id: 11,
-      caption: "Identifying the reason for BG 	P neighbor down ",
+      caption: "Identifying the reason for BGP neighbor down ",
       Summary:
         "Customer having large number of branches and each branch connected with more than one ISP link",
       BreifSummary: `The customer having large number of branches and each branch connected with more than one ISP link. Often the engineers would shut one of the links if they experienced some packet loss or latency in order to use a more efficient link during the day. But often the engineers would forget to up the links and hence the traffic flowing through the secondary link instead of primary.`,

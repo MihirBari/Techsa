@@ -13,6 +13,8 @@ import { ArmisPage } from "./pages/ArmisPage.js";
 import { ResourcePage } from "./pages/ResourcePage.js";
 import { Career } from "./pages/Career.js";
 import { Database } from "./component/SolarWinds/Database.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
  //window.addEventListener("contextmenu", (e) => e.preventDefault());
@@ -34,6 +36,18 @@ function App() {
             <Route path="/Resource" element={<ResourcePage />} />
             <Route path="/Database" element={<Database />} />
           </Routes>
+
+          <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored" />
       </>
     </div>
   );

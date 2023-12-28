@@ -48,12 +48,15 @@ export const  Banner = () => {
               unwaveringly secure our customer's IT infrastructure. Through our
                dedicated efforts and innovative solutions, we ensure comprehensive protection, 
               performance, and strategic insights related to your hybrid IT infrastructure.</p>
-            <button onClick={handleScrollDown}>Let's Explore <ArrowRightCircle size={25} /></button>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImage} alt="Header" />
           </Col>
+      
+          <button onClick={handleScrollDown}>Let's Explore <ArrowRightCircle size={25} /></button>
+         
         </Row>
+
       </Container>
     </section>
   );

@@ -4,6 +4,7 @@ import { NavBar } from "../component/NavBar";
 import { Footer } from "../component/Footer";
 import { Loader } from "../component/loader";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 export const Career = () => {
   const [loading, setLoading] = useState(true);
@@ -15,7 +16,6 @@ export const Career = () => {
     message: "",
   });
   const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
   const [selectedOption, setSelectedOption] = useState("");
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export const Career = () => {
       setLoading(false);
     }, 1000);
   }, []);
-
+  
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
@@ -35,7 +35,7 @@ export const Career = () => {
     e.preventDefault();
 
     if (!formDetails.firstName || !formDetails.lastName || !formDetails.email  || !selectedOption) {
-      setStatus({ success: false, message: 'Please fill out all required fields.' });
+      toast.error("Please Fill all the feild")
       return;
     }
 
@@ -46,7 +46,7 @@ export const Career = () => {
         `${formDetails.firstName} ${formDetails.lastName}`,
         formDetails.email,
         formDetails.message,
-        formDetails.phone
+        formDetails.phone,
       );
 
       setButtonText("Send");
@@ -58,10 +58,10 @@ export const Career = () => {
         message: "",
       });
       setSelectedOption("");
-      setStatus({ success: true, message: "Message sent successfully" });
+      toast.success("Delivered")
     } catch (error) {
       console.error(error);
-      setStatus({ success: false, message: "Something went wrong." });
+      toast.error("Please switch of your ad blocker")
     } finally {
       setButtonText("Send");
     }
@@ -117,7 +117,7 @@ export const Career = () => {
                     </div>
                     <br />
                     <br />
-                    <div style={{ display: "flex", textAlign: "center" }}>
+                    <div style={{ display: "flex",flexDirection:'row-reverse' }}>
                       <div>
                         <p>Business Development Managers</p>
                         <br />
@@ -203,21 +203,6 @@ export const Career = () => {
                           </option>
                         </select>
                       </Col>
-                      {/* <Col sm={6} className="px-1">
-                        <input type="file" onChange={handleFileChange} />
-                      </Col> */}
-                      {status.message && (
-                        <Col>
-                          <p
-                            className={
-                              status.success === false ? "danger" : "success"
-                            }
-                          >
-                            {" "}
-                            {status.message}
-                          </p>
-                        </Col>
-                      )}
                       <Col sm={6} className="px-1">
                         <button style={{ marginBottom: "60px" }} type="submit">
                           <span>{buttonText}</span>{" "}

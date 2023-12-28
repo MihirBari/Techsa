@@ -835,6 +835,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     margin-right: 0px;
   }
 
+  .product-Solar1 img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 20px;
+    box-shadow: -3px 4px 11px 0px #888888;
+  }
 
 
   .product-Big {
@@ -1100,7 +1107,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 .summary {
-  flex: 1 1;
+  flex: 1 ;
   border: 2px solid #f7f0f0;
   padding: 20px;
   margin: 20px auto 0px;
@@ -1111,7 +1118,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 
 .module {
-  flex: 1 1;
+  flex: 1 ;
   border: 2px solid #f7f0f0;
   padding: 20px;
   margin: 20px auto 0px;
@@ -1385,7 +1392,7 @@ margin: auto ;
 }
 
   .ten img{
-    width: 85%;
+    
     height: auto;
   }
 }
