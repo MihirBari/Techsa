@@ -872,6 +872,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   }
 }
 
+@media (min-width:769px ) and (max-width:980px) {
+  .product-Solar1 img {
+    width: 220px
+  }
+}
+
 
 /*************Solarwind*************/
 .solarwinds {

@@ -5,11 +5,11 @@ export const ProjectCard = ({ imgUrl, link, description }) => {
   return (
     <Col sm={4} md={4}>
         <div className="product-Solar1 img ">
-          <Link to={link} className="proj-link">
           <div >
+          <Link to={link} className="proj-link">
             <img src={imgUrl} alt="alt" />
-            </div>
           </Link>
+            </div>
         </div>
     </Col>
   );
