@@ -747,6 +747,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
+  width: 550px;
 }
 
 .product-Solar button {
@@ -783,6 +784,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
+  width: 550px;
+  float: right;
 }
 
 .product-Big button {
@@ -794,6 +797,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   box-shadow: 0px 0px 7px 1px #888888;
 }
 
+.InCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
   .ProductsPage {
@@ -824,6 +832,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     font-size: 16px;
     letter-spacing: 0.8px;
     line-height: 1.2em;
+    width: auto;
   }
 
 
@@ -835,8 +844,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     margin-right: 0px;
   }
 
+  .product-Solar1  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .product-Solar1 img {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
     max-height: 100%;
     margin-bottom: 20px;
@@ -857,6 +874,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     font-size: 16px;
     letter-spacing: 0.8px;
     line-height: 1.2em;
+    width: auto;
   }
 
   .product-Big img {

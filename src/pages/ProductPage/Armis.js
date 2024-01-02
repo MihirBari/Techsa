@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Armis = () => {
   return (
     <>
-    <h2 style={{ textAlign: "center"  }}>ARMIS</h2>
+    <h2 style={{ textAlign: "center" , marginTop:"50px" }}>ARMIS</h2>
     <div className='product-Solar'>
         <div>
         <img src={projImg1} alt='Solarwinds' />

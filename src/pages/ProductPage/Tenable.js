@@ -7,7 +7,7 @@ export const Tenable = () => {
     <>
       <h2 style={{ textAlign: "center", marginTop: "50px" }}>TENABLE</h2>
       <div className="product-Big">
-        <div>
+        <div className="InCenter">
           <p>
             Your attack surface is growing, always changing and more
             interconnected than ever. With specialized security tools offering

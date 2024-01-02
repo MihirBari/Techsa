@@ -8,7 +8,7 @@ export const BigFix = () => {
     <>
     <h2 style={{ textAlign: "center", marginTop:'50px'  }}>BIGFIX</h2>
     <div className='product-Big'>
-        <div>
+        <div className='InCenter'>
         <p>BigFix is the result of IBM's purchase of BigFix, Inc. 
             Enabling it to offer additional security and compliance services. 
             The software provides endpoint and security management in a single 
