@@ -655,6 +655,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   max-height: 50rem;
   transition: 0.2s;
   box-shadow: -3px 4px 11px 0px #888888;
+  /* border-radius: 50%;  */
 }
 
 .productCard:hover {

@@ -17,20 +17,18 @@ export function AboutCard(props) {
 
   return (
     <div className="productList">
-      <div key={props.id} onClick={openModal} className="productCard">
+      <div key={props.id} onClick={openModal} >
+        <div className="productCard">
         <img
-          style={{ width: "150px", height: "200px" }}
+           //style={{ width: "150px", height: "200px", borderRadius: "50%", objectFit: "cover" }}
+           style={{ width: "150px", height: "200px" }}
           src={props.image}
           alt="product-img"
           className="productImage"
         />
+        </div>
         <div className="productCard__content">
           <h3 className="productName">{props.name}</h3>
-          <div className="displayStack__1">
-            <Link to={props.link}>
-              <FaLinkedin size={30} className="productPrice" />
-            </Link>
-          </div>
         </div>
       </div>
 

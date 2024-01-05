@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Summary } from './Summary'
 import { AssetManagement } from './AssetManagement'
 import { IoTSecurity } from './IoTSecurity'
@@ -7,8 +7,14 @@ import { Remediation } from './Remediation'
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Armis = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
     <div>
@@ -22,10 +28,10 @@ export const Armis = () => {
      <IoTSecurity />
      </div>
      <div style={{ margin:"40px 0 40px 0" }}>
-     <DeviceSecurity />
+     <DeviceSecurity  />
      </div>
      <div style={{ margin:"40px 0 40px 0" }}>
-     <Remediation />
+     <Remediation  />
      </div>
      <div style={{ textAlign: "center", marginTop: "20px" }}>
         <Link to="/Contact">

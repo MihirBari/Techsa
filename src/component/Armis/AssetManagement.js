@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Module } from "./Module";
 import img1 from "../../assets/compliance/Pass+audits+and+avoid+fines+with+continuous+compliance.png";
 import img2 from "../../assets/compliance/Improve+visibility+and+reduce+risk.png";
 import img3 from "../../assets/compliance/Prioritize+remediation+with+compliance.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const modules = [
   {
@@ -32,8 +34,17 @@ const modules = [
 ];
 
 export const AssetManagement = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+
   return (
-    <div className="summary-module-container">
+    <div className="summary-module-container"
+    data-aos="fade-left"
+    data-aos-offset="200"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="600">
       <div className="sum">
         <h2 style={{ marginBottom: "20px" }}>Armis Centrix™ for Asset Management and Security</h2>
         <span>

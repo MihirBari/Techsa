@@ -19,19 +19,27 @@ const BoxContainer = () => {
 
   return (
     <>
-    <h2 style={{textAlign:"center",marginBottom:"20px"}}> IT Service </h2>
-    <div className="boxxx-container">
+    <div   >
+    <h2 style={{textAlign:"center",marginBottom:"20px"}}  
+     data-aos="zoom-in"
+     data-aos-offset="200"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="600"
+    > IT Service </h2>
+    <div className="boxxx-container"
+    
+    data-aos="flip-left"
+    data-aos-offset="200"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="600">
       {boxes.map((box, index) => (
         <div key={index} className="boxxx" 
-        data-aos="flip-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="600"
         >
           <h2 style={{textAlign:"center"}}>{box.title}</h2>
           <p style={{textAlign:"center"}}>{box.description}</p>
         </div>
       ))}
+    </div>
     </div>
     </>
   );
